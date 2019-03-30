@@ -51,6 +51,7 @@
         android:background="@drawable/gradient">
 
         <LinearLayout
+            android:id="@+id/layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -59,8 +60,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileIv"
                 android:layout_width="@dimen/homeImageWidth"
-                android:layout_height="@dimen/homeImageeHeight"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_height="@dimen/homeImageeHeight" />
 
             <TextView
                 android:id="@+id/shoptTitleTv"
@@ -68,7 +68,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Shop Title"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -78,12 +77,13 @@
             style="@style/Base.TextAppearance.AppCompat.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:text="Pakistan"
+            android:layout_marginLeft="@dimen/marginLinear"
+            android:layout_toRightOf="@id/layout"
             android:textColor="@color/colorWhite" />
 
         <ImageView
+            android:id="@+id/chatIv"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_alignParentRight="true"

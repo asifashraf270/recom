@@ -14,7 +14,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="@dimen/chatImageWidth"
             android:layout_height="@dimen/chatImageWidth"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/chaticon"
             app:civ_border_color="@color/colorWhite"
             app:civ_border_width="1dp">
 
@@ -46,12 +46,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="start"
-            android:text="Asif ashraf" />
+            android:text="John Alia" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Helo world" />
+            android:text="Hi i need nike shoes" />
     </LinearLayout>
 
     <LinearLayout

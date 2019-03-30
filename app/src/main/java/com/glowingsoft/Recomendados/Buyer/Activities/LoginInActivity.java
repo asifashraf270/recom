@@ -64,20 +64,8 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         fullScreen();
         setContentView(R.layout.activity_login_in);
         context = LoginInActivity.this;
-        if (GlobalClass.getInstance().returnUserId() != null) {
-            if (GlobalClass.getInstance().returnUserType().equals("1")) {
-                intent = new Intent(LoginInActivity.this, ShopPreferencesActivity.class);
-                startActivity(intent);
-                finish();
-            } else {
-                intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        viewBinding();
 
-        } else {
-            viewBinding();
-        }
     }
 
     private void viewBinding() {
@@ -250,6 +238,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
                     JSONObject jsonObject = response.getJSONObject("user");
                     GlobalClass.getInstance().StoreUserId(jsonObject.getString("id"));
                     String title = response.getString("title");
+                    GlobalClass.getInstance().storeTitle(title);
 //                    if (title.equals("Become a SELLER")) {
 //                        intent = new Intent(LoginInActivity.this, ShopPreferencesActivity.class);
 //                        GlobalClass.getInstance().storeUserType("1");
@@ -258,6 +247,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
 //                        GlobalClass.getInstance().storeUserType("2");
 //                    }
                     intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     GlobalClass.getInstance().storeUserType("2");
                     startActivity(intent);
 
@@ -292,6 +282,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
+            progressDialog.dismiss();
 
         }
     }
@@ -316,6 +307,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
     }
 
     private void signIn() {
+        progressDialog.show();
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, 100);
     }

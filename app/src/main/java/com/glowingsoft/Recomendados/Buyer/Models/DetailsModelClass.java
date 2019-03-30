@@ -3,7 +3,7 @@ package com.glowingsoft.Recomendados.Buyer.Models;
 public class DetailsModelClass {
     String imageUrl;
     String id;
-    String product_id,subject_type;
+    String product_id, subject_type;
 
     public String getImageUrl() {
         return imageUrl;

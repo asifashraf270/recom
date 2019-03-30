@@ -1,6 +1,7 @@
 package com.glowingsoft.Recomendados.Buyer.Activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +31,7 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
     String userName, userEmail, userPassword;
     ImageView backIv;
     RelativeLayout rootLayout;
+    TextView loginTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +50,10 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
         emailEt = findViewById(R.id.emailEt);
         passwordEt = findViewById(R.id.passwordEt);
         signupTv = findViewById(R.id.signUpBtnTv);
-        backIv.setOnClickListener(this);
         signupTv.setOnClickListener(this);
+        backIv.setOnClickListener(this);
+        loginTv = findViewById(R.id.signUpTv);
+        loginTv.setOnClickListener(this);
         rootLayout = findViewById(R.id.rootLayout);
 
     }
@@ -61,6 +65,9 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                 signUpBtn(userEt, emailEt, passwordEt);
                 break;
             case R.id.backIv:
+                finish();
+                break;
+            case R.id.signUpTv:
                 finish();
                 break;
         }
@@ -116,7 +123,7 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
         @Override
         public void onStart() {
             super.onStart();
-            progressDialog.dismiss();
+            progressDialog.show();
         }
 
         @Override
@@ -124,8 +131,16 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
             super.onSuccess(statusCode, headers, response);
             try {
                 if (response.getInt("status") == 200) {
+                    JSONObject jsonObject = response.getJSONObject("user");
+                    GlobalClass.getInstance().StoreUserId(jsonObject.getString("id"));
+                    String title = response.getString("title");
+                    GlobalClass.getInstance().storeTitle(title);
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
-
+                    intent = new Intent(SignUpActivity.this, BottomNavigationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    GlobalClass.getInstance().storeUserType("2");
+                    startActivity(intent);
+                    finish();
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
                 }
@@ -138,6 +153,7 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
         public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
             super.onFailure(statusCode, headers, throwable, errorResponse);
             GlobalClass.getInstance().SnackBar(rootLayout, throwable.getMessage(), -1, -1);
+            progressDialog.dismiss();
         }
 
         @Override

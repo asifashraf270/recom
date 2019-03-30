@@ -1,7 +1,9 @@
 package com.glowingsoft.Recomendados.Buyer.Activities;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +27,8 @@ import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.WebReq.Urls;
 import com.glowingsoft.Recomendados.WebReq.WebReq;
+import com.gun0912.tedpermission.PermissionListener;
+import com.gun0912.tedpermission.TedPermission;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Callback;
@@ -58,6 +62,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     List<DetailsModelClass> detailsModelClasses;
     List<HomeModelClass> recyclerViewMoreShop;
     String shopId;
+    ImageView chatIV, phoneIv, shareIv;
+    String productNamePrice = null, ownerPhoneNumber;
+    PermissionListener permissionlistener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +79,14 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         priceTv = findViewById(R.id.priceTv);
         viewPager = findViewById(R.id.viewPager);
         recyclerView = findViewById(R.id.recyclerviewItems);
+        chatIV = findViewById(R.id.chatIv);
+        phoneIv = findViewById(R.id.phoneIv);
+        phoneIv.setOnClickListener(this);
+        chatIV.setOnClickListener(this);
+        shareIv = findViewById(R.id.shareIv);
+        shareIv.setOnClickListener(this);
         recyclerViewMoreShop = new ArrayList<>();
-        recyclerViewAdapter = new ItemRecyclerViewAdapter(recyclerViewMoreShop);
+        recyclerViewAdapter = new ItemRecyclerViewAdapter(recyclerViewMoreShop, DetailActivity.this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(recyclerViewAdapter);
         viewShopTv = findViewById(R.id.viewShopTv);
@@ -103,7 +117,21 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         } else {
             GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
         }
+        permissionlistener = new PermissionListener() {
+            @Override
+            public void onPermissionGranted() {
+                Intent call = new Intent(Intent.ACTION_CALL);
+                call.setData(Uri.parse("tel:" + ownerPhoneNumber));
+                startActivity(call);
+            }
 
+            @Override
+            public void onPermissionDenied(List<String> deniedPermissions) {
+                Toast.makeText(DetailActivity.this, "Permission is required for call", Toast.LENGTH_SHORT).show();
+            }
+
+
+        };
 
     }
 
@@ -118,6 +146,27 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.backIv:
                 finish();
+                break;
+            case R.id.chatIv:
+                Toast.makeText(this, "Development in Progress", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.phoneIv:
+                TedPermission.with(this)
+                        .setPermissionListener(permissionlistener)
+                        .setDeniedMessage("If you reject permission,you can not use this service\n\nPlease turn on permissions at [Setting] > [Permission]")
+                        .setPermissions(Manifest.permission.CALL_PHONE)
+                        .check();
+
+                break;
+            case R.id.shareIv:
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("text/plain");
+                share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+//                share.putExtra(Intent.EXTRA_SUBJECT, productNamePrice);
+                share.putExtra(Intent.EXTRA_SUBJECT, "Hello World");
+
+                share.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=" + getPackageName());
+                startActivity(Intent.createChooser(share, "Share link!"));
                 break;
         }
     }
@@ -137,11 +186,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 Log.d("response", response.toString());
                 if (response.getInt("status") == 200) {
                     JSONObject jsonObject = response.getJSONObject("product");
+                    productNamePrice = jsonObject.getString("title") + "\n" + jsonObject.getString("price");
                     ownerNameTv.setText("" + jsonObject.getString("owner_name"));
                     Picasso.get()
                             .load(jsonObject.getString("owner_image"))
                             .fit()
-                            .placeholder(R.mipmap.ic_launcher)
+                            .placeholder(R.drawable.placeholderviewplager)
                             .into(ownerIv, new Callback() {
                                 @Override
                                 public void onSuccess() {
@@ -154,6 +204,8 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                                 }
                             });
                     JSONObject jsonObjectShop = response.getJSONObject("shop");
+                    locationTv.setText("" + jsonObjectShop.getJSONObject("location").getString("address"));
+                    ownerPhoneNumber = jsonObjectShop.getJSONObject("owner").getString("phone");
                     nameTv.setText("" + jsonObjectShop.getString("name"));
                     shopId = jsonObjectShop.getString("id");
                     Log.d("shopId", shopId);

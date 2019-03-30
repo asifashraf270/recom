@@ -88,13 +88,21 @@ public class GlobalClass extends Application {
         return sharedPreferences.getString("type", null);
     }
 
+    public void storeTitle(String title) {
+        editor.putString("title", title);
+        editor.commit();
+    }
+
+    public String returntitle() {
+        return sharedPreferences.getString("title", null);
+    }
 
     /**
-     *
      * 1=Login as a Buyer
      * 2=Login as a seller
-     *
      */
-
+    public void logoOut() {
+        editor.clear().commit();
+    }
 
 }

@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/home"
+        android:enabled="true"
         android:icon="@drawable/home"
-        android:title="Home" />
+        android:title="Home"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/favourite"
+        android:enabled="true"
         android:icon="@drawable/favourite"
-        android:title="Favourite" />
+        android:title="Favourite"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/chat"
+        android:enabled="true"
         android:icon="@drawable/chat"
-        android:title="Chat" />
+        android:title="Chat"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/profile"
+        android:enabled="true"
         android:icon="@drawable/user"
-        android:title="Profile" />
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/more"
+        android:enabled="true"
         android:icon="@drawable/more"
-        android:title="More" />
+        android:title="More"
+        app:showAsAction="ifRoom" />
 
 </menu>

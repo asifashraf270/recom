@@ -19,7 +19,7 @@
             android:layout_width="@dimen/logoWidth"
             android:layout_height="@dimen/logoHeigh"
             android:layout_centerHorizontal="true"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/logohome" />
 
         <TextView
             android:layout_width="wrap_content"

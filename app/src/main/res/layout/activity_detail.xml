@@ -23,10 +23,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:padding="@dimen/textPadding"
                 android:src="@drawable/back"
                 android:tint="@color/colorBlack" />
 
             <TextView
+                android:id="@+id/detailTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -35,12 +37,13 @@
                 android:text="Details" />
 
             <ImageView
+                android:id="@+id/shareIv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_margin="@dimen/textPadding"
                 android:padding="3dp"
-                android:src="@drawable/upload"
+                android:src="@drawable/ic_share_black_24dp"
                 android:tint="@color/colorBlack" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
@@ -88,8 +91,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/textPadding"
                 android:paddingRight="@dimen/textPadding"
-                android:paddingBottom="@dimen/textPadding"
-                android:text="$35.00" />
+                android:paddingBottom="@dimen/textPadding" />
 
             <TextView
                 android:id="@+id/nameTv"
@@ -98,7 +100,6 @@
                 android:paddingTop="@dimen/textPadding"
                 android:paddingRight="@dimen/textPadding"
                 android:paddingBottom="@dimen/textPadding"
-                android:text="Stock men Shoes"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -107,6 +108,17 @@
                 android:layout_margin="3dp">
 
                 <ImageView
+                    android:id="@+id/phoneIv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="@dimen/textPadding"
+                    android:layout_toLeftOf="@id/chatIv"
+                    android:background="@drawable/chat_bg_gradient"
+                    android:src="@drawable/ic_phone_white_18dp"
+                    android:tint="@color/colorWhite" />
+
+                <ImageView
+                    android:id="@+id/chatIv"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_alignParentRight="true"
@@ -121,21 +133,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:drawableLeft="@drawable/location"
+                    android:drawableLeft="@drawable/ic_location_on_black_18dp"
                     android:paddingTop="@dimen/textPadding"
                     android:paddingRight="@dimen/textPadding"
-                    android:paddingBottom="@dimen/textPadding"
-                    android:text="Wahdat Road Lahore" />
+                    android:paddingBottom="@dimen/textPadding" />
             </RelativeLayout>
 
             <TextView
-                style="@style/Base.TextAppearance.AppCompat.Large"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/textPadding"
-                android:paddingRight="@dimen/textPadding"
-                android:paddingBottom="@dimen/textPadding"
-                android:text="Description" />
+                android:paddingLeft="@dimen/textPadding"
+                android:text="Description"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/descriptionTv"
@@ -144,8 +154,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/textPadding"
                 android:paddingRight="@dimen/textPadding"
-                android:paddingBottom="@dimen/textPadding"
-                android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making" />
+                android:paddingBottom="@dimen/textPadding" />
 
             <TextView
                 android:id="@+id/viewShopTv"
@@ -172,7 +181,6 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/textPadding"
-                android:src="@mipmap/ic_launcher"
                 app:civ_border_color="@color/colorWhite"
                 app:civ_border_width="1dp" />
 
@@ -182,8 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:padding="@dimen/textPadding"
-                android:text="Asif ashraf" />
+                android:padding="@dimen/textPadding" />
 
             <TextView
                 style="@style/Base.TextAppearance.AppCompat.Large"

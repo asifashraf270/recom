@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".Buyer.Activities.LoginInActivity">
@@ -29,7 +29,7 @@
                 android:layout_height="@dimen/logoWelcomeHeight"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/welcomeLogoTopMargin"
-                android:src="@drawable/logosimple" />
+                android:src="@drawable/logohome" />
 
             <TextView
                 android:id="@+id/buyerTv"
@@ -42,7 +42,8 @@
                 android:text="@string/buyer"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/welcomeTextSize"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cardView"

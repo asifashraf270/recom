@@ -20,8 +20,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@id/favouriteBtn"
                 android:layout_margin="@dimen/textPadding"
-                android:fitsSystemWindows="true"
-                android:src="@mipmap/ic_launcher" />
+                android:fitsSystemWindows="true" />
 
 
         </RelativeLayout>

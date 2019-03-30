@@ -45,7 +45,8 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
     RequestParams requestParams;
     RelativeLayout rootLayout;
     //    TagContainerLayout tagContainerLayout;
-    List<String> tags;
+//    List<String> tags;
+    ImageView chatIv;
 
 
     @Override
@@ -59,6 +60,8 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
         gridView = findViewById(R.id.gridView);
         modelClasses = new ArrayList<>();
         backIv = findViewById(R.id.backIv);
+        chatIv = findViewById(R.id.chatIv);
+        chatIv.setOnClickListener(this);
 //        tagContainerLayout = findViewById(R.id.tags);
         profileIv = findViewById(R.id.profileIv);
         locationTv = findViewById(R.id.locationTv);
@@ -89,6 +92,9 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.backIv:
                 finish();
                 break;
+            case R.id.chatIv:
+                Toast.makeText(this, "Development in Progress", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
@@ -99,12 +105,12 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
             try {
                 Log.d("Response", response.toString());
                 if (response.getInt("status") == 200) {
-                    locationTv.setText("" + response.getJSONObject("shop").getJSONObject("location").getString("country"));
+                    locationTv.setText("" + response.getJSONObject("shop").getJSONObject("location").getString("address"));
                     JSONObject jsonObject = response.getJSONObject("shop");
                     shoptTitleTv.setText("" + jsonObject.getString("name"));
-                    Picasso.get().load(jsonObject.getString("image")).fit().placeholder(R.mipmap.ic_launcher).into(profileIv);
+                    Picasso.get().load(jsonObject.getString("image")).fit().placeholder(R.drawable.placeholderviewplager).into(profileIv);
                     JSONArray jsonArrayProducts = jsonObject.getJSONArray("products");
-                    tags = new ArrayList<>();
+//                    tags = new ArrayList<>();
 //                    JSONArray jsonArray = jsonObject.getJSONArray("tags");
 //                    for (int i = 0; i < jsonArray.length(); i++) {
 //                        JSONObject jsonObject1 = jsonArray.getJSONObject(i);

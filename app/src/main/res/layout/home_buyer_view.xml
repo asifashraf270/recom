@@ -16,8 +16,7 @@
             android:id="@+id/pictureIv"
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeImageeHeight"
-            android:layout_margin="3dp"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_margin="3dp" />
 
         <com.varunest.sparkbutton.SparkButton
             android:id="@+id/favouriteBtn"

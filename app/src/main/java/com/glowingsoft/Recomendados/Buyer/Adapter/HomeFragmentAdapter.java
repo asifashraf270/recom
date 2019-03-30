@@ -111,7 +111,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
         Picasso.get()
                 .load(modelClasses.get(position).getImage())
                 .fit()
-                .placeholder(R.mipmap.ic_launcher)
+                .placeholder(R.drawable.placeholderviewplager)
                 .into(pictureIv, new Callback() {
                     @Override
                     public void onSuccess() {

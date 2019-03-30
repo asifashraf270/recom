@@ -1,7 +1,7 @@
 package com.glowingsoft.Recomendados.Seller.Models;
 
 public class LanguageModel {
-    String id,title;
+    String id, title;
 
     public String getId() {
         return id;

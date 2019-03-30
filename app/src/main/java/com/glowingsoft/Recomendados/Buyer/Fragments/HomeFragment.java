@@ -1,9 +1,7 @@
 package com.glowingsoft.Recomendados.Buyer.Fragments;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -12,21 +10,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import com.glowingsoft.Recomendados.Buyer.Activities.DetailActivity;
+import com.glowingsoft.Recomendados.Buyer.Activities.SearchActivity;
 import com.glowingsoft.Recomendados.Buyer.Adapter.HomeFragmentAdapter;
 import com.glowingsoft.Recomendados.Buyer.Models.HomeModelClass;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.WebReq.Urls;
 import com.glowingsoft.Recomendados.WebReq.WebReq;
-import com.glowingsoft.Recomendados.WelcomeActivity;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
@@ -46,6 +41,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     SwipeRefreshLayout swipeRefreshLayout;
     Toolbar toolbar;
     List<HomeModelClass> homeModelClasses;
+
     RequestParams requestParams;
     HomeModelClass homeModelClass;
     ProgressDialog progressDialog;
@@ -65,6 +61,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.home_fragment_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.search:
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return false;
     }
 
     private void viewBinding(View view) {

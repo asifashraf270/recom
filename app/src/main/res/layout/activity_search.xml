@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/textPadding"
+    tools:context="com.glowingsoft.Recomendados.Buyer.Activities.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"
+            android:tint="@color/colorBlack" />
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/backTv"
+            android:hint="Search" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noRecordtv"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:text="No Record Found"
+        android:textStyle="bold" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout"
+        android:horizontalSpacing="@dimen/textPadding"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="@dimen/textPadding"></GridView>
+</RelativeLayout>

@@ -14,10 +14,11 @@ public class Urls {
     public static String like = "like";
     public static String profile = "buyer/profile";
     public static String viewShop = "buyer/shop";
+    public static String buyerSearch = "buyer/search";
     /*
 
     Seller
      */
     public static String shopPreferences = "seller/shop/preferences";
-    public static String ShopAvailible="seller/shop/name";
+    public static String ShopAvailible = "seller/shop/name";
 }

@@ -2,6 +2,7 @@ package com.glowingsoft.Recomendados.Buyer.Fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.glowingsoft.Recomendados.Buyer.Activities.LoginInActivity;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.WebReq.Urls;
@@ -32,7 +35,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     RequestParams requestParams;
     View rootLayout;
     ProgressDialog progressDialog;
-    TextView viewShopTv;
+    TextView logOutTv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,8 +54,17 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         rootLayout = getActivity().findViewById(R.id.rootLayout);
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading....");
-        viewShopTv = view.findViewById(R.id.viewShopTv);
-        viewShopTv.setOnClickListener(this);
+        logOutTv = view.findViewById(R.id.logout);
+        logOutTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalClass.getInstance().logoOut();
+                Intent intent = new Intent(getActivity(), LoginInActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
         requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
         if (GlobalClass.getInstance().isNetworkAvailable()) {
             WebReq.post(Urls.profile, requestParams, new ProfileRestApi());
@@ -64,8 +76,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.viewShopTv:
-                break;
+
         }
     }
 

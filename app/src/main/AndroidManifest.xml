@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.glowingsoft.Recomendados">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".GlobalClass"
@@ -15,6 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Buyer.Activities.SearchActivity"></activity>
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -38,44 +41,18 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Seller.ActivitiesSeller.AddProductActivity">
-
-        </activity>
-        <activity android:name=".Seller.ActivitiesSeller.BottomNavigationSellerActivity">
-
-
-        </activity>
-        <activity android:name=".Seller.ActivitiesSeller.SectionActivity">
-
-        </activity>
-        <activity android:name=".Seller.ActivitiesSeller.NameYourShopActivity">
-
-        </activity>
-        <activity android:name=".Seller.ShopPreferencesActivity">
-
-        </activity>
-        <activity android:name=".Seller.ActivitiesSeller.SellerSignUpActivity">
-
-        </activity>
-        <activity android:name=".Buyer.Activities.ShopActivity">
-
-        </activity>
-        <activity android:name=".Buyer.Activities.DetailActivity">
-
-        </activity>
-        <activity android:name=".Buyer.Activities.BottomNavigationActivity">
-
-        </activity>
-        <activity android:name=".Buyer.Activities.SignUpActivity">
-
-        </activity>
-        <activity android:name=".Buyer.Activities.LoginInActivity">
-
-        </activity>
-        <activity android:name=".WelcomeActivity">
-
-        </activity>
+        <activity android:name=".Seller.ActivitiesSeller.AddProductActivity" />
+        <activity android:name=".Seller.ActivitiesSeller.BottomNavigationSellerActivity" />
+        <activity android:name=".Seller.ActivitiesSeller.SectionActivity" />
+        <activity android:name=".Seller.ActivitiesSeller.NameYourShopActivity" />
+        <activity android:name=".Seller.ShopPreferencesActivity" />
+        <activity android:name=".Seller.ActivitiesSeller.SellerSignUpActivity" />
+        <activity android:name=".Buyer.Activities.ShopActivity" />
+        <activity android:name=".Buyer.Activities.DetailActivity" />
+        <activity android:name=".Buyer.Activities.BottomNavigationActivity" />
+        <activity android:name=".Buyer.Activities.SignUpActivity" />
+        <activity android:name=".Buyer.Activities.LoginInActivity" />
+        <activity android:name=".WelcomeActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

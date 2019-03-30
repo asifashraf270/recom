@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Toast;
 
 import com.glowingsoft.Recomendados.R;
 
@@ -20,7 +21,7 @@ public class ChatFragmentAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 1;
     }
 
     @Override
@@ -36,6 +37,12 @@ public class ChatFragmentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.chat_fragment_view, parent, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Development in Progress", Toast.LENGTH_SHORT).show();
+            }
+        });
         return view;
     }
 }
