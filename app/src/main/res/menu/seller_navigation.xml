@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeSeller"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/subSeller"
+        android:icon="@drawable/subscription"
+        android:title="Subscription" />
+    <item
+        android:id="@+id/chatSeller"
+        android:icon="@drawable/chat"
+        android:title="Chat" />
+    <item
+        android:id="@+id/profileSeller"
+        android:icon="@drawable/usernew"
+        android:title="Profile" />
+    <item
+        android:id="@+id/sellerMore"
+        android:icon="@drawable/more"
+        android:title="More" />
+</menu>

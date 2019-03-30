@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000</color>
+    <color name="cardBackground">#DABFE2</color>
+    <color name="loginBg">#5057FF</color>
+    <color name="colorTransparent">#80ffffff</color>
+    <color name="startcolor">#C418AA</color>
+    <color name="centerColor">#7F4EB9</color>
+    <color name="endColor">#3189C9</color>
+    <color name="colorLabel">#7A8285</color>
+    <color name="fbShare">#411CFF</color>
+    <color name="googleShare">#FF2927</color>
+    <color name="instaShare">#FE0EEB</color>
+    <color name="cancelBtnColor">#228801</color>
+    <color name="deleteBtnColor">#C8000D</color>
+
+</resources>

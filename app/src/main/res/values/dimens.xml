@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logoWidth">120dp</dimen>
+    <dimen name="logoHeigh">120dp</dimen>
+    <dimen name="bottomMarginSplash">50dp</dimen>
+    <dimen name="paddingText">10dp</dimen>
+    <dimen name="textSizeSpl">16dp</dimen>
+    <dimen name="backBtnPadding">10dp</dimen>
+    <dimen name="logoWelcomeWidth">150dp</dimen>
+    <dimen name="logoWelcomeHeight">150dp</dimen>
+    <dimen name="welcomeLogoTopMargin">45dp</dimen>
+    <dimen name="welcomeTextSize">20dp</dimen>
+    <dimen name="buttonWidth">185dp</dimen>
+    <dimen name="buttonMarginTop">100dp</dimen>
+    <dimen name="sellerTopMargin">12dp</dimen>
+    <dimen name="marginLinear">10dp</dimen>
+    <dimen name="homeGrid">20dp</dimen>
+    <dimen name="elevationCard">5dp</dimen>
+    <dimen name="cardRadius">12dp</dimen>
+    <dimen name="layoutMargin">15dp</dimen>
+    <dimen name="drawablePadding">8dp</dimen>
+    <dimen name="loginWith">150dp</dimen>
+    <dimen name="signUpMarginTop">28dp</dimen>
+    <dimen name="homeImageWidth">110dp</dimen>
+    <dimen name="homeImageeHeight">130dp</dimen>
+    <dimen name="shopHeaderHeight">170dp</dimen>
+    <dimen name="profileMargin">80dp</dimen>
+    <dimen name="chatImageWidth">80dp</dimen>
+    <dimen name="marginTopcard">50dp</dimen>
+    <dimen name="shopPrefMargin">25dp</dimen>
+    <dimen name="textSizeName">25dp</dimen>
+    <dimen name="textPadding">3dp</dimen>
+    <dimen name="cardMarginLeft">15dp</dimen>
+    <dimen name="linearLayouMargin">20dp</dimen>
+    <dimen name="m14">14dp</dimen>
+    <dimen name="textSize">15sp</dimen>
+
+</resources>

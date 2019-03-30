@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Recomendados</string>
+    <string name="splashText">SIMPLE BUY WHAT YOU NEED,\nALSO SELL YOUR PRODUCTS</string>
+    <string name="welcome">WELCOME</string>
+    <string name="buyer">BUYER</string>
+    <string name="seller">SELLER</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgotPassword">FORGOT PASSWORD ?</string>
+    <string name="login">LOGIN</string>
+    <string name="signUpTv">SIGN UP</string>
+    <string name="user">Name</string>
+    <string name="viewShop">VIEW SHOP</string>
+    <string name="alreadyAccount">Already have an account? <u>LOGIN</u></string>
+    <string name="socialLogin">LOGIN WITH SOCIAL</string>
+    <string name="signUp">Don\'t have account? <u>SIGNUP</u></string>
+    <string name="welcomeText">PLEASE CHOOSE YOUR PREFERRED\nACTION.WOULD YOU LIKE TO SELL\nYOUR GOODS OR BECOME A BUYER ?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location">Location</string>
+    <string name="phoneNo">Phone No</string>
+    <string name="shopPreference">Shop Preferences</string>
+    <string name="shopPreferenceDes">Lets get started tell us about\nyour and your shop</string>
+    <string-array name="category">
+        <item>Select Category</item>
+    </string-array>
+    <string name="country">Country</string>
+    <string name="currency">Shop Currency</string>
+    <string name="bestDescription"><u><b>Which of these best describes you?</b></u></string>
+    <string name="checkboxFulltime">Selling is my full time job</string>
+    <string name="checkboxparttimePartial">I sell part-time but hope to sell full time</string>
+    <string name="checkboxpartTime">I sell part-time and that how i like it.</string>
+    <string name="checkboxOther">Other</string>
+    <string name="search">Search</string>
+    <string name="nameyourshop">Name Your Shop</string>
+    <string name="reflect">Choose a memorable name\nreflects your style</string>
+    <string name="shopName">Shop Name</string>
+    <string name="checkavailability">CHECK AVAILABILITY</string>
+    <string name="saveandcontinue">SAVE AND CONTINUE</string>
+    <string name="section">Section</string>
+    <string name="add">ADD</string>
+    <string name="continueText">CONTINUE</string>
+    <string name="material">Materials(Optional)   (Max 10)</string>
+    <string name="shooper">Help shooper to reach easily through tags</string>
+    <string name="tag">Tags(Optional)      (Max 10)</string>
+    <string name="nameshopDescr">Your shop name will appear in your shop and next to earth of your listings throughout SALT.Afteryour open your shop your can change your name once.\n<u>Here are some tips to choose shop name.</u></string>
+    <string name="congalert">Your shop has been added successfully,find out the shop in menu and odd your goods/items</string>
+    <string name="homeSellerDesc">Add your products and share online to earn  and engage with people.GOOD NEWS!first products are free to enter</string>
+    <string name="addproducts">ADD PRODUCTS</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="prive">Price</string>
+    <string name="submit">SUBMIT</string>
+    <string name="deletealert">Are you sure to want delete product</string>
+    <string name="monthlysubscription">MONTHLY PACKAGE</string>
+    <string name="unlimited">Get unlimited number of products posting for whole month</string>
+    <string name="subCharges"><b>$0.99 only</b></string>
+    <string name="update">Update</string>
+    <string name="networkConnection">No Internet Available Please check Internet Connection</string>
+    <string name="facebook_app_id">565572090600020</string>
+    <string name="fb_login_protocol_scheme">fb565572090600020</string>
+    <string name="sharedPreference">Recomendados</string>
+    <string name="apiKey">AIzaSyC66-Ysn4X-i2L3-OEGboOG4gTSuOtW9tI</string>
+
+
+</resources>

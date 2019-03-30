@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.glowingsoft.Recomendados.Seller.ActivitiesSeller.SectionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorTransparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back"
+                android:tint="@color/colorBlack" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_centerVertical="true"
+                android:text="@string/section" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/shooperTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/shopPrefMargin"
+        android:text="@string/shooper"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shooperTv"
+        android:layout_margin="@dimen/shopPrefMargin"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/tagEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_drawable"
+            android:hint="@string/tag" />
+
+        <TextView
+            android:id="@+id/tagAddTv"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/cardMarginLeft"
+            android:background="@drawable/viewshop_view"
+            android:gravity="center"
+            android:text="@string/add"
+            android:textColor="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/materialEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLinear"
+            android:background="@drawable/spinner_drawable"
+            android:hint="@string/material" />
+
+        <TextView
+            android:id="@+id/materialAddTv"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/cardMarginLeft"
+            android:background="@drawable/viewshop_view"
+            android:gravity="center"
+            android:text="@string/add"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/saveAndcontinueTv"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/marginTopcard"
+        android:background="@drawable/viewshop_view"
+        android:gravity="center"
+        android:text="@string/saveandcontinue"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

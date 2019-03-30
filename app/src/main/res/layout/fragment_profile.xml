@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootLayout"
+    android:layout_height="match_parent"
+    tools:context="com.glowingsoft.Recomendados.Buyer.Fragments.ProfileFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="Profile" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/textPadding"
+                android:src="@drawable/edit"
+                android:tint="@color/colorBlack" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopHeaderHeight"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/gradient"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profileRl"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/profileMargin">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="@dimen/homeImageWidth"
+            android:layout_height="@dimen/homeImageeHeight"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="2dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nameTv"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileRl"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:text="Asif Ashrad" />
+
+    <TextView
+        android:id="@+id/emailTv"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/marginLinear"
+        android:padding="@dimen/textPadding"
+        android:text="Email:muhammadasif@gmail.com" />
+
+    <TextView
+        android:id="@+id/viewShopTv"
+        android:layout_width="@dimen/loginWith"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/profileMargin"
+        android:background="@drawable/viewshop_view"
+        android:gravity="center"
+
+        android:text="@string/viewShop"
+        android:textColor="@color/colorWhite" />
+
+
+</RelativeLayout>

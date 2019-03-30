@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.glowingsoft.Recomendados.Buyer.Activities.DetailActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorTransparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back"
+                android:tint="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:padding="3dp"
+                android:text="Details" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/textPadding"
+                android:padding="3dp"
+                android:src="@drawable/upload"
+                android:tint="@color/colorBlack" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/textPadding"
+            android:layout_marginTop="@dimen/textPadding"
+            android:layout_marginRight="@dimen/textPadding"
+            android:layout_marginBottom="@dimen/marginLinear"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@id/toolbar">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"></android.support.v4.view.ViewPager>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/marginLinear"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/priceTv"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:paddingBottom="@dimen/textPadding"
+                android:text="$35.00" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:paddingBottom="@dimen/textPadding"
+                android:text="Stock men Shoes"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/textPadding"
+                    android:background="@drawable/chat_bg_gradient"
+                    android:src="@drawable/chat"
+                    android:tint="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/locationTv"
+                    style="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/location"
+                    android:paddingTop="@dimen/textPadding"
+                    android:paddingRight="@dimen/textPadding"
+                    android:paddingBottom="@dimen/textPadding"
+                    android:text="Wahdat Road Lahore" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:paddingBottom="@dimen/textPadding"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:paddingBottom="@dimen/textPadding"
+                android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making" />
+
+            <TextView
+                android:id="@+id/viewShopTv"
+                android:layout_width="@dimen/loginWith"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/textPadding"
+                android:background="@drawable/viewshop_view"
+                android:gravity="center"
+                android:text="@string/viewShop"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/textPadding"
+                android:text="Meet with owner" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ownerIv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/textPadding"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/nameOwnerTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/textPadding"
+                android:text="Asif ashraf" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="More:" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerviewItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginLinear"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

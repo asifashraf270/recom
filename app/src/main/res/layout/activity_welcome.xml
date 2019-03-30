@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/logoTv"
+        android:layout_width="@dimen/logoWelcomeWidth"
+        android:layout_height="@dimen/logoWelcomeHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/welcomeLogoTopMargin"
+        android:src="@drawable/logosimple" />
+
+    <TextView
+        android:id="@+id/welcomeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoTv"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/paddingText"
+        android:text="@string/welcome"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/welcomeTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descriptionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/welcomeLogoTopMargin"
+        android:lineSpacingExtra="4dp"
+        android:padding="@dimen/paddingText"
+        android:text="@string/welcomeText"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/sellerBtn"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionTv"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:background="@drawable/button_design"
+        android:drawableLeft="@drawable/seller"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="30dp"
+
+        android:text="@string/seller" />
+
+    <TextView
+        android:id="@+id/buyerTv"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sellerBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/sellerTopMargin"
+        android:background="@drawable/button_design"
+        android:drawableLeft="@drawable/buyer"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="30dp"
+        android:text="@string/buyer" />
+
+</RelativeLayout>

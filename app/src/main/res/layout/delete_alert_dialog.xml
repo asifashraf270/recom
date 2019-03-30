@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/headerRl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/gradient">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cancel"
+            android:tint="@color/colorWhite" />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="DELETE WARNING"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerRl"
+        android:layout_margin="@dimen/shopPrefMargin"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deletealert" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/textPadding"
+                android:layout_marginTop="@dimen/marginLinear"
+                android:background="@drawable/cancel_button_view"
+                android:text="CANCEL"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/textPadding"
+                android:layout_marginTop="@dimen/marginLinear"
+                android:background="@drawable/delete_button_view"
+                android:text="DELETE"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
