@@ -1,755 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed48c2ff-3115-4afa-8c2f-e9c0b3bbda94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CallBack/app/src/main/java/com/glowingsoft/callback/CallBackDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CallBack/app/src/main/java/com/glowingsoft/callback/CallBackFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CallBack/app/src/main/res/layout/activity_call_back_demo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CallBack/app/src/main/res/layout/fragment_call_back.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CallBack/app/src/main/res/menu/mymenu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Adapter/ChatFragmentAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Adapter/DetailPagerAdaper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Adapter/HomeFragmentAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Adapter/ItemRecyclerViewAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/HomeFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/MoreFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/ProfileFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Models/DetailsModelClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Models/HomeModelClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Models/ShopPreferneceModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/GlobalClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ParentClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/BottomNavigationSellerActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SellerSignUpActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/CurrencyAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/LanguageAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/HomeSellerFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/ProfileFragmentSeller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SubscriptionFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Models/CurrencyModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Models/LanguageModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/Urls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/WebReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WelcomeActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button_design.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/buyer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cancel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cancel_button_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/chat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/chat_bg_gradient.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/coinedittext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/country.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/delete_button_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/facebookshare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/favourite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/funnel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/googleshare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/inactive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/instagram_share.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/label_voew.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/location.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/locationicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/login_design.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logosimple.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logosimple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/onlinestatus.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/password.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/phoneicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/placeholderviewplager.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/seller.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shop_chat_bg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/spinner_drawable.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/subscription.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tab_indicator_default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tab_indicator_selected.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tab_selector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/usernew.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/viewshop_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/roboto_bold.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/roboto_medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bottom_navigation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bottom_navigation_seller.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_in.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_name_your_shop.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_section.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_seller_sign_up_activitu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_preferences.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/chat_fragment_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/congratulation_alert_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_adapter_spinner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/delete_alert_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_blank.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_chat.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_favourite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_seller.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_fragment_seller.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_subscription.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_buyer_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/items_views.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewpager_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/buyer_navigation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/home_fragment_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/seller_navigation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/font_certs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CONTRIBUTORS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/lint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/pluggable.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/proguard.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/androidTest/java/com/quran/labs/androidquran/BaseActivityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/androidTest/java/com/quran/labs/androidquran/ui/QuranActivityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/debug/java/com/quran/labs/androidquran/DebugApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/debug/java/com/quran/labs/androidquran/component/application/DebugApplicationComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/debug/java/com/quran/labs/androidquran/module/application/DebugNetworkModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/debug/res/drawable/debug_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/assets/uthmanic_hafs_ver12.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/java/com/quran/labs/androidquran/data/QuranDataModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/java/com/quran/labs/androidquran/data/QuranFileConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/res/drawable-hdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/res/drawable-mdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/res/drawable-xhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/res/drawable-xxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/res/drawable-xxxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/madani/res/xml/shortcuts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/androidx/viewpager/widget/NonRestoringViewPager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/AboutUsActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/HelpActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/QuranAdvancedPreferenceActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/QuranApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/QuranDataActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/QuranForwarderActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/QuranImportActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/QuranPreferenceActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/SearchActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ShortcutsActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/common/HighlightInfo.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/common/LocalTranslation.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/common/QariItem.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/common/QuranAyahInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/common/QuranText.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/common/Response.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/common/TranslationMetadata.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/component/activity/PagerActivityComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/component/application/ApplicationComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/component/fragment/QuranPageComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/RecentPage.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/Tag.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/audio/AudioPathInfo.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/audio/AudioPlaybackInfo.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/audio/AudioRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/bookmark/Bookmark.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/bookmark/BookmarkData.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/bookmark/BookmarkResult.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/translation/Translation.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/translation/TranslationHeader.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/translation/TranslationItem.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/translation/TranslationList.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/dao/translation/TranslationRowData.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/AyahInfoDatabaseHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/AyahInfoDatabaseProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/QuranDataProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/QuranInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/SuraAyah.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/SuraAyahIterator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/data/VerseRange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/database/BookmarksDBAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/database/BookmarksDBHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/database/DatabaseHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/database/DatabaseUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/database/SuraTimingDatabaseHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/database/TranslationsDBAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/database/TranslationsDBHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/di/ActivityScope.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/di/QuranPageScope.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/extension/CloseableExtension.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/extension/SuraAyahExtension.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/model/bookmark/BookmarkImportExportModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/model/bookmark/BookmarkJsonModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/model/bookmark/BookmarkModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/model/bookmark/RecentPageModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/model/quran/CoordinatesModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/model/translation/ArabicDatabaseUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/model/translation/TranslationModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/module/activity/PagerActivityModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/module/application/ApplicationModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/module/application/DatabaseModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/module/application/NetworkModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/module/fragment/QuranPageModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/pageselect/PageSelectActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/pageselect/PageSelectAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/pageselect/PageSelectPresenter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/pageselect/PageTypeItem.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/Presenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/QuranImportPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/audio/AudioPresenter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/audio/service/AudioQueue.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/bookmark/AddTagDialogPresenter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/bookmark/BookmarkPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/bookmark/BookmarksContextualModePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/bookmark/RecentPagePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/bookmark/TagBookmarkPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/quran/QuranPagePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/quran/QuranPageScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/quran/ayahtracker/AyahImageTrackerItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/quran/ayahtracker/AyahScrollableImageTrackerItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/quran/ayahtracker/AyahTrackerItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/quran/ayahtracker/AyahTrackerPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/quran/ayahtracker/AyahTranslationTrackerItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/translation/BaseTranslationPresenter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/translation/InlineTranslationPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/translation/TranslationManagerPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/presenter/translation/TranslationPresenter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/AudioService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/QuranDownloadService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/util/AudioFocusHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/util/AudioFocusable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/util/DefaultDownloadReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/util/PermissionUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/util/QuranDownloadNotifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/service/util/ServiceIntentHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/AudioManagerActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/PagerActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/QuranActionBarActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/QuranActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/TranslationManagerActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/adapter/TranslationsAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/AboutFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/AddTagDialog.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/AyahActionFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/AyahPlaybackFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/AyahTranslationFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/BookmarksFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/JumpFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/JuzListFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/QuranAdvancedSettingsFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/QuranPageFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/QuranSettingsFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/SuraListFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/TabletFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/TagBookmarkDialog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/fragment/TranslationFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/AyahSelectedListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/AyahTracker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/ExpandTafseerSpan.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/FragmentStatePagerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/HighlightType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/JumpDestination.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/PageDownloadListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranDisplayHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranListAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranPageAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranPageWorker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranRow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranRowFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/SlidingPagerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/helpers/UthmaniSpan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/preference/DataListPreference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/preference/QuranHeaderPreference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/preference/QuranListPreference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/preference/SeekBarPreference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/translation/OnTranslationActionListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/translation/TranslationAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/translation/TranslationView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/translation/TranslationViewRow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/util/ImageAyahUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/util/PageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/util/TranslationsSpinnerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/ui/util/TypefaceManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/AudioManagerUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/AudioUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/CopyDatabaseUtil.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/ImageUtil.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/QariDownloadInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/QuranAppUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/QuranFileUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/QuranPartialPageChecker.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/QuranScreenInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/QuranSettings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/QuranUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/RecordingLogTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/ShareUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/StorageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/TranslationUtil.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/util/ZipUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/AudioStatusBar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/AyahNumberView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/AyahToolBar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/AyahToolBarPip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/DividerView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/FitSystemRelativeLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/ForceCompleteTextView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/HighlightingImageView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/IconPageIndicator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/InlineTranslationView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/JuzView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/LeftToRightLinearLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/ObservableScrollView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranHeaderView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranImagePageLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranPageLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranPageWrapperLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranSpinner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranTabletImagePageLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranTranslationPageLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/QuranViewPager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/RepeatButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/SlidingTabLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/SlidingTabStrip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/SlidingUpPanelLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/TabletView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/quran/labs/androidquran/widgets/TagsViewGroup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/color/sherlock_primary_text.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/color/sherlock_primary_text_disable.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/bookmark_currentpage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_ab_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_accept.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_action_expand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_action_settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_day_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_done.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_goto_quran.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_link.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_night_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_not_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_previous.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_repeat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_sort.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_translation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_translation_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_translation_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/bookmark_currentpage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_ab_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_accept.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_action_expand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_action_settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_day_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_done.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_goto_quran.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_link.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_night_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_not_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_previous.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_repeat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_sort.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_translation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_translation_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_translation_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-nodpi/border_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-nodpi/border_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-nodpi/night_left_border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-nodpi/night_right_border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-v21/header_ripple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-v21/list_header_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-v21/quran_row_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-v21/quran_row_ripple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-v21/toolbar_button.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/bookmark_currentpage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_ab_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_accept.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_action_expand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_action_settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_day_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_done.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_goto_quran.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_link.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_night_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_not_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_notification.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_previous.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_repeat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_shortcut_last_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_sort.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_translation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_translation_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_translation_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/bookmark_currentpage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_ab_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_accept.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_action_expand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_action_settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_day_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_done.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_link.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_night_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_not_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_notification.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_previous.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_repeat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_shortcut_last_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_sort.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_translation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_translation_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_translation_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/bookmark_currentpage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_ab_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_accept.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_action_expand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_action_settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_day_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_done.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_link.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_night_mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_not_favorite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_previous.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_repeat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_shortcut_last_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_sort.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_translation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_translation_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_translation_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/download_button_circle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/list_header_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/quran_row_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/sliding_panel_above_shadow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/sliding_panel_below_shadow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/toolbar_button.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar-land-v17/audio_panel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar-land/audio_panel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar-v17/audio_manager_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar-v17/audio_panel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar-v17/index_sura_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar/audio_manager_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar/audio_panel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-ar/index_sura_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-land/audio_panel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout-v21/seekbar_pref.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/about_header.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/about_us.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/audio_manager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/audio_manager_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/audio_panel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/ayah_action_panel_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/data_storage_location_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/download_progress_bar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/help.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/index_header_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/index_sura_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/jump_dialog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/page_load_error.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/page_select.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/page_select_page.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/preferences.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_page_activity.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_page_activity_slider.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_translation_arabic_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_translation_header_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_translation_spacer_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_translation_text_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_translation_translator_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/quran_translation_verse_number_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/search.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/search_result.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/seekbar_pref.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/sherlock_spinner_dropdown_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/sherlock_spinner_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/tag_dialog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/tag_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/translation_ab_spinner_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/translation_ab_spinner_selected.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/translation_manager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/translation_panel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/translation_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/translation_sep.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/ayah_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/bookmark_contextual_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/home_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/quran_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/share_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/raw/bismillah.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/raw/isti3atha.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ar/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ar/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ar/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-de/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-de/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-de/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-de/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-es/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-es/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-es/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-es/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-fa/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-fa/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-fa/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-fr/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-fr/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-in/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-in/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-in/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-kk/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-kk/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-kk/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-kk/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ku/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ku/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-land/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-my/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-my/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-nl/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-pt/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-pt/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ru/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ru/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ru/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ru/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-sw600dp/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-sw720dp/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-tr/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-tr/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-tr/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ug/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-ug/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-uz/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-uz/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-uz/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-uz/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-v19/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-v21/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-xlarge/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-zh/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/arrays.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/attrs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/keys.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/preferences_keys.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/quarters.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/xml/about.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/xml/backup.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/xml/file_paths.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/xml/quran_advanced_preferences.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/xml/quran_preferences.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/xml/searchable.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/assets/noorehira.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/java/com/quran/labs/androidquran/data/QuranDataModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/java/com/quran/labs/androidquran/data/QuranFileConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable-hdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable-mdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable-xhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable-xxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable-xxxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable/border_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable/border_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable/night_left_border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/drawable/night_right_border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/values-ar/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/values/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/values/booleans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/values/sura_names.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/naskh/res/xml/shortcuts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/assets/uthmanic_hafs_ver12.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/java/com/quran/labs/androidquran/data/QuranDataModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/java/com/quran/labs/androidquran/data/QuranFileConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/drawable-hdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/drawable-mdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/drawable-xhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/drawable-xxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/drawable-xxxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-ar/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-ar/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-de/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-es/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-fa/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-fr/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-in/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-nl/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-ru/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-tr/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values-zh/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/values/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/qaloon/res/xml/shortcuts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/java/com/quran/labs/androidquran/data/QuranDataModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/java/com/quran/labs/androidquran/data/QuranFileConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/res/drawable-hdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/res/drawable-mdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/res/drawable-xhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/res/drawable-xxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/res/drawable-xxxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/res/values/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/shemerly/res/xml/shortcuts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/data/QuranInfoTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/model/bookmark/BookmarkImportExportModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/model/bookmark/BookmarkJsonModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/model/bookmark/BookmarkModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/model/bookmark/RecentPageModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/model/translation/ArabicDatabaseUtilsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/presenter/QuranImportPresenterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/presenter/bookmark/BookmarkPresenterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/presenter/bookmark/TagBookmarkPresenterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/presenter/translation/BaseTranslationPresenterTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/presenter/translation/TranslationManagerPresenterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/util/AudioUtilsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/com/quran/labs/androidquran/util/ZipUtilsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/resources/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/resources/translations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/resources/zip_file_100mb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/resources/zip_file_writes_outside.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/assets/uthmanic_hafs_ver12.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/java/com/quran/labs/androidquran/data/QuranDataModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/java/com/quran/labs/androidquran/data/QuranFileConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/drawable-hdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/drawable-mdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/drawable-xhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/drawable-xxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/drawable-xxxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/values-ar/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/values-ar/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/values/app_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/values/readers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/warsh/res/xml/shortcuts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/src/main/java/com/quran/data/pageinfo/common/MadaniDataSource.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/src/main/java/com/quran/data/pageinfo/common/size/DefaultPageSizeCalculator.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/src/main/java/com/quran/data/pageinfo/common/size/NoOverridePageSizeCalculator.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/src/main/java/com/quran/data/source/DisplaySize.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/src/main/java/com/quran/data/source/PageProvider.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/src/main/java/com/quran/data/source/PageSizeCalculator.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/data/src/main/java/com/quran/data/source/QuranDataSource.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/src/main/java/com/quran/page/common/data/AyahBounds.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/src/main/java/com/quran/page/common/data/AyahCoordinates.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/src/main/java/com/quran/page/common/data/AyahMarkerLocation.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/src/main/java/com/quran/page/common/data/PageCoordinates.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/src/main/java/com/quran/page/common/data/SuraHeaderLocation.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../common/pages/src/main/java/com/quran/page/common/draw/ImageDrawHelper.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/madani/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/madani/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/madani/src/main/java/com/quran/data/page/provider/QuranPageModule.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/madani/src/main/java/com/quran/data/page/provider/madani/MadaniPageProvider.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/madani/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quran_android-code_style.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/debug_icon.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/material.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/tanzilToSqlite.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/writeTimingDatabase.php" beforeDir="false" />
+    <list default="true" id="6512a786-b806-4213-92f3-d5b30162d0ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logosimple.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -765,85 +23,30 @@
     </system>
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="1640560362">
+    <session id="723675654">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.74" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gradle" value="2" />
-          <entry key="java" value="2" />
-          <entry key="pro" value="1" />
-          <entry key="properties" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="2" />
-          <entry key="ProGuard File" value="1" />
-          <entry key="Properties" value="3" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1738">
-              <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../PracticsQuran" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../QuranOnAndroid" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Word-By-Word-Quran-Android" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../poi-on-android" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../quran_android" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../secondQuran" value="PREVIEW" />
+        <entry key="F:/CloneProject" value="PREVIEW" />
+        <entry key="F:/CloneProject/PracticsQuran" value="PREVIEW" />
+        <entry key="F:/CloneProject/QuranOnAndroid" value="PREVIEW" />
+        <entry key="F:/CloneProject/Word-By-Word-Quran-Android" value="PREVIEW" />
+        <entry key="F:/CloneProject/poi-on-android" value="PREVIEW" />
+        <entry key="F:/CloneProject/quran_android" value="PREVIEW" />
+        <entry key="F:/CloneProject/secondQuran" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -852,33 +55,22 @@
     <option name="width" value="1280" />
     <option name="height" value="699" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Recomendadas" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ShopP&#9;PSI&#9;JAVA://com.glowingsoft.Recomendados.Seller.ShopPreferencesActivity.ShopPreferences&#10;Mainac&#9;FILE&#9;file://C:/Users/Asif/AppData/Local/Android/Sdk/sources/android-28/android/databinding/appwithspaces/MainActivity.java&#10;local.pro&#9;FILE&#9;file://F:/CloneProject/Recomendadas/local.properties" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="01103a8dd955b2a7" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="gradle.compiler" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -899,7 +91,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -958,11 +150,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ed48c2ff-3115-4afa-8c2f-e9c0b3bbda94" name="Default Changelist" comment="" />
-      <created>1553938488770</created>
+      <changelist id="6512a786-b806-4213-92f3-d5b30162d0ee" name="Default Changelist" comment="" />
+      <created>1553945769341</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1553938488770</updated>
+      <updated>1553945769341</updated>
     </task>
     <servers />
   </component>
@@ -970,20 +162,22 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.3290469" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.3290469" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32879046" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Build" order="5" visible="true" weight="0.32879046" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -994,40 +188,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/databinding/appwithspaces/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1738">
-          <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
