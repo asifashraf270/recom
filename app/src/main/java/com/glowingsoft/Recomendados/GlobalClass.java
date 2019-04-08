@@ -105,4 +105,68 @@ public class GlobalClass extends Application {
         editor.clear().commit();
     }
 
+    public void storePreferenceScreenData(String latitude, String longitude, String currencyId, String languageId, String shoptype, String country, String city, String address) {
+        editor.putString("lat", latitude);
+        editor.putString("lon", longitude);
+        editor.putString("currencyId", currencyId);
+        editor.putString("langId", languageId);
+        editor.putString("shopType", shoptype);
+        editor.putString("city", city);
+        editor.putString("country", country);
+        editor.putString("address", address);
+        editor.commit();
+    }
+
+    public String returnShoptype() {
+        return sharedPreferences.getString("shopType", null);
+    }
+
+    public void storeShopName(String name) {
+        editor.putString("shopName", name);
+        editor.commit();
+    }
+
+    public String returnLatitude() {
+        return sharedPreferences.getString("lat", null);
+    }
+
+    public String returnLongitude() {
+        return sharedPreferences.getString("lon", null);
+    }
+
+    public String returncurrencyId() {
+        return sharedPreferences.getString("currencyId", null);
+
+    }
+
+    public String returnLangId() {
+        return sharedPreferences.getString("langId", null);
+    }
+
+    public String returncityName() {
+        return sharedPreferences.getString("city", null);
+    }
+
+    public String returnCountryName() {
+        return sharedPreferences.getString("country", null);
+    }
+
+    public String returnAddress() {
+        return sharedPreferences.getString("address", null);
+    }
+
+    public String returnshopName() {
+        return sharedPreferences.getString("shopName", null);
+    }
+
+    public void storeShopId(String id) {
+        editor.putString("shopId", id);
+        editor.commit();
+    }
+
+    public String returnShopId() {
+        return sharedPreferences.getString("shopId", null);
+    }
+
+
 }

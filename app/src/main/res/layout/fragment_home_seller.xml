@@ -45,8 +45,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textStyle="bold"
-            android:text="@string/welcome" />
+            android:text="@string/welcome"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -67,6 +67,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/addProductTv"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

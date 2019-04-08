@@ -2,19 +2,26 @@ package com.glowingsoft.Recomendados.Seller;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,6 +30,7 @@ import android.widget.Toast;
 import com.glowingsoft.Recomendados.Buyer.Models.ShopPreferneceModel;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.NameYourShopActivity;
 import com.glowingsoft.Recomendados.Seller.Adapters.CurrencyAdapter;
 import com.glowingsoft.Recomendados.Seller.Adapters.LanguageAdapter;
 import com.glowingsoft.Recomendados.Seller.Models.CurrencyModel;
@@ -42,7 +50,7 @@ import java.util.List;
 import cz.msebera.android.httpclient.Header;
 
 public class ShopPreferencesActivity extends AppCompatActivity implements View.OnClickListener {
-    Spinner spinner, currencySp, languageSp;
+    Spinner currencySp, languageSp;
     TextView countryTv;
     TextView searchTv;
     RelativeLayout rootLayout;
@@ -55,7 +63,11 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
     List<LanguageModel> languageModels;
     LanguageAdapter languageAdapter;
     int PLACE_PICKER_REQUEST = 1;
-    String latLng = null;
+    String latitude = null, longitude = null;
+    String languageId, currencyId;
+    String shopType;
+    RadioGroup radioGroup;
+    String country = null, city = null, address = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +77,12 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
     }
 
     private void viewBinding() {
-        spinner = findViewById(R.id.categorySp);
+        country = "pakistan";
+        city = "Lahore";
+        address = "Muslim town Mor Kalma Chowk Lahore";
+        latitude = "31.5412458";
+        longitude = "74.3143284";
+        radioGroup = findViewById(R.id.shoptype);
         countryTv = findViewById(R.id.countryTv);
         countryTv.setOnClickListener(this);
         searchTv = findViewById(R.id.searchTv);
@@ -77,7 +94,6 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
         currencySp = findViewById(R.id.currencySp);
         rootLayout = findViewById(R.id.rootLayout);
         shopPreferneceModels = new ArrayList<>();
-
         languageModels = new ArrayList<>();
         languageAdapter = new LanguageAdapter(languageModels, this);
         languageSp.setAdapter(languageAdapter);
@@ -85,8 +101,30 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
         currencyAdapter = new CurrencyAdapter(currencyModels, this);
         currencySp.setAdapter(currencyAdapter);
         customAdapterSpinner = new CustomAdapter(shopPreferneceModels);
-        spinner.setAdapter(customAdapterSpinner);
-        Toast.makeText(this, "" + spinner.getSelectedItemPosition(), Toast.LENGTH_SHORT).show();
+
+        languageSp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                languageId = languageModels.get(position).getId();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        currencySp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                currencyId = currencyModels.get(position).getId();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         if (GlobalClass.getInstance().isNetworkAvailable()) {
             requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
@@ -100,11 +138,15 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.searchTv:
+                RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
+                shopType = radioButton.getText().toString();
+                GlobalClass.getInstance().storePreferenceScreenData(latitude, longitude, currencyId, languageId, shopType, country, city, address);
+                Intent intent = new Intent(ShopPreferencesActivity.this, NameYourShopActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.countryTv:
 //                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-//
 //                try {
 //                    startActivityForResult(builder.build(this), PLACE_PICKER_REQUEST);
 //                } catch (GooglePlayServicesRepairableException e) {
@@ -218,25 +260,22 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
         }
     }
 
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (requestCode == PLACE_PICKER_REQUEST) {
-//            if (resultCode == RESULT_OK) {
-//                Place place = PlacePicker.getPlace(data, this);
-//                latLng = place.getLatLng().latitude + "," + place.getLatLng().longitude;
-//                Geocoder gcd = new Geocoder(this, Locale.getDefault());
-//                List<Address> addresses = null;
-//                try {
-//                    addresses = gcd.getFromLocation(place.getLatLng().latitude, place.getLatLng().longitude, 1);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                if (addresses.size() > 0) {
-//                    String toastMsg = String.format("Place: %s", addresses.get(0).getLocality() + " - " + addresses.get(0).getCountryName() + " - " + addresses.get(0).getCountryCode());
-//                    Toast.makeText(this, "" + toastMsg, Toast.LENGTH_SHORT).show();
-//
-//                }
-//
-//            }
-//        }
-//    }
+    private void buildAlertMessageNoGps() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Your GPS seems to be disabled, do you want to enable it?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, final int id) {
+                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, final int id) {
+                        dialog.cancel();
+                    }
+                });
+        final AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 }

@@ -34,5 +34,6 @@
     <dimen name="linearLayouMargin">20dp</dimen>
     <dimen name="m14">14dp</dimen>
     <dimen name="textSize">15sp</dimen>
+    <dimen name="spinnerPadding">7dp</dimen>
 
 </resources>

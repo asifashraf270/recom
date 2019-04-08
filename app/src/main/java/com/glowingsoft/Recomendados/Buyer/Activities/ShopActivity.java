@@ -9,12 +9,16 @@ import android.view.View;
 import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.tommykw.tagview.DataTransform;
+import com.github.tommykw.tagview.TagView;
 import com.glowingsoft.Recomendados.Buyer.Adapter.HomeFragmentAdapter;
 import com.glowingsoft.Recomendados.Buyer.Models.HomeModelClass;
+import com.glowingsoft.Recomendados.Buyer.Models.TagsModel;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.WebReq.Urls;
@@ -23,6 +27,7 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,9 +49,10 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
     ProgressDialog progressDialog;
     RequestParams requestParams;
     RelativeLayout rootLayout;
-    //    TagContainerLayout tagContainerLayout;
-//    List<String> tags;
+    LinearLayout tagsLayout, materialLayout;
     ImageView chatIv;
+    TagView<TagsModel> tagsView, materialTags;
+    List<TagsModel> tagsviewModel, materialTagsModel;
 
 
     @Override
@@ -61,8 +67,13 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
         modelClasses = new ArrayList<>();
         backIv = findViewById(R.id.backIv);
         chatIv = findViewById(R.id.chatIv);
+        tagsView = findViewById(R.id.tagView);
+        materialTags = findViewById(R.id.materialsTag);
+        tagsviewModel = new ArrayList<>();
+        materialTagsModel = new ArrayList<>();
         chatIv.setOnClickListener(this);
-//        tagContainerLayout = findViewById(R.id.tags);
+        tagsLayout = findViewById(R.id.tagsLayout);
+        materialLayout = findViewById(R.id.materialLayout);
         profileIv = findViewById(R.id.profileIv);
         locationTv = findViewById(R.id.locationTv);
         progressDialog = new ProgressDialog(this);
@@ -110,13 +121,42 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
                     shoptTitleTv.setText("" + jsonObject.getString("name"));
                     Picasso.get().load(jsonObject.getString("image")).fit().placeholder(R.drawable.placeholderviewplager).into(profileIv);
                     JSONArray jsonArrayProducts = jsonObject.getJSONArray("products");
-//                    tags = new ArrayList<>();
-//                    JSONArray jsonArray = jsonObject.getJSONArray("tags");
-//                    for (int i = 0; i < jsonArray.length(); i++) {
-//                        JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-//                        tags.add("" + jsonObject1.getString("title"));
-//                    }
-//                    tagContainerLayout.setTags(tags);
+                    final JSONArray tagArray = jsonObject.getJSONArray("tags");
+                    if (tagArray.length() > 0) {
+                        for (int i = 0; i < tagArray.length(); i++) {
+                            TagsModel tagsModel = new TagsModel();
+                            tagsModel.setId("" + tagArray.getJSONObject(i).getString("id"));
+                            tagsModel.setTitle("" + tagArray.getJSONObject(i).getString("title"));
+                            tagsviewModel.add(tagsModel);
+                        }
+                        tagsView.setTags(tagsviewModel, new DataTransform<TagsModel>() {
+                            @NotNull
+                            @Override
+                            public String transfer(TagsModel tagsModel) {
+                                return tagsModel.getTitle();
+                            }
+                        });
+                    } else {
+                        tagsLayout.setVisibility(View.GONE);
+                    }
+                    JSONArray materialArray = jsonObject.getJSONArray("materials");
+                    if (materialArray.length() > 0) {
+                        for (int i = 0; i < materialArray.length(); i++) {
+                            TagsModel tagsModel = new TagsModel();
+                            tagsModel.setId("" + materialArray.getJSONObject(i).getString("id"));
+                            tagsModel.setTitle("" + materialArray.getJSONObject(i).getString("title"));
+                            materialTagsModel.add(tagsModel);
+                        }
+                        materialTags.setTags(materialTagsModel, new DataTransform<TagsModel>() {
+                            @NotNull
+                            @Override
+                            public String transfer(TagsModel tagsModel) {
+                                return tagsModel.getTitle();
+                            }
+                        });
+                    } else {
+                        materialLayout.setVisibility(View.GONE);
+                    }
 
                     for (int i = 0; i < jsonArrayProducts.length(); i++) {
                         HomeModelClass homeModelClass = new HomeModelClass();

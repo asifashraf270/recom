@@ -42,7 +42,7 @@ public class LanguageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.custom_adapter_spinner, parent, false);
         TextView textView = view.findViewById(R.id.valueTv);
-        textView.setText("" + languageModels.get(position));
+        textView.setText("" + languageModels.get(position).getTitle());
         return view;
     }
 }

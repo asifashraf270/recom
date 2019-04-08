@@ -62,7 +62,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:src="@drawable/facebookshare"
-
                 android:tint="@color/fbShare" />
 
             <ImageView

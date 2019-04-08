@@ -21,4 +21,13 @@ public class Urls {
      */
     public static String shopPreferences = "seller/shop/preferences";
     public static String ShopAvailible = "seller/shop/name";
+    public static String addTags = "add/tag";
+    public static String tagSearch = "seller/tag/search";
+    public static String addShop = "seller/add/shop";
+    public static String addProduct = "seller/add/product";
+    public static String sellerHome = "seller/home";
+    public static String deleteProduct = "seller/delete/shop/product";
+    public static String profileSeller = "seller/profile";
+    public static String updateProduct="seller/update/product";
+    public static String conversations="conversations";
 }

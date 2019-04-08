@@ -9,7 +9,6 @@
         android:id="@+id/valueTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/textPadding"
-        android:textStyle="bold" />
+        android:padding="@dimen/spinnerPadding" />
 
 </LinearLayout>

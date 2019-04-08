@@ -55,72 +55,93 @@
                 android:layout_margin="@dimen/shopPrefMargin"
                 android:orientation="vertical">
 
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/spinner_drawable"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/funnel" />
-
-                    <Spinner
-                        android:id="@+id/categorySp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"></Spinner>
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/countryTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/marginLinear"
-                    android:background="@drawable/spinner_drawable"
-                    android:drawableLeft="@drawable/country"
-                    android:drawablePadding="@dimen/marginLinear"
-                    android:hint="@string/country"
-                    android:paddingLeft="@dimen/marginLinear" />
+                    android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/langLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/marginLinear"
-                    android:background="@drawable/spinner_drawable"
-                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/textPadding"
+                        android:text="Country:" />
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/coin" />
-
-                    <Spinner
-                        android:id="@+id/currencySp"
+                    <TextView
+                        android:id="@+id/countryTv"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"></Spinner>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_drawable"
+                        android:drawableLeft="@drawable/country"
+                        android:drawablePadding="@dimen/marginLinear"
+                        android:hint="@string/country"
+                        android:paddingLeft="@dimen/marginLinear" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/marginLinear"
-                    android:background="@drawable/spinner_drawable"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/coin" />
+                    >
 
-                    <Spinner
-                        android:id="@+id/languageSp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/textPadding"
+                        android:text="Currency:" />
+
+                    <LinearLayout
+                        android:id="@+id/langLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"></Spinner>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_drawable"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/coin" />
+
+                        <Spinner
+                            android:id="@+id/currencySp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></Spinner>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginLinear"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/textPadding"
+                        android:text="Language:" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_drawable"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/coin" />
+
+                        <Spinner
+                            android:id="@+id/languageSp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></Spinner>
+                    </LinearLayout>
                 </LinearLayout>
 
 
@@ -134,29 +155,35 @@
                     android:text="@string/bestDescription"
                     android:textStyle="bold" />
 
-                <CheckBox
+                <RadioGroup
+                    android:id="@+id/shoptype"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/marginLinear"
-                    android:text="@string/checkboxFulltime" />
+                    android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/marginLinear"
-                    android:text="@string/checkboxparttimePartial" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginLinear"
+                        android:text="@string/checkboxFulltime" />
 
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/marginLinear"
-                    android:text="@string/checkboxpartTime" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginLinear"
+                        android:text="@string/checkboxparttimePartial" />
 
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/marginLinear"
-                    android:text="@string/checkboxOther" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginLinear"
+                        android:text="@string/checkboxpartTime" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginLinear"
+                        android:text="@string/checkboxOther" />
+                </RadioGroup>
 
                 <TextView
                     android:id="@+id/searchTv"

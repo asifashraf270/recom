@@ -1,12 +1,14 @@
 package com.glowingsoft.Recomendados.Seller.ActivitiesSeller;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.ParentClass;
@@ -28,6 +30,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
     ProgressDialog progressDialog;
     RelativeLayout rootLayout;
     RequestParams requestParams;
+    TextView continueTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +46,8 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading....");
         rootLayout = findViewById(R.id.rootLayout);
-
-
+        continueTv = findViewById(R.id.continueTv);
+        continueTv.setOnClickListener(this);
     }
 
     @Override
@@ -57,13 +60,22 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
                         requestParams = new RequestParams();
                         requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
                         requestParams.put("shop_name", shopName);
-                        WebReq.post(Urls.viewShop, requestParams, new ShopAvailibility());
+                        WebReq.post(Urls.ShopAvailible, requestParams, new ShopAvailibility());
                     } else {
                         GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
                     }
                 } else {
                     shopNameEt.setError("Shop Name is Compulsory");
                 }
+                break;
+            case R.id.continueTv:
+                if (GlobalClass.getInstance().returnshopName() != null) {
+                    Intent intent = new Intent(NameYourShopActivity.this, SectionActivity.class);
+                    startActivity(intent);
+                } else {
+                    GlobalClass.getInstance().SnackBar(rootLayout, "Enter Shop Name First than continue", -1, -1);
+                }
+
                 break;
 
         }
@@ -76,6 +88,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
             super.onSuccess(statusCode, headers, response);
             try {
                 if (response.getInt("status") == 200) {
+                    GlobalClass.getInstance().storeShopName(shopName);
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);

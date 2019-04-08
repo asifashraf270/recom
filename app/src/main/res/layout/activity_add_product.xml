@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.glowingsoft.Recomendados.Seller.ActivitiesSeller.AddProductActivity">
@@ -52,7 +53,8 @@
                 <ImageView
                     android:id="@+id/imageview"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
             </android.support.v7.widget.CardView>
 
             <LinearLayout
@@ -64,6 +66,7 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/titleEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/spinner_drawable"
@@ -87,11 +90,11 @@
                     <Spinner
                         android:id="@+id/categorySp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/category"></Spinner>
+                        android:layout_height="wrap_content"></Spinner>
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/priceEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/marginLinear"
@@ -101,6 +104,7 @@
                     android:hint="@string/prive" />
 
                 <EditText
+                    android:id="@+id/descEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/marginLinear"
@@ -110,6 +114,7 @@
                     android:minLines="5" />
 
                 <TextView
+                    android:id="@+id/submitTv"
                     android:layout_width="@dimen/loginWith"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -120,23 +125,9 @@
                     android:text="@string/submit"
                     android:textColor="@color/colorWhite" />
 
-                <TextView
-                    style="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/textPadding"
-                    android:text=" Add More:"
-                    android:textStyle="bold" />
+
             </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout"
-                android:layout_marginTop="@dimen/textPadding"
-                android:layout_marginBottom="@dimen/marginLinear"
-                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
 
         </RelativeLayout>
     </ScrollView>

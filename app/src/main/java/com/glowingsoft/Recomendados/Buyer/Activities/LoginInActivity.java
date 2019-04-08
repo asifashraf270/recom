@@ -246,9 +246,9 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
 //                        intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
 //                        GlobalClass.getInstance().storeUserType("2");
 //                    }
-                    intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
+                    intent = new Intent(LoginInActivity.this, ShopPreferencesActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    GlobalClass.getInstance().storeUserType("2");
+                    GlobalClass.getInstance().storeUserType("1");
                     startActivity(intent);
 
                 } else {

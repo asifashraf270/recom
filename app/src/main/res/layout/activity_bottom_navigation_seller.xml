@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.glowingsoft.Recomendados.Seller.ActivitiesSeller.BottomNavigationSellerActivity">
@@ -9,13 +10,17 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_above="@id/navigationSeller"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigationSeller"></FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationSeller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:defaultFocusHighlightEnabled="true"
+        app:itemIconTint="@color/fbShare"
+        app:itemTextColor="@color/fbShare"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/seller_navigation"></android.support.design.widget.BottomNavigationView>
 </RelativeLayout>

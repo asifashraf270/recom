@@ -93,19 +93,72 @@
             android:src="@drawable/chat" />
     </RelativeLayout>
 
-    <!--<co.lujun.androidtagview.TagContainerLayout-->
-    <!--android:id="@+id/tags"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_below="@id/headerLayout"-->
-    <!--app:horizontal_interval="10dp"-->
-    <!--app:tag_clickable="true"-->
-    <!--app:vertical_interval="10dp"></co.lujun.androidtagview.TagContainerLayout>-->
+    <LinearLayout
+        android:id="@+id/tagsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_margin="@dimen/textPadding"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/textPadding"
+            android:text="Tags:"
+            android:textStyle="bold" />
+
+        <com.github.tommykw.tagview.TagView
+            android:id="@+id/tagView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:background_color="@color/white"
+            app:corner_radius="2dp"
+            app:horizontal_spacing="4dp"
+            app:sort_type="asc"
+            app:stroke_color="@color/gray"
+            app:stroke_width="1dp"
+            app:text_color="#000000"
+            app:text_font_size="6sp"
+            app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/materialLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tagsLayout"
+        android:layout_margin="@dimen/textPadding"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/textPadding"
+            android:text="Material:"
+            android:textStyle="bold" />
+
+        <com.github.tommykw.tagview.TagView
+            android:id="@+id/materialsTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:background_color="@color/white"
+            app:corner_radius="2dp"
+            app:horizontal_spacing="4dp"
+            app:sort_type="asc"
+            app:stroke_color="@color/gray"
+            app:stroke_width="1dp"
+            app:text_color="#000000"
+            app:text_font_size="6sp"
+            app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/headerLayout"
+
+        android:layout_below="@id/materialLayout"
         android:layout_margin="@dimen/textPadding">
 
         <android.support.v4.widget.SwipeRefreshLayout
