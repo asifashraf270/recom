@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="actionBarSize">56dp</dimen>
+
     <dimen name="logoWidth">120dp</dimen>
     <dimen name="logoHeigh">120dp</dimen>
     <dimen name="bottomMarginSplash">50dp</dimen>

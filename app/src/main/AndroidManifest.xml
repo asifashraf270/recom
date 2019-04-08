@@ -45,6 +45,8 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+        <activity android:name=".Seller.Chat.UserChatMessages" />
+        <activity android:name=".Seller.ActivitiesSeller.MyshopActivity" />
         <activity android:name=".Seller.ActivitiesSeller.AddProductActivity" />
         <activity android:name=".Seller.ActivitiesSeller.BottomNavigationSellerActivity" />
         <activity android:name=".Seller.ActivitiesSeller.SectionActivity" />

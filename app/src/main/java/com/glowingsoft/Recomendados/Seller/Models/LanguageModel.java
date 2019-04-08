@@ -1,6 +1,8 @@
 package com.glowingsoft.Recomendados.Seller.Models;
 
-public class LanguageModel {
+import java.io.Serializable;
+
+public class LanguageModel implements Serializable {
     String id, title;
 
     public String getId() {

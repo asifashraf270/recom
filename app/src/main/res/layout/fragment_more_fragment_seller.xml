@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.glowingsoft.Recomendados.Seller.FragmentSeller.MoreFragmentSeller">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="More"
+                android:textColor="@color/colorBlack" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/marginLinear">
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout"
+            android:padding="5dp"
+            android:text="Share"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/googleIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/google"
+                android:tint="@color/googleShare" />
+
+            <ImageView
+                android:id="@+id/facebookIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/facebookshare"
+                android:tint="@color/fbShare" />
+
+            <ImageView
+                android:id="@+id/instaIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/instagram_share"
+                android:tint="@color/instaShare" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="@dimen/loginWith"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/marginLinear"
+            android:background="@drawable/viewshop_view"
+            android:gravity="center"
+            android:padding="@dimen/marginLinear"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/myshopTv"
+            android:layout_width="@dimen/loginWith"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTv"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/marginLinear"
+            android:background="@drawable/viewshop_view"
+            android:gravity="center"
+            android:padding="@dimen/marginLinear"
+            android:text="My Shop"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

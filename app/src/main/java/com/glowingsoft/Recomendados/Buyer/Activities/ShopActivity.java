@@ -1,6 +1,8 @@
 package com.glowingsoft.Recomendados.Buyer.Activities;
 
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 import com.github.tommykw.tagview.DataTransform;
 import com.github.tommykw.tagview.TagView;
 import com.glowingsoft.Recomendados.Buyer.Adapter.HomeFragmentAdapter;
+import com.glowingsoft.Recomendados.Buyer.ChatFragment;
 import com.glowingsoft.Recomendados.Buyer.Models.HomeModelClass;
 import com.glowingsoft.Recomendados.Buyer.Models.TagsModel;
 import com.glowingsoft.Recomendados.GlobalClass;
@@ -104,7 +107,9 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
                 break;
             case R.id.chatIv:
-                Toast.makeText(this, "Development in Progress", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ShopActivity.this, BottomNavigationActivity.class);
+                intent.putExtra("type", 1);
+                startActivity(intent);
                 break;
         }
     }

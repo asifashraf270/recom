@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.ParentClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.ShopPreferencesActivity;
 import com.glowingsoft.Recomendados.WebReq.Urls;
 import com.glowingsoft.Recomendados.WebReq.WebReq;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -136,10 +137,18 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                     String title = response.getString("title");
                     GlobalClass.getInstance().storeTitle(title);
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
-                    intent = new Intent(SignUpActivity.this, BottomNavigationActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    GlobalClass.getInstance().storeUserType("2");
-                    startActivity(intent);
+                    GlobalClass.getInstance().storeTitle(title);
+                    if (title.equals("Become a SELLER")) {
+                        intent = new Intent(SignUpActivity.this, ShopPreferencesActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        GlobalClass.getInstance().storeUserType("1");
+                        startActivity(intent);
+                    } else {
+                        intent = new Intent(SignUpActivity.this, BottomNavigationActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        GlobalClass.getInstance().storeUserType("2");
+                        startActivity(intent);
+                    }
                     finish();
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);

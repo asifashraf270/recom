@@ -10,9 +10,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -46,6 +50,7 @@ public class SellerHomePageFragment extends Fragment implements View.OnClickList
     SellerHomePageAdapter adapter;
     RelativeLayout rootLayout;
     ProgressDialog progressDialog;
+    ImageView addProduct;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,6 +64,14 @@ public class SellerHomePageFragment extends Fragment implements View.OnClickList
     private void viewBinding(View view) {
         toolbar = view.findViewById(R.id.toolbar);
         gridView = view.findViewById(R.id.gridView);
+        addProduct = view.findViewById(R.id.addProductTv);
+        addProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().replace(R.id.container, new HomeSellerFragment()).addToBackStack(null).commit();
+            }
+        });
+        setHasOptionsMenu(true);
         swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -156,7 +169,8 @@ public class SellerHomePageFragment extends Fragment implements View.OnClickList
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == 101) {
-            Toast.makeText(getActivity(), "Check", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }

@@ -40,6 +40,8 @@ dependencies {
 //    implementation 'com.google.android.gms:play-services:9.2.0'
     implementation 'gun0912.ted:tedpermission:2.2.2'
     implementation 'com.github.tommykw:TagView:0.0.1'
+    implementation "com.splitwise:tokenautocomplete:3.0.1@aar"
+
 
 
 }

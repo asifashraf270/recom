@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.github.tommykw.tagview.TagView;
 import com.glowingsoft.Recomendados.Buyer.Models.TagsModel;
+import com.glowingsoft.Recomendados.ContactsCompletionView;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.ParentClass;
 import com.glowingsoft.Recomendados.R;
@@ -54,16 +56,17 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
     EditText materialEt;
     TextView addTvTags, addTvMaterial, saveandContinueTv;
     RelativeLayout rootLayout;
-    TagView<TagsModel> tagsView;
     List<LanguageModel> tagsListModels;
-    AutoCompleteTextView tagsautoCompleteTv;
-    AutoCompleteTextAdapter adapter;
     ImageView shopImage;
     int SELECT_PICTURE = 1;
     ProgressDialog progressDialog;
     byte[] inputData = null;
     String tagId, materialId;
     String imagePath = null;
+    ImageView backIv;
+    ContactsCompletionView completionView;
+    List<LanguageModel> tagsModel;
+    ArrayAdapter<LanguageModel> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,53 +78,59 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
     private void viewBinding() {
         tagId = "9,10";
         materialId = "11,13";
+        backIv = findViewById(R.id.backIv);
+        backIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        tagsListModels = new ArrayList<>();
+        LanguageModel languageModel = new LanguageModel();
+        languageModel.setTitle("Hello world");
+        tagsListModels.add(languageModel);
+        tagsListModels.add(languageModel);
+        tagsListModels.add(languageModel);
+        tagsListModels.add(languageModel);
+        tagsListModels.add(languageModel);
+        adapter = new ArrayAdapter<LanguageModel>(this, android.R.layout.simple_list_item_1, tagsListModels);
+        completionView = findViewById(R.id.searchView);
+        completionView.setAdapter(adapter);
         shopImage = findViewById(R.id.shopImage);
         materialEt = findViewById(R.id.materialEt);
         addTvTags = findViewById(R.id.tagAddTv);
         addTvMaterial = findViewById(R.id.materialAddTv);
         saveandContinueTv = findViewById(R.id.saveAndcontinueTv);
         addTvTags.setOnClickListener(this);
-        tagsListModels = new ArrayList<>();
+//        completionView.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                if (GlobalClass.getInstance().isNetworkAvailable()) {
+//                    WebReq.client.cancelAllRequests(true);
+//                    RequestParams requestParams = new RequestParams();
+//                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
+//                    requestParams.put("title", s);
+//                    WebReq.post(Urls.tagSearch, requestParams, new TagSearch());
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
         rootLayout = findViewById(R.id.rootLayout);
         saveandContinueTv.setOnClickListener(this);
         addTvMaterial.setOnClickListener(this);
-        tagsautoCompleteTv = findViewById(R.id.tagsSearch);
-        tagsView = findViewById(R.id.tags);
-        tagsautoCompleteTv.setThreshold(0);
 //        tagsListModels = retriveData();
         shopImage.setOnClickListener(this);
         progressDialog = new ProgressDialog(SectionActivity.this);
         progressDialog.setMessage("Loading...");
-
-        tagsautoCompleteTv.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-
-                if (GlobalClass.getInstance().isNetworkAvailable()) {
-                    tagsListModels.clear();
-                    RequestParams requestParams = new RequestParams();
-                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
-                    requestParams.put("title", s);
-                    WebReq.client.cancelAllRequests(true);
-                    WebReq.post(Urls.tagSearch, requestParams, new TagSearch());
-
-                } else {
-                    GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
 
     }
@@ -134,7 +143,7 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
             case R.id.materialAddTv:
                 break;
             case R.id.saveAndcontinueTv:
-                if (tagId != null && materialId != null) {
+                if (tagId != null && materialId != null && imagePath != null) {
                     if (GlobalClass.getInstance().isNetworkAvailable()) {
                         RequestParams requestParams = new RequestParams();
                         requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
@@ -193,6 +202,7 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
         @Override
         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
             super.onSuccess(statusCode, headers, response);
+            Log.d("response", response.toString());
             try {
                 if (response.getInt("status") == 200) {
                     JSONArray tagsArray = response.getJSONArray("result");
@@ -203,12 +213,8 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
                         tagsModel.setTitle("" + jsonObject.getString("title"));
                         tagsListModels.add(tagsModel);
                     }
-                    Log.d("response", tagsListModels.size() + " size");
-
-                    adapter = new AutoCompleteTextAdapter(SectionActivity.this, R.layout.activity_section, retriveData());
-                    tagsautoCompleteTv.setAdapter(adapter);
-
-
+                    Log.d("size", tagsListModels.size() + "");
+                    adapter.notifyDataSetChanged();
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
                 }

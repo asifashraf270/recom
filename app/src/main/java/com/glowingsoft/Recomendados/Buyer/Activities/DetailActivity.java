@@ -148,7 +148,9 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.chatIv:
-                Toast.makeText(this, "Development in Progress", Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(DetailActivity.this, BottomNavigationActivity.class);
+                intent1.putExtra("type", 1);
+                startActivity(intent1);
                 break;
             case R.id.phoneIv:
                 TedPermission.with(this)
@@ -204,6 +206,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                                 }
                             });
                     JSONObject jsonObjectShop = response.getJSONObject("shop");
+                    String conversitional_id = jsonObjectShop.getString("conversation_id");
+                    if (conversitional_id.equals("0")) {
+                        chatIV.setVisibility(View.INVISIBLE);
+                    }
                     locationTv.setText("" + jsonObjectShop.getJSONObject("location").getString("address"));
                     ownerPhoneNumber = jsonObjectShop.getJSONObject("owner").getString("phone");
                     nameTv.setText("" + jsonObjectShop.getString("name"));

@@ -9,12 +9,6 @@
         android:layout_height="70dp"
         android:background="@drawable/gradient">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/cancel"
-            android:tint="@color/colorWhite" />
 
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Medium"

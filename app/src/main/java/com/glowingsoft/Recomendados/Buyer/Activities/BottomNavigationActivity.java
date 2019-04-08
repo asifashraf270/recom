@@ -1,5 +1,6 @@
 package com.glowingsoft.Recomendados.Buyer.Activities;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.glowingsoft.Recomendados.Buyer.ChatFragment;
 import com.glowingsoft.Recomendados.Buyer.Fragments.FavouriteFragment;
@@ -34,7 +36,16 @@ public class BottomNavigationActivity extends ParentClass implements BottomNavig
         frameLayout = findViewById(R.id.container);
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-        loadFragment(new HomeFragment(), R.id.container);
+        try {
+            if (getIntent().getExtras().getInt("type") == 1) {
+                loadFragment(new ChatFragment(), R.id.container);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            loadFragment(new HomeFragment(), R.id.container);
+
+        }
 
 
     }

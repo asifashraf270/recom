@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.ShopPreferencesActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -51,7 +52,9 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
                 share();
                 break;
             case R.id.titleTv:
-                Toast.makeText(getActivity(), "Development in Progress", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), ShopPreferencesActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                getActivity().startActivity(intent);
         }
     }
 

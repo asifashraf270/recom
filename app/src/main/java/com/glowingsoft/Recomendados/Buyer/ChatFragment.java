@@ -1,36 +1,47 @@
 package com.glowingsoft.Recomendados.Buyer;
 
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.glowingsoft.Recomendados.Buyer.Adapter.ChatFragmentAdapter;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
-import com.glowingsoft.Recomendados.Seller.Models.ConversionModel;
+import com.glowingsoft.Recomendados.Seller.Chat.ChatUsersAdapter;
+import com.glowingsoft.Recomendados.Seller.Chat.UserChatModel;
+import com.glowingsoft.Recomendados.WebReq.Urls;
+import com.glowingsoft.Recomendados.WebReq.WebReq;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
 public class ChatFragment extends Fragment {
-    ListView listView;
-    ChatFragmentAdapter adapter;
-    List<ConversionModel> conversionModels;
-    ProgressDialog progressDialog;
-    RelativeLayout rootLayout;
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private ListView listView;
+    private RelativeLayout rootLayout;
+    private ArrayList<UserChatModel> mUsersData;
+    private ChatUsersAdapter chatUsersAdapter;
+    private UserChatModel userchatmodel;
+    private Runnable runnableCode;
+    private Handler handler = new Handler();
+
+
+    String conversation_id, user_id, friend_id, user_name, friend_name, last_message, last_message_time, friend_photo, unread;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,12 +53,52 @@ public class ChatFragment extends Fragment {
     }
 
     private void viewBinding(View view) {
-        listView = view.findViewById(R.id.listView);
-        progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading....");
+        swipeRefreshLayout = view.findViewById(R.id.refresh);
+        listView = view.findViewById(R.id.chatUsersList);
         rootLayout = view.findViewById(R.id.rootLayout);
-        adapter = new ChatFragmentAdapter(getContext());
-        listView.setAdapter(adapter);
+        mUsersData = new ArrayList<>();
+        chatUsersAdapter = new ChatUsersAdapter(getActivity(), mUsersData);
+        listView.setAdapter(chatUsersAdapter);
+        runConversationTHread();
+    }
+
+    private void runConversationTHread() {
+        runnableCode = new Runnable() {
+            @Override
+            public void run() {
+                // Do something here on the main thread
+                Log.d("Handlers", "Called on main In conversaation Activity");
+
+                if (GlobalClass.getInstance().isNetworkAvailable()) {
+                    OnlineUsersRequest();
+                } else {
+                    GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
+                }
+
+
+                handler.postDelayed(runnableCode, 5000);
+            }
+        };
+
+        handler.post(runnableCode);
+
+    }
+
+
+    protected void OnlineUsersRequest() {
+
+
+        RequestParams mParams = new RequestParams();
+        mParams.put("user_id", GlobalClass.getInstance().returnUserId());
+
+        // WebReq.client.addHeader("accessToken", accessToken);
+        WebReq.post(Urls.conversations, mParams, new ConversionRestApi());
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        handler.removeCallbacks(runnableCode);
 
     }
 
@@ -55,21 +106,41 @@ public class ChatFragment extends Fragment {
         @Override
         public void onStart() {
             super.onStart();
-            progressDialog.show();
+            mUsersData.clear();
         }
-
 
         @Override
         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
             super.onSuccess(statusCode, headers, response);
             try {
                 if (response.getInt("status") == 200) {
-                    JSONArray jsonArrayconversations = response.getJSONArray("conversations");
-                    for (int i = 0; i < jsonArrayconversations.length(); i++) {
-                        ConversionModel conversionModel = new ConversionModel();
-                        JSONObject jsonObject = jsonArrayconversations.getJSONObject(i);
-                        conversionModel.setConversionId("" + jsonObject.getString(""));
+                    JSONArray jsonArray = response.getJSONArray("conversations");
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject object = jsonArray.getJSONObject(i);
+                        conversation_id = object.getString("conversation_id");
+                        user_id = object.getString("user_id");
+                        friend_id = object.getString("friend_id");
+                        user_name = object.getString("user_name");
+                        friend_name = object.getString("friend_name");
+                        last_message = object.getString("last_message");
+                        last_message_time = object.getString("last_message_time");
+                        friend_photo = object.getString("friend_photo");
+                        unread = object.getString("unread");
+                        userchatmodel = new UserChatModel();
+                        userchatmodel.setConversation_id(conversation_id);
+                        userchatmodel.setUser_id(user_id);
+                        userchatmodel.setFriend_id(friend_id);
+                        userchatmodel.setUser_name(user_name);
+                        userchatmodel.setFriend_name(friend_name);
+                        userchatmodel.setLast_message(last_message);
+                        userchatmodel.setLast_message_time(last_message_time);
+                        userchatmodel.setFriend_photo(friend_photo);
+                        userchatmodel.setUnread(unread);
+                        mUsersData.add(userchatmodel);
+
                     }
+                    chatUsersAdapter.notifyDataSetChanged();
+
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, "" + response.getString("message"), -1, -1);
                 }
@@ -81,14 +152,12 @@ public class ChatFragment extends Fragment {
         @Override
         public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
             super.onFailure(statusCode, headers, responseString, throwable);
-            progressDialog.dismiss();
             GlobalClass.getInstance().SnackBar(rootLayout, "" + responseString, -1, -1);
         }
 
         @Override
         public void onFinish() {
             super.onFinish();
-            progressDialog.dismiss();
         }
     }
 

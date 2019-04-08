@@ -30,6 +30,7 @@ import android.widget.Toast;
 import com.glowingsoft.Recomendados.Buyer.Models.ShopPreferneceModel;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.BottomNavigationSellerActivity;
 import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.NameYourShopActivity;
 import com.glowingsoft.Recomendados.Seller.Adapters.CurrencyAdapter;
 import com.glowingsoft.Recomendados.Seller.Adapters.LanguageAdapter;
@@ -73,7 +74,13 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_preferences);
-        viewBinding();
+        if (GlobalClass.getInstance().returnShopId() != null) {
+            Intent intent = new Intent(ShopPreferencesActivity.this, BottomNavigationSellerActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            viewBinding();
+        }
     }
 
     private void viewBinding() {

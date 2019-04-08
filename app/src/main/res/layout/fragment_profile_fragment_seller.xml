@@ -37,7 +37,8 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/textPadding"
                 android:src="@drawable/edit"
-                android:tint="@color/colorBlack" />
+                android:tint="@color/colorBlack"
+                android:visibility="invisible" />
 
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>

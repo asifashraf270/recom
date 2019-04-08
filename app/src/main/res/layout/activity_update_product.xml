@@ -18,9 +18,12 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/backIv"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
                 android:src="@drawable/back"
                 android:tint="@color/colorBlack" />
 

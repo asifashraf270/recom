@@ -28,6 +28,9 @@ public class Urls {
     public static String sellerHome = "seller/home";
     public static String deleteProduct = "seller/delete/shop/product";
     public static String profileSeller = "seller/profile";
-    public static String updateProduct="seller/update/product";
-    public static String conversations="conversations";
+    public static String updateProduct = "seller/update/product";
+    public static String conversations = "conversations";
+    public static String chat = "chat";
+    public static String sendMessage = "send/message";
+    public static String myshop="seller/shop";
 }

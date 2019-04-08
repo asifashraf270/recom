@@ -15,6 +15,7 @@
     <string name="socialLogin">LOGIN WITH SOCIAL</string>
     <string name="signUp">Don\'t have account? <u>SIGNUP</u></string>
     <string name="welcomeText">PLEASE CHOOSE YOUR PREFERRED\nACTION.WOULD YOU LIKE TO SELL\nYOUR GOODS OR BECOME A BUYER ?</string>
+    <string name="type_message">Type your message</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

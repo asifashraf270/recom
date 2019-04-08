@@ -32,14 +32,6 @@
                 android:layout_centerVertical="true"
                 android:text="Shop" />
 
-            <ImageView
-                android:id="@+id/coinIv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_margin="@dimen/textPadding"
-                android:src="@drawable/coin" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
@@ -74,7 +66,6 @@
 
         <TextView
             android:id="@+id/locationTv"
-            style="@style/Base.TextAppearance.AppCompat.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -118,7 +109,7 @@
             app:sort_type="asc"
             app:stroke_color="@color/gray"
             app:stroke_width="1dp"
-            app:text_color="#000000"
+            app:text_color="@color/white"
             app:text_font_size="6sp"
             app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
     </LinearLayout>

@@ -15,6 +15,7 @@ import com.glowingsoft.Recomendados.Buyer.ChatFragment;
 import com.glowingsoft.Recomendados.Buyer.Fragments.MoreFragment;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.FragmentSeller.MoreFragmentSeller;
 import com.glowingsoft.Recomendados.Seller.FragmentSeller.ProfileFragmentSeller;
 import com.glowingsoft.Recomendados.Seller.FragmentSeller.SellerHomePageFragment;
 import com.glowingsoft.Recomendados.Seller.FragmentSeller.SubscriptionFragment;
@@ -48,15 +49,23 @@ public class BottomNavigationSellerActivity extends AppCompatActivity implements
         bottomNavigationView = findViewById(R.id.navigationSeller);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
-        if (GlobalClass.getInstance().isNetworkAvailable()) {
-            RequestParams requestParams = new RequestParams();
-            requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
-            requestParams.put("shop_id", GlobalClass.getInstance().returnShopId());
-            WebReq.post(Urls.sellerHome, requestParams, new SellerHomeRestApi());
+        try {
+            if (getIntent().getExtras().getInt("type") == 1) {
+                loadFragment(new ChatFragment(), R.id.container);
+            }
 
-        } else {
-            GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
+        } catch (Exception e) {
+            if (GlobalClass.getInstance().isNetworkAvailable()) {
+                RequestParams requestParams = new RequestParams();
+                requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
+                requestParams.put("shop_id", GlobalClass.getInstance().returnShopId());
+                WebReq.post(Urls.sellerHome, requestParams, new SellerHomeRestApi());
+
+            } else {
+                GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
+            }
         }
+
 
     }
 
@@ -89,7 +98,7 @@ public class BottomNavigationSellerActivity extends AppCompatActivity implements
                 loadFragment(new ProfileFragmentSeller(), R.id.container);
                 return true;
             case R.id.sellerMore:
-                loadFragment(new MoreFragment(), R.id.container);
+                loadFragment(new MoreFragmentSeller(), R.id.container);
                 return true;
         }
         return false;

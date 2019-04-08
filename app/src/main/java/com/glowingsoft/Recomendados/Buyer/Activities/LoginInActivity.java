@@ -226,7 +226,6 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         @Override
         public void onStart() {
             super.onStart();
-            progressDialog.show();
         }
 
         @Override
@@ -239,17 +238,17 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
                     GlobalClass.getInstance().StoreUserId(jsonObject.getString("id"));
                     String title = response.getString("title");
                     GlobalClass.getInstance().storeTitle(title);
-//                    if (title.equals("Become a SELLER")) {
-//                        intent = new Intent(LoginInActivity.this, ShopPreferencesActivity.class);
-//                        GlobalClass.getInstance().storeUserType("1");
-//                    } else {
-//                        intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
-//                        GlobalClass.getInstance().storeUserType("2");
-//                    }
-                    intent = new Intent(LoginInActivity.this, ShopPreferencesActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    GlobalClass.getInstance().storeUserType("1");
-                    startActivity(intent);
+                    if (title.equals("Become a SELLER")) {
+                        intent = new Intent(LoginInActivity.this, ShopPreferencesActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        GlobalClass.getInstance().storeUserType("1");
+                        startActivity(intent);
+                    } else {
+                        intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        GlobalClass.getInstance().storeUserType("2");
+                        startActivity(intent);
+                    }
 
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
@@ -282,7 +281,6 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
-            progressDialog.dismiss();
 
         }
     }

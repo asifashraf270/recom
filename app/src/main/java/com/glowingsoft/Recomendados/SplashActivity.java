@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.facebook.stetho.Stetho;
+import com.glowingsoft.Recomendados.Buyer.Activities.BottomNavigationActivity;
 import com.glowingsoft.Recomendados.Buyer.Activities.LoginInActivity;
 import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.BottomNavigationSellerActivity;
 import com.glowingsoft.Recomendados.Seller.ShopPreferencesActivity;
@@ -26,14 +27,15 @@ public class SplashActivity extends ParentClass {
                     Thread.sleep(3000);
                     if (GlobalClass.getInstance().returnUserId() != null) {
 
-                        if (GlobalClass.getInstance().returnShopId().length() > 0) {
-                            intent = new Intent(SplashActivity.this, BottomNavigationSellerActivity.class);
-                            startActivity(intent);
-                        } else {
-                            intent = new Intent(SplashActivity.this, ShopPreferencesActivity.class);
-                            startActivity(intent);
-                        }
-
+//                        if (GlobalClass.getInstance().returnShopId().length() > 0) {
+//                            intent = new Intent(SplashActivity.this, BottomNavigationSellerActivity.class);
+//                            startActivity(intent);
+//                        } else {
+//                            intent = new Intent(SplashActivity.this, ShopPreferencesActivity.class);
+//                            startActivity(intent);
+//                        }
+                        intent = new Intent(SplashActivity.this, BottomNavigationActivity.class);
+                        startActivity(intent);
                     } else {
                         intent = new Intent(SplashActivity.this, LoginInActivity.class);
                         startActivity(intent);

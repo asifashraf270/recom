@@ -53,6 +53,7 @@ public class UpdateProductActivity extends ParentClass implements View.OnClickLi
     RelativeLayout rootLayout;
     String categoryId, title, price, description;
     String imagePath = null;
+    ImageView backIv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,14 @@ public class UpdateProductActivity extends ParentClass implements View.OnClickLi
         titleEt = findViewById(R.id.titleEt);
         priceEt = findViewById(R.id.priceEt);
         descEt = findViewById(R.id.descEt);
+        backIv = findViewById(R.id.backIv);
+        backIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         categoryEt = findViewById(R.id.categorySp);
         rootLayout = findViewById(R.id.rootLayout);
         submitTv = findViewById(R.id.submitTv);

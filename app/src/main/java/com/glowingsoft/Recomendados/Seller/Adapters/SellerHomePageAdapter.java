@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -67,8 +68,8 @@ public class SellerHomePageAdapter extends BaseAdapter {
         priveTv.setText("" + homeModelClasses.get(position).getPrice());
         nameTv.setText("" + homeModelClasses.get(position).getTitle());
         descriptionTv.setText("" + homeModelClasses.get(position).getDescription());
-        TextView editBtn = view.findViewById(R.id.editBtn);
-        TextView deleteBtn = view.findViewById(R.id.deleteBtn);
+        ImageButton editBtn = view.findViewById(R.id.editBtn);
+        ImageButton deleteBtn = view.findViewById(R.id.deleteBtn);
         Picasso.get().load(homeModelClasses.get(position).getImage()).fit().placeholder(R.drawable.placeholderviewplager).into(imageView);
 
         view.setOnClickListener(new View.OnClickListener() {

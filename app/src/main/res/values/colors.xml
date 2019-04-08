@@ -17,5 +17,7 @@
     <color name="instaShare">#FE0EEB</color>
     <color name="cancelBtnColor">#228801</color>
     <color name="deleteBtnColor">#C8000D</color>
+    <color name="sub_text">#9b9b9b</color>
+
 
 </resources>

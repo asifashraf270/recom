@@ -9,12 +9,6 @@
         android:layout_height="70dp"
         android:background="@drawable/gradient">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/cancel"
-            android:tint="@color/colorWhite" />
 
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Medium"
@@ -63,7 +57,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="@dimen/textPadding"
                 android:layout_marginTop="@dimen/marginLinear"
-                android:background="@drawable/delete_button_view"
+                android:background="@drawable/delete_button_icon"
                 android:text="DELETE"
                 android:textColor="@color/colorWhite" />
         </RelativeLayout>

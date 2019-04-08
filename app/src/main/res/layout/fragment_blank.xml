@@ -75,7 +75,6 @@
 
         <TextView
             android:id="@+id/titleTv"
-            style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_width="@dimen/loginWith"
             android:layout_height="wrap_content"
             android:layout_below="@id/layout"
@@ -84,10 +83,8 @@
             android:layout_marginTop="@dimen/marginLinear"
             android:background="@drawable/viewshop_view"
             android:gravity="center"
-            android:padding="@dimen/textPadding"
-            android:textColor="@color/colorWhite"
-            android:textStyle="bold"
-            android:visibility="invisible" />
+            android:padding="@dimen/marginLinear"
+            android:textColor="@color/colorWhite" />
     </RelativeLayout>
 
 </RelativeLayout>
