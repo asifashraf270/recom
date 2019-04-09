@@ -50,10 +50,11 @@ public class UserChatMessages extends AppCompatActivity {
     ProgressDialog progressDialog;
     protected ImageView chat_back;
     TextView messagesBatch;
-    int batchValue = 0;
+    int batchValue;
     Handler h;
     int delay = 5000; //5 seconds
     Runnable runnable;
+    TextView name_toolbar_title;
 
 
     @Override
@@ -61,7 +62,14 @@ public class UserChatMessages extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_user_chat_messages);
+        batchValue = GlobalClass.getInstance().returnCount();
         viewBinding();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        GlobalClass.getInstance().storeBadgeValue(0);
     }
 
     @Override
@@ -84,6 +92,7 @@ public class UserChatMessages extends AppCompatActivity {
         sendMessageButton = (ImageView) findViewById(R.id.sendMessageBtn);
         userMessagesData = new ArrayList<>();
         messagesBatch = (TextView) findViewById(R.id.messagesBatch);
+        name_toolbar_title = findViewById(R.id.name_toolbar_title);
 
         user_id = getIntent().getExtras().getString("user_id");
         conversionalId = getIntent().getExtras().getString("conversation_id");
@@ -105,7 +114,6 @@ public class UserChatMessages extends AppCompatActivity {
 
         if (GlobalClass.getInstance().isNetworkAvailable()) {
             fetchChatMessages(1);
-
         } else {
             GlobalClass.getInstance().SnackBar(rootlayout, getResources().getString(R.string.networkConnection), -1, -1);
         }
@@ -149,18 +157,19 @@ public class UserChatMessages extends AppCompatActivity {
 
     private void updateNewMessagesBatch() {
         try {
-
-            if (batchValue == 0) {
-                messagesBatch.setVisibility(View.GONE);
-            } else {
-
-                if (batchValue > 9) {
-                    messagesBatch.setVisibility(View.VISIBLE);
-                    messagesBatch.setText("9+");
+            batchValue = GlobalClass.getInstance().returnCount();
+            if (batchValue != -1) {
+                if (batchValue == 0) {
+                    messagesBatch.setVisibility(View.GONE);
                 } else {
-                    messagesBatch.setVisibility(View.VISIBLE);
-                    messagesBatch.setText(batchValue + "");
+                    if (batchValue > 9) {
+                        messagesBatch.setVisibility(View.VISIBLE);
+                        messagesBatch.setText("9+");
+                    } else {
+                        messagesBatch.setVisibility(View.VISIBLE);
+                        messagesBatch.setText(batchValue + "");
 
+                    }
                 }
 
 
@@ -359,64 +368,70 @@ public class UserChatMessages extends AppCompatActivity {
     }
 
 
-    public class UserChatMessage extends JsonHttpResponseHandler {
-        @Override
-        public void onStart() {
-            super.onStart();
-            progressDialog.show();
-        }
+//    public class UserChatMessage extends JsonHttpResponseHandler {
+//        @Override
+//        public void onStart() {
+//            super.onStart();
+//            progressDialog.show();
+//        }
+//
+//        @Override
+//        public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+//            super.onSuccess(statusCode, headers, response);
+//            try {
+//                Log.d("response", response.toString());
+//                if (response.getInt("status") == 200) {
+//                    JSONArray jsonArray = response.getJSONArray("chat");
+//                    for (int i = 0; i < jsonArray.length(); i++) {
+//                        JSONObject eachMessage = jsonArray.getJSONObject(i);
+//                        Log.d("response_each_messages", eachMessage.toString() + "");
+//                        usersModel = new Users();
+//                        usersModel.setBody(eachMessage.getString("message"));
+//                        usersModel.setConversation_id(eachMessage.getString("conversation_id"));
+//                        usersModel.setName(eachMessage.getString("sender_name"));
+//                        // usersModel.setRead(eachMessage.getString("read"));
+////                                 usersModel.setMessage_id(eachMessage.getString("message_id"));
+//                        //  usersModel.setUser_id(eachMessage.getString("user_id"));
+//                        usersModel.setAvatar(eachMessage.getString("sender_photo"));
+//                        usersModel.setDate(eachMessage.getString("datetime"));
+//                        usersModel.setTick(true);
+////                                if (usersModel.getUser_id().equals(pref.getString("userID", ""))) {
+////                                    usersModel.setMe(true);
+////                                }
+//                        String isSender = eachMessage.getString("is_sender");
+//                        if (isSender.equalsIgnoreCase("1")) {
+//                            usersModel.setMe(true);
+//                        }
+//
+//                        userMessagesData.add(usersModel);
+//                    }
+//                    chatUsersMessagesAdapter.notifyDataSetChanged();
+//
+//                } else {
+//                    GlobalClass.getInstance().SnackBar(rootlayout, "" + response.getString("message"), -1, -1);
+//                }
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        @Override
+//        public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+//            super.onFailure(statusCode, headers, responseString, throwable);
+//            progressDialog.dismiss();
+//            GlobalClass.getInstance().SnackBar(rootlayout, "" + responseString.toString(), -1, -1);
+//        }
+//
+//        @Override
+//        public void onFinish() {
+//            super.onFinish();
+//            progressDialog.dismiss();
+//        }
+//    }
 
-        @Override
-        public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-            super.onSuccess(statusCode, headers, response);
-            try {
-                Log.d("response", response.toString());
-                if (response.getInt("status") == 200) {
-                    JSONArray jsonArray = response.getJSONArray("chat");
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        JSONObject eachMessage = jsonArray.getJSONObject(i);
-                        Log.d("response_each_messages", eachMessage.toString() + "");
-                        usersModel = new Users();
-                        usersModel.setBody(eachMessage.getString("message"));
-                        usersModel.setConversation_id(eachMessage.getString("conversation_id"));
-                        usersModel.setName(eachMessage.getString("sender_name"));
-                        // usersModel.setRead(eachMessage.getString("read"));
-//                                 usersModel.setMessage_id(eachMessage.getString("message_id"));
-                        //  usersModel.setUser_id(eachMessage.getString("user_id"));
-                        usersModel.setAvatar(eachMessage.getString("sender_photo"));
-                        usersModel.setDate(eachMessage.getString("datetime"));
-                        usersModel.setTick(true);
-//                                if (usersModel.getUser_id().equals(pref.getString("userID", ""))) {
-//                                    usersModel.setMe(true);
-//                                }
-                        String isSender = eachMessage.getString("is_sender");
-                        if (isSender.equalsIgnoreCase("1")) {
-                            usersModel.setMe(true);
-                        }
-
-                        userMessagesData.add(usersModel);
-                    }
-                    chatUsersMessagesAdapter.notifyDataSetChanged();
-
-                } else {
-                    GlobalClass.getInstance().SnackBar(rootlayout, "" + response.getString("message"), -1, -1);
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-            super.onFailure(statusCode, headers, responseString, throwable);
-            progressDialog.dismiss();
-            GlobalClass.getInstance().SnackBar(rootlayout, "" + responseString.toString(), -1, -1);
-        }
-
-        @Override
-        public void onFinish() {
-            super.onFinish();
-            progressDialog.dismiss();
-        }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        GlobalClass.getInstance().removeConId();
     }
 }

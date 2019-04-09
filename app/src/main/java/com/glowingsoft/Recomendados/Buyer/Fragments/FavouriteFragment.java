@@ -108,23 +108,22 @@ public class FavouriteFragment extends Fragment {
                     JSONArray jsonArray = response.getJSONArray("products");
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        if (jsonObject.getString("is_favourite").equals("true")) {
-                            homeModelClass = new HomeModelClass();
-                            homeModelClass.setId(jsonObject.getString("id"));
-                            homeModelClass.setTitle(jsonObject.getString("title"));
-                            homeModelClass.setCategory_id(jsonObject.getString("category_id"));
-                            homeModelClass.setImage(jsonObject.getString("image"));
-                            homeModelClass.setPrice(jsonObject.getString("price"));
-                            homeModelClass.setActive(jsonObject.getString("active"));
-                            homeModelClass.setBusiness_id(jsonObject.getString("business_id"));
-                            homeModelClass.setCategory_title(jsonObject.getString("category_title"));
-                            homeModelClass.setShop(jsonObject.getString("shop"));
-                            homeModelClass.setOwner_name(jsonObject.getString("owner_name"));
-                            homeModelClass.setOwner_id(jsonObject.getString("owner_id"));
-                            homeModelClass.setOwner_image(jsonObject.getString("owner_image"));
-                            homeModelClass.setIs_favorite("" + jsonObject.getString("is_favourite"));
-                            homeModelClasses.add(homeModelClass);
-                        }
+                        homeModelClass = new HomeModelClass();
+                        homeModelClass.setId(jsonObject.getString("id"));
+                        homeModelClass.setTitle(jsonObject.getString("title"));
+                        homeModelClass.setCategory_id(jsonObject.getString("category_id"));
+                        homeModelClass.setImage(jsonObject.getString("image"));
+                        homeModelClass.setPrice(jsonObject.getString("price"));
+                        homeModelClass.setActive(jsonObject.getString("active"));
+                        homeModelClass.setBusiness_id(jsonObject.getString("business_id"));
+                        homeModelClass.setCategory_title(jsonObject.getString("category_title"));
+                        homeModelClass.setShop(jsonObject.getString("shop"));
+                        homeModelClass.setOwner_name(jsonObject.getString("owner_name"));
+                        homeModelClass.setOwner_id(jsonObject.getString("owner_id"));
+                        homeModelClass.setOwner_image(jsonObject.getString("owner_image"));
+                        homeModelClass.setIs_favorite("" + jsonObject.getString("is_favourite"));
+                        homeModelClasses.add(homeModelClass);
+
                     }
                     if (homeModelClasses.size() == 0) {
                         noRecordTv.setVisibility(View.VISIBLE);

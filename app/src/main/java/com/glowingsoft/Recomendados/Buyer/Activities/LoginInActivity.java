@@ -78,6 +78,8 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         emailEt = findViewById(R.id.emailEt);
         passwordEt = findViewById(R.id.passwordEt);
         googleTv = findViewById(R.id.googleTv);
+        rootLayout = findViewById(R.id.rootLayout);
+
         if (GlobalClass.getInstance().isNetworkAvailable()) {
             googleTv.setOnClickListener(this);
         } else {
@@ -88,7 +90,6 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         loginTv = findViewById(R.id.loginTv);
         signupTv = findViewById(R.id.signUpTv);
         signupTv.setOnClickListener(this);
-        rootLayout = findViewById(R.id.rootLayout);
         loginTv.setOnClickListener(this);
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Loading....");
@@ -126,7 +127,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
                                         requestParams.put("name", name);
                                         requestParams.put("email", email);
                                         requestParams.put("password", "123456323");
-                                        requestParams.put("device_id", getUniqueId());
+                                        requestParams.put("device_id", GlobalClass.getInstance().returnFcmToken());
                                         requestParams.put("device_type", "android");
                                         requestParams.put("is_social", "1");
                                         requestParams.put("social_id", id);
@@ -201,7 +202,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
             requestParams.put("email", email);
             requestParams.put("password", password);
             requestParams.put("devicetype", "android");
-            requestParams.put("device_id", getUniqueId());
+            requestParams.put("device_id", GlobalClass.getInstance().returnFcmToken());
             if (GlobalClass.getInstance().isNetworkAvailable()) {
                 WebReq.post(Urls.login, requestParams, new LoginInApi());
             } else {
@@ -292,7 +293,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
             requestParams.put("name", account.getDisplayName());
             requestParams.put("email", account.getEmail());
             requestParams.put("password", "123456323");
-            requestParams.put("device_id", getUniqueId());
+            requestParams.put("device_id", GlobalClass.getInstance().returnFcmToken());
             requestParams.put("device_type", "android");
             requestParams.put("is_social", "1");
             requestParams.put("social_id", account.getId());

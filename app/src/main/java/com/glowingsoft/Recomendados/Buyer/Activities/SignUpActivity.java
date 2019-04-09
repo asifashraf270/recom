@@ -85,7 +85,7 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                 requestParams.put("name", userName);
                 requestParams.put("email", userEmail);
                 requestParams.put("password", userPassword);
-                requestParams.put("device_id", getUniqueId());
+                requestParams.put("device_id", GlobalClass.getInstance().returnFcmToken());
                 requestParams.put("device_type", "android");
                 requestParams.put("is_social", "0");
                 WebReq.post(Urls.signup, requestParams, new SignUpApi());

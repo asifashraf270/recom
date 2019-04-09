@@ -168,5 +168,37 @@ public class GlobalClass extends Application {
         return sharedPreferences.getString("shopId", null);
     }
 
+    public void storeFcmToken(String token) {
+        editor.putString("token", token);
+        editor.commit();
+    }
+
+    public String returnFcmToken() {
+        return sharedPreferences.getString("token", null);
+    }
+
+    public void storeBadgeValue(int value) {
+        editor.putInt("count", value);
+        editor.commit();
+    }
+
+    public int returnCount() {
+        return sharedPreferences.getInt("count", -1);
+    }
+
+    public void storeConvertionalId(String id) {
+        editor.putString("conversition_id", id);
+        editor.commit();
+    }
+
+    public String returnConvertionalId() {
+        return sharedPreferences.getString("conversition_id", null);
+    }
+
+    public void removeConId() {
+        editor.remove("conversition_id");
+        editor.commit();
+        editor.apply();
+    }
 
 }

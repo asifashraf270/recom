@@ -1,5 +1,7 @@
 package com.glowingsoft.Recomendados.Buyer;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,10 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.Seller.Chat.ChatUsersAdapter;
+import com.glowingsoft.Recomendados.Seller.Chat.UserChatMessages;
 import com.glowingsoft.Recomendados.Seller.Chat.UserChatModel;
 import com.glowingsoft.Recomendados.WebReq.Urls;
 import com.glowingsoft.Recomendados.WebReq.WebReq;
@@ -48,7 +52,9 @@ public class ChatFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
+
         viewBinding(view);
+
         return view;
     }
 
@@ -114,6 +120,13 @@ public class ChatFragment extends Fragment {
             super.onSuccess(statusCode, headers, response);
             try {
                 if (response.getInt("status") == 200) {
+                    try {
+                        if (getArguments().getInt("type") == 2) {
+                            loadconversionafterwait();
+                        }
+                    } catch (Exception e) {
+
+                    }
                     JSONArray jsonArray = response.getJSONArray("conversations");
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject object = jsonArray.getJSONObject(i);
@@ -137,7 +150,6 @@ public class ChatFragment extends Fragment {
                         userchatmodel.setFriend_photo(friend_photo);
                         userchatmodel.setUnread(unread);
                         mUsersData.add(userchatmodel);
-
                     }
                     chatUsersAdapter.notifyDataSetChanged();
 
@@ -160,5 +172,21 @@ public class ChatFragment extends Fragment {
             super.onFinish();
         }
     }
+
+    private void loadconversionafterwait() {
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 100ms
+                Intent intent = new Intent(getActivity(), UserChatMessages.class);
+                intent.putExtra("user_id", GlobalClass.getInstance().returnUserId());
+                intent.putExtra("conversation_id", getArguments().getString("conversation_id"));
+                startActivity(intent);
+            }
+        }, 2000);
+    }
+
 
 }

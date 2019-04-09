@@ -9,6 +9,8 @@ import com.glowingsoft.Recomendados.Buyer.Activities.LoginInActivity;
 import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.BottomNavigationSellerActivity;
 import com.glowingsoft.Recomendados.Seller.ShopPreferencesActivity;
 
+import me.leolin.shortcutbadger.ShortcutBadger;
+
 public class SplashActivity extends ParentClass {
     Thread thread;
 
@@ -18,6 +20,10 @@ public class SplashActivity extends ParentClass {
         fullScreen();
         setContentView(R.layout.activity_main);
         Stetho.initializeWithDefaults(this);
+
+        if (GlobalClass.getInstance().returnCount() != -1) {
+            ShortcutBadger.applyCount(SplashActivity.this, GlobalClass.getInstance().returnCount());
+        }
 
 
         thread = new Thread(new Runnable() {

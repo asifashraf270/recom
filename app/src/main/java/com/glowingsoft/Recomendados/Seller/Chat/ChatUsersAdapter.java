@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.squareup.picasso.Picasso;
 
@@ -78,6 +79,7 @@ public class ChatUsersAdapter extends BaseAdapter {
                 Intent intent = new Intent(mContext, UserChatMessages.class);
                 intent.putExtra("user_id", mUsersData.get(position).getUser_id());
                 intent.putExtra("conversation_id", mUsersData.get(position).getConversation_id());
+                GlobalClass.getInstance().storeConvertionalId(mUsersData.get(position).getConversation_id());
                 mContext.startActivity(intent);
             }
         });
