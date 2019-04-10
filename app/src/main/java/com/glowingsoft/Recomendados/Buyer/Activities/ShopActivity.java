@@ -134,6 +134,13 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
                             tagsModel.setTitle("" + tagArray.getJSONObject(i).getString("title"));
                             tagsviewModel.add(tagsModel);
                         }
+
+                        tagsView.setClickListener(new TagView.TagClickListener<TagsModel>() {
+                            @Override
+                            public void onTagClick(TagsModel tagsModel) {
+                                Toast.makeText(ShopActivity.this, "clicked", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                         tagsView.setTags(tagsviewModel, new DataTransform<TagsModel>() {
                             @NotNull
                             @Override

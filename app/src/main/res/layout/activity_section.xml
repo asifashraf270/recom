@@ -55,12 +55,30 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/shooperTv"
         android:layout_margin="@dimen/shopPrefMargin"
+
         android:orientation="vertical">
 
-        <com.glowingsoft.Recomendados.ContactsCompletionView
-            android:id="@+id/searchView"
+        <com.github.tommykw.tagview.TagView
+            android:id="@+id/tagsTv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:background_color="@color/white"
+            app:corner_radius="2dp"
+            app:horizontal_spacing="4dp"
+            app:sort_type="asc"
+            app:stroke_color="@color/gray"
+            app:stroke_width="1dp"
+            app:text_color="#000000"
+            app:text_font_size="6sp"
+            app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+
+
+        <AutoCompleteTextView
+            android:id="@+id/tagsAtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/spinner_drawable" />
 
         <TextView
             android:id="@+id/tagAddTv"
@@ -71,15 +89,31 @@
             android:background="@drawable/viewshop_view"
             android:gravity="center"
             android:text="@string/add"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:visibility="invisible" />
 
-        <EditText
-            android:id="@+id/materialEt"
+
+        <com.github.tommykw.tagview.TagView
+            android:id="@+id/materialsTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/marginLinear"
-            android:background="@drawable/spinner_drawable"
-            android:hint="@string/material" />
+            app:background_color="@color/white"
+
+            app:corner_radius="2dp"
+            app:horizontal_spacing="4dp"
+            app:sort_type="asc"
+            app:stroke_color="@color/gray"
+            app:stroke_width="1dp"
+            app:text_color="#000000"
+            app:text_font_size="6sp"
+            app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+
+        <AutoCompleteTextView
+            android:id="@+id/materialAtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textPadding"
+            android:background="@drawable/spinner_drawable" />
 
         <TextView
             android:id="@+id/materialAddTv"
@@ -90,7 +124,8 @@
             android:background="@drawable/viewshop_view"
             android:gravity="center"
             android:text="@string/add"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:visibility="invisible" />
 
     </LinearLayout>
 

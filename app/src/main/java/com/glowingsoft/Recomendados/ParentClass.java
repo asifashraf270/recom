@@ -50,7 +50,12 @@ public class ParentClass extends AppCompatActivity {
                 + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$").matcher(email).matches();
     }
 
-    protected void loadFragment(Fragment fragment, int container) {
-        getSupportFragmentManager().beginTransaction().replace(container, fragment).addToBackStack(null).commit();
+    protected void loadFragment(Fragment fragment, int container, String tag) {
+        if (tag != null) {
+            getSupportFragmentManager().beginTransaction().replace(container, fragment, tag).addToBackStack(null).commit();
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(container, fragment).addToBackStack(null).commit();
+
+        }
     }
 }

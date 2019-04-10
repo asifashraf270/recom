@@ -29,14 +29,15 @@ public class ContactsCompletionView extends TokenCompleteTextView<LanguageModel>
     @Override
     protected LanguageModel defaultObject(String completionText) {
         int index = completionText.indexOf('@');
-        if (index == -1) {
-            LanguageModel languageModel = new LanguageModel();
-            languageModel.setId("");
-            languageModel.setTitle("");
-            return languageModel;
-        } else {
-            return new LanguageModel();
-        }
+        return null;
+//        if (index == -1) {
+//            LanguageModel languageModel = new LanguageModel();
+//            languageModel.setId("");
+//            languageModel.setTitle("");
+//            return languageModel;
+//        } else {
+//            return new LanguageModel();
+//        }
     }
 
 

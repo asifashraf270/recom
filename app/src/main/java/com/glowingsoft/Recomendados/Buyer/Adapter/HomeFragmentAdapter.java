@@ -156,5 +156,6 @@ public class HomeFragmentAdapter extends BaseAdapter {
         public void onFinish() {
             super.onFinish();
         }
+
     }
 }

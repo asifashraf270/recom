@@ -92,7 +92,6 @@
     <!--android:textColor="@color/colorWhite" />-->
     <TextView
         android:id="@+id/logout"
-        style="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_width="@dimen/loginWith"
         android:layout_height="wrap_content"
         android:layout_below="@id/emailTv"

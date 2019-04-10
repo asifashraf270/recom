@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
     RelativeLayout rootLayout;
     RequestParams requestParams;
     TextView continueTv;
+    ImageView backIv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         rootLayout = findViewById(R.id.rootLayout);
         continueTv = findViewById(R.id.continueTv);
         continueTv.setOnClickListener(this);
+        backIv = findViewById(R.id.backIv);
+        backIv.setOnClickListener(this);
     }
 
     @Override
@@ -77,7 +81,9 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
                 }
 
                 break;
-
+            case R.id.backIv:
+                finish();
+                break;
         }
 
     }
