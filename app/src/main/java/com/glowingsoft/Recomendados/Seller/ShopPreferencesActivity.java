@@ -84,7 +84,7 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
     }
 
     private void viewBinding() {
-        country = "pakistan";
+        country = null;
         city = "Lahore";
         address = "Muslim town Mor Kalma Chowk Lahore";
         latitude = "31.5412458";
@@ -147,9 +147,14 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
             case R.id.searchTv:
                 RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
                 shopType = radioButton.getText().toString();
-                GlobalClass.getInstance().storePreferenceScreenData(latitude, longitude, currencyId, languageId, shopType, country, city, address);
-                Intent intent = new Intent(ShopPreferencesActivity.this, NameYourShopActivity.class);
-                startActivity(intent);
+                country = countryTv.getText().toString();
+                if (country != null) {
+                    GlobalClass.getInstance().storePreferenceScreenData(latitude, longitude, currencyId, languageId, shopType, country, city, address);
+                    Intent intent = new Intent(ShopPreferencesActivity.this, NameYourShopActivity.class);
+                    startActivity(intent);
+                } else {
+                    GlobalClass.getInstance().SnackBar(rootLayout, "Country is Require", -1, -1);
+                }
                 break;
 
             case R.id.countryTv:

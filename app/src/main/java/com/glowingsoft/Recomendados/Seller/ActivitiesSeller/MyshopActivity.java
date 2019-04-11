@@ -5,14 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.tommykw.tagview.DataTransform;
 import com.github.tommykw.tagview.TagView;
@@ -45,7 +46,6 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
     GridView gridView;
     HomeFragmentAdapter adapter;
     List<HomeModelClass> modelClasses;
-    ImageView backIv;
     CircleImageView profileIv;
     TextView locationTv, shoptTitleTv;
     SwipeRefreshLayout swipeRefreshLayout;
@@ -56,6 +56,7 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
     ImageView chatIv;
     TagView<TagsModel> tagsView, materialTags;
     List<TagsModel> tagsviewModel, materialTagsModel;
+    Toolbar toolbar;
 
 
     @Override
@@ -68,7 +69,11 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
     private void viewBinding() {
         gridView = findViewById(R.id.gridView);
         modelClasses = new ArrayList<>();
-        backIv = findViewById(R.id.backIv);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         chatIv = findViewById(R.id.chatIv);
         tagsView = findViewById(R.id.tagView);
         materialTags = findViewById(R.id.materialsTag);
@@ -83,8 +88,24 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
         progressDialog.setMessage("Loading....");
         rootLayout = findViewById(R.id.rootLayout);
         swipeRefreshLayout = findViewById(R.id.refreshLayout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipeRefreshLayout.setRefreshing(false);
+                tagsviewModel.clear();
+                materialTagsModel.clear();
+                modelClasses.clear();
+                if (GlobalClass.getInstance().isNetworkAvailable()) {
+                    requestParams = new RequestParams();
+                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
+                    WebReq.post(Urls.myshop, requestParams, new ViewShopRestApi());
+
+                } else {
+                    GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
+                }
+            }
+        });
         shoptTitleTv = findViewById(R.id.shoptTitleTv);
-        backIv.setOnClickListener(this);
         adapter = new HomeFragmentAdapter(this, modelClasses);
         gridView.setAdapter(adapter);
         if (GlobalClass.getInstance().isNetworkAvailable()) {
@@ -100,9 +121,6 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.backIv:
-                finish();
-                break;
             case R.id.chatIv:
                 Intent intent = new Intent(MyshopActivity.this, BottomNavigationSellerActivity.class);
                 intent.putExtra("type", 1);
@@ -116,7 +134,7 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
             super.onSuccess(statusCode, headers, response);
             try {
-                Log.d("Response", response.toString());
+                Log.d("response_shop", response.toString());
                 if (response.getInt("status") == 200) {
                     locationTv.setText("" + response.getJSONObject("shop").getJSONObject("location").getString("address"));
                     JSONObject jsonObject = response.getJSONObject("shop");
@@ -207,5 +225,16 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
             progressDialog.dismiss();
             GlobalClass.getInstance().SnackBar(rootLayout, throwable.getMessage(), -1, -1);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+
     }
 }

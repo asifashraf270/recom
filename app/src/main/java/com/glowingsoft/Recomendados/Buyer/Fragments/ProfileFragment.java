@@ -37,6 +37,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     ProgressDialog progressDialog;
     TextView logOutTv;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

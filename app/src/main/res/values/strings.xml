@@ -63,6 +63,7 @@
     <string name="fb_login_protocol_scheme">fb565572090600020</string>
     <string name="sharedPreference">Recomendados</string>
     <string name="apiKey">AIzaSyC66-Ysn4X-i2L3-OEGboOG4gTSuOtW9tI</string>
+    <string name="tokenPref">Token</string>
 
 
 </resources>

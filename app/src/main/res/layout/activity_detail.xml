@@ -14,38 +14,18 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorTransparent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/backIv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/textPadding"
-                android:src="@drawable/back"
-                android:tint="@color/colorBlack" />
+        <TextView
+            android:id="@+id/detailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
 
-            <TextView
-                android:id="@+id/detailTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
-                android:padding="3dp"
-                android:text="Details" />
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:text="Details" />
 
-            <ImageView
-                android:id="@+id/shareIv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_margin="@dimen/textPadding"
-                android:padding="3dp"
-                android:src="@drawable/ic_share_black_24dp"
-                android:tint="@color/colorBlack" />
-        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -130,13 +110,11 @@
                 <TextView
                     android:id="@+id/locationTv"
                     style="@style/Base.TextAppearance.AppCompat.Medium"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:drawableLeft="@drawable/ic_location_on_black_18dp"
-                    android:paddingTop="@dimen/textPadding"
-                    android:paddingRight="@dimen/textPadding"
-                    android:paddingBottom="@dimen/textPadding" />
+                    android:drawableLeft="@drawable/ic_location_on_black_18dp" />
             </RelativeLayout>
 
             <TextView

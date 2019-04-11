@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -63,6 +64,8 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         super.onCreate(savedInstanceState);
         fullScreen();
         setContentView(R.layout.activity_login_in);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
         context = LoginInActivity.this;
         viewBinding();
 
@@ -227,6 +230,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         @Override
         public void onStart() {
             super.onStart();
+            progressDialog.show();
         }
 
         @Override
@@ -263,6 +267,8 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
             super.onFailure(statusCode, headers, throwable, errorResponse);
             GlobalClass.getInstance().SnackBar(rootLayout, throwable.getMessage(), -1, -1);
+            progressDialog.dismiss();
+
 
         }
 
@@ -300,8 +306,12 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
             requestParams.put("social_type", social_type);
             WebReq.post(Urls.signup, requestParams, new LoginInApi());
         } catch (ApiException e) {
+            Log.d("exception", e.getLocalizedMessage());
+            Log.d("exception", e.getMessage());
 
             GlobalClass.getInstance().SnackBar(rootLayout, e.getMessage(), -1, -1);
+            progressDialog.dismiss();
+
         }
     }
 

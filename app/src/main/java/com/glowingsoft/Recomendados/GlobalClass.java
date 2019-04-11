@@ -16,6 +16,8 @@ public class GlobalClass extends Application {
     public static GlobalClass singelton;
     public SharedPreferences sharedPreferences;
     public SharedPreferences.Editor editor;
+    public SharedPreferences sharedPreferencestoken;
+    public SharedPreferences.Editor editortoken;
 
     @Override
     public void onCreate() {
@@ -24,6 +26,8 @@ public class GlobalClass extends Application {
         singelton = this;
         sharedPreferences = getSharedPreferences(getResources().getString(R.string.sharedPreference), MODE_PRIVATE);
         editor = sharedPreferences.edit();
+        sharedPreferencestoken = getSharedPreferences(getResources().getString(R.string.tokenPref), MODE_PRIVATE);
+        editortoken = sharedPreferencestoken.edit();
 
     }
 
@@ -169,12 +173,12 @@ public class GlobalClass extends Application {
     }
 
     public void storeFcmToken(String token) {
-        editor.putString("token", token);
-        editor.commit();
+        editortoken.putString("token", token);
+        editortoken.commit();
     }
 
     public String returnFcmToken() {
-        return sharedPreferences.getString("token", null);
+        return sharedPreferencestoken.getString("token", null);
     }
 
     public void storeBadgeValue(int value) {

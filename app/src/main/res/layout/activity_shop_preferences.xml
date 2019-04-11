@@ -68,7 +68,7 @@
                         android:padding="@dimen/textPadding"
                         android:text="Country:" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/countryTv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

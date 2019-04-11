@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -32,7 +34,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
     RelativeLayout rootLayout;
     RequestParams requestParams;
     TextView continueTv;
-    ImageView backIv;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,11 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
     }
 
     private void viewBinding() {
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         shopNameEt = findViewById(R.id.shopNameEt);
         checkavailabilyTv = findViewById(R.id.checkavailabilyTv);
         checkavailabilyTv.setOnClickListener(this);
@@ -50,8 +57,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         rootLayout = findViewById(R.id.rootLayout);
         continueTv = findViewById(R.id.continueTv);
         continueTv.setOnClickListener(this);
-        backIv = findViewById(R.id.backIv);
-        backIv.setOnClickListener(this);
+
     }
 
     @Override
@@ -81,9 +87,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
                 }
 
                 break;
-            case R.id.backIv:
-                finish();
-                break;
+
         }
 
     }
@@ -125,4 +129,14 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

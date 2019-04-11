@@ -32,5 +32,5 @@ public class Urls {
     public static String conversations = "conversations";
     public static String chat = "chat";
     public static String sendMessage = "send/message";
-    public static String myshop="seller/shop";
+    public static String myshop = "seller/shop";
 }

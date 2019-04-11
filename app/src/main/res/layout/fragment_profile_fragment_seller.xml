@@ -15,13 +15,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/back"
-                android:tint="@color/colorBlack" />
-
             <TextView
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
@@ -110,6 +103,18 @@
         android:layout_marginTop="@dimen/shopPrefMargin"
         android:drawableLeft="@drawable/email"
         android:drawablePadding="@dimen/marginLinear" />
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="@dimen/loginWith"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/marginTopcard"
+        android:background="@drawable/viewshop_view"
+        android:gravity="center"
+        android:text="Log Out"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

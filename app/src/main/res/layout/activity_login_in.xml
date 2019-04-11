@@ -144,8 +144,7 @@
                         android:layout_below="@id/socialTv"
                         android:layout_centerHorizontal="true"
                         android:paddingRight="@dimen/textPadding"
-                        android:src="@drawable/fb"
-                        android:visibility="gone" />
+                        android:src="@drawable/fb" />
                 </FrameLayout>
 
 

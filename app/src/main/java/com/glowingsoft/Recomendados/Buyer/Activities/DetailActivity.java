@@ -13,6 +13,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -58,11 +59,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     TextView priceTv, locationTv, descriptionTv;
     TextView nameTv, ownerNameTv;
     CircleImageView ownerIv;
-    ImageView backIv;
     List<DetailsModelClass> detailsModelClasses;
     List<HomeModelClass> recyclerViewMoreShop;
     String shopId;
-    ImageView chatIV, phoneIv, shareIv;
+    ImageView chatIV, phoneIv;
     String productNamePrice = null, ownerPhoneNumber;
     PermissionListener permissionlistener;
 
@@ -76,6 +76,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
     private void viewBinding() {
         toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         priceTv = findViewById(R.id.priceTv);
         viewPager = findViewById(R.id.viewPager);
         recyclerView = findViewById(R.id.recyclerviewItems);
@@ -83,8 +87,6 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         phoneIv = findViewById(R.id.phoneIv);
         phoneIv.setOnClickListener(this);
         chatIV.setOnClickListener(this);
-        shareIv = findViewById(R.id.shareIv);
-        shareIv.setOnClickListener(this);
         recyclerViewMoreShop = new ArrayList<>();
         recyclerViewAdapter = new ItemRecyclerViewAdapter(recyclerViewMoreShop, DetailActivity.this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -96,8 +98,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         descriptionTv = findViewById(R.id.descriptionTv);
         ownerIv = findViewById(R.id.ownerIv);
         ownerNameTv = findViewById(R.id.nameOwnerTv);
-        backIv = findViewById(R.id.backIv);
-        backIv.setOnClickListener(this);
+
         recyclerView.setHasFixedSize(true);
         detailsModelClasses = new ArrayList<>();
         adaper = new DetailPagerAdaper(this, detailsModelClasses);
@@ -144,9 +145,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent);
 
                 break;
-            case R.id.backIv:
-                finish();
-                break;
+
             case R.id.chatIv:
                 Intent intent1 = new Intent(DetailActivity.this, BottomNavigationActivity.class);
                 intent1.putExtra("type", 1);
@@ -160,16 +159,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                         .check();
 
                 break;
-            case R.id.shareIv:
-                Intent share = new Intent(Intent.ACTION_SEND);
-                share.setType("text/plain");
-                share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-//                share.putExtra(Intent.EXTRA_SUBJECT, productNamePrice);
-                share.putExtra(Intent.EXTRA_SUBJECT, "Hello World");
 
-                share.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=" + getPackageName());
-                startActivity(Intent.createChooser(share, "Share link!"));
-                break;
         }
     }
 
@@ -290,5 +280,15 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
             super.onFinish();
             progressDialog.dismiss();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -112,6 +112,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/marginLinear"
                     android:background="@drawable/spinner_drawable"
+
+                    android:gravity="top"
                     android:hint="@string/description"
                     android:inputType="textMultiLine"
                     android:minLines="5" />

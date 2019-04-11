@@ -2,6 +2,7 @@ package com.glowingsoft.Recomendados.Seller.FragmentSeller;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.glowingsoft.Recomendados.Buyer.Activities.LoginInActivity;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.WebReq.Urls;
@@ -33,6 +35,7 @@ public class ProfileFragmentSeller extends Fragment {
     TextView emailTv, phoneNoTv, nameTv;
     RelativeLayout rootLayout;
     CircleImageView profileIv;
+    TextView textView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,6 +50,16 @@ public class ProfileFragmentSeller extends Fragment {
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
         emailTv = view.findViewById(R.id.emailTv);
+        textView = view.findViewById(R.id.logout);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalClass.getInstance().logoOut();
+                Intent intent = new Intent(getActivity(), LoginInActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
         phoneNoTv = view.findViewById(R.id.phoneNoTv);
         nameTv = view.findViewById(R.id.nameTv);
         rootLayout = view.findViewById(R.id.rootLayout);

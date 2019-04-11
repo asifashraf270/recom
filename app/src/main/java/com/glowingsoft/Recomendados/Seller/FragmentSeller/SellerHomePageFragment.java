@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -51,6 +52,7 @@ public class SellerHomePageFragment extends Fragment implements View.OnClickList
     RelativeLayout rootLayout;
     ProgressDialog progressDialog;
     ImageView addProduct;
+    TextView noRecordtv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,6 +66,7 @@ public class SellerHomePageFragment extends Fragment implements View.OnClickList
     private void viewBinding(View view) {
         toolbar = view.findViewById(R.id.toolbar);
         gridView = view.findViewById(R.id.gridView);
+        noRecordtv = view.findViewById(R.id.noRecordtv);
         addProduct = view.findViewById(R.id.addProductTv);
         addProduct.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,8 +142,11 @@ public class SellerHomePageFragment extends Fragment implements View.OnClickList
                         homeSellerModel.setOwner_id("" + jsonObject.getString("owner_id"));
                         homeSellerModel.setOwner_image("" + jsonObject.getString("owner_image"));
                         homeSellerModels.add(homeSellerModel);
-
-
+                    }
+                    if (homeSellerModels.size() == 0) {
+                        noRecordtv.setVisibility(View.VISIBLE);
+                    } else {
+                        noRecordtv.setVisibility(View.GONE);
                     }
                     adapter.notifyDataSetChanged();
                 } else {

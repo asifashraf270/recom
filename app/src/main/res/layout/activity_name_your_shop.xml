@@ -13,26 +13,16 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorTransparent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/backIv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/back"
-                android:tint="@color/colorBlack" />
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
 
-            <TextView
-                style="@style/Base.TextAppearance.AppCompat.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="@string/nameyourshop" />
-        </RelativeLayout>
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="@string/nameyourshop" />
     </android.support.v7.widget.Toolbar>
 
     <ScrollView

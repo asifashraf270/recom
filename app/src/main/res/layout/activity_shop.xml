@@ -12,27 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorTransparent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="Shop" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/backIv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/back"
-                android:tint="@color/colorBlack" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:text="Shop" />
-
-        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
@@ -103,14 +91,14 @@
             android:id="@+id/tagView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
             app:background_color="@color/white"
             app:corner_radius="2dp"
-            app:left_drawable="@drawable/ic_clear_black_18dp"
+            app:horizontal_spacing="4dp"
             app:sort_type="asc"
             app:stroke_color="@color/gray"
             app:stroke_width="1dp"
-            app:text_color="@color/white"
+            app:text_color="#000000"
+            app:text_font_size="6sp"
             app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
     </LinearLayout>
 

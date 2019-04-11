@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -39,6 +40,8 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         fullScreen();
         setContentView(R.layout.activity_sign_up);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
         context = SignUpActivity.this;
         viewBinding();
     }

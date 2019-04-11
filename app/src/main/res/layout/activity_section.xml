@@ -7,148 +7,150 @@
     android:layout_height="match_parent"
     tools:context="com.glowingsoft.Recomendados.Seller.ActivitiesSeller.SectionActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <ScrollView
+
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorTransparent">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/backIv"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:src="@drawable/back"
-                android:tint="@color/colorBlack" />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorTransparent">
+
+
+                <TextView
+                    style="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_gravity="center"
+                    android:text="@string/section" />
+            </android.support.v7.widget.Toolbar>
 
             <TextView
-                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:id="@+id/shooperTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
                 android:layout_centerHorizontal="true"
-
                 android:layout_centerVertical="true"
-                android:text="@string/section" />
+                android:layout_marginTop="@dimen/shopPrefMargin"
+                android:text="@string/shooper"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shooperTv"
+                android:layout_margin="@dimen/shopPrefMargin"
+
+                android:orientation="vertical">
+
+                <com.github.tommykw.tagview.TagView
+                    android:id="@+id/tagsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:background_color="@color/white"
+                    app:corner_radius="2dp"
+                    app:horizontal_spacing="4dp"
+                    app:sort_type="asc"
+                    app:stroke_color="@color/gray"
+                    app:stroke_width="1dp"
+                    app:text_color="#000000"
+                    app:text_font_size="6sp"
+                    app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/tagsAtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_drawable"
+
+                    android:hint="Enter Shop Tags" />
+
+                <TextView
+                    android:id="@+id/tagAddTv"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spinnerPadding"
+                    android:background="@drawable/viewshop_view"
+                    android:gravity="center"
+                    android:text="@string/add"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="invisible" />
+
+
+                <com.github.tommykw.tagview.TagView
+                    android:id="@+id/materialsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:background_color="@color/white"
+
+                    app:corner_radius="2dp"
+                    app:horizontal_spacing="4dp"
+                    app:sort_type="asc"
+                    app:stroke_color="@color/gray"
+                    app:stroke_width="1dp"
+                    app:text_color="#000000"
+                    app:text_font_size="6sp"
+                    app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+
+                <AutoCompleteTextView
+                    android:id="@+id/materialAtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spinnerPadding"
+
+                    android:background="@drawable/spinner_drawable"
+                    android:hint="Enter Shop Tags" />
+
+                <TextView
+                    android:id="@+id/materialAddTv"
+                    android:layout_width="@dimen/buttonWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/cardMarginLeft"
+                    android:background="@drawable/viewshop_view"
+                    android:gravity="center"
+                    android:text="@string/add"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/shopImage"
+                android:layout_width="@dimen/loginWith"
+                android:layout_height="@dimen/loginWith"
+                android:layout_below="@id/layout"
+                android:layout_centerHorizontal="true"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholderviewplager" />
+
+
+            <TextView
+                android:id="@+id/saveAndcontinueTv"
+                android:layout_width="@dimen/buttonWidth"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shopImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/spinnerPadding"
+                android:layout_marginBottom="@dimen/marginTopcard"
+                android:background="@drawable/viewshop_view"
+                android:gravity="center"
+                android:text="@string/saveandcontinue"
+                android:textColor="@color/colorWhite" />
         </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
-
-    <TextView
-        android:id="@+id/shooperTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="@dimen/shopPrefMargin"
-        android:text="@string/shooper"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:id="@+id/layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/shooperTv"
-        android:layout_margin="@dimen/shopPrefMargin"
-
-        android:orientation="vertical">
-
-        <com.github.tommykw.tagview.TagView
-            android:id="@+id/tagsTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:background_color="@color/white"
-            app:corner_radius="2dp"
-            app:horizontal_spacing="4dp"
-            app:sort_type="asc"
-            app:stroke_color="@color/gray"
-            app:stroke_width="1dp"
-            app:text_color="#000000"
-            app:text_font_size="6sp"
-            app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
-
-
-        <AutoCompleteTextView
-            android:id="@+id/tagsAtv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:background="@drawable/spinner_drawable" />
-
-        <TextView
-            android:id="@+id/tagAddTv"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/cardMarginLeft"
-            android:background="@drawable/viewshop_view"
-            android:gravity="center"
-            android:text="@string/add"
-            android:textColor="@color/colorWhite"
-            android:visibility="invisible" />
-
-
-        <com.github.tommykw.tagview.TagView
-            android:id="@+id/materialsTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:background_color="@color/white"
-
-            app:corner_radius="2dp"
-            app:horizontal_spacing="4dp"
-            app:sort_type="asc"
-            app:stroke_color="@color/gray"
-            app:stroke_width="1dp"
-            app:text_color="#000000"
-            app:text_font_size="6sp"
-            app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
-
-        <AutoCompleteTextView
-            android:id="@+id/materialAtv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/textPadding"
-            android:background="@drawable/spinner_drawable" />
-
-        <TextView
-            android:id="@+id/materialAddTv"
-            android:layout_width="@dimen/buttonWidth"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/cardMarginLeft"
-            android:background="@drawable/viewshop_view"
-            android:gravity="center"
-            android:text="@string/add"
-            android:textColor="@color/colorWhite"
-            android:visibility="invisible" />
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/shopImage"
-        android:layout_width="@dimen/loginWith"
-        android:layout_height="@dimen/loginWith"
-        android:layout_below="@id/layout"
-        android:layout_centerHorizontal="true"
-        android:fitsSystemWindows="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/placeholderviewplager" />
-
-
-    <TextView
-        android:id="@+id/saveAndcontinueTv"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/marginTopcard"
-        android:background="@drawable/viewshop_view"
-        android:gravity="center"
-        android:text="@string/saveandcontinue"
-        android:textColor="@color/colorWhite" />
+    </ScrollView>
 </RelativeLayout>

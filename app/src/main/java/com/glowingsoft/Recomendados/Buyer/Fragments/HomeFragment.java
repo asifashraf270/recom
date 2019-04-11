@@ -34,14 +34,13 @@ import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 
-public class HomeFragment extends Fragment implements View.OnClickListener{
+public class HomeFragment extends Fragment implements View.OnClickListener {
     HomeFragmentAdapter adapter;
     View rootLayout;
     GridView gridView;
     SwipeRefreshLayout swipeRefreshLayout;
     Toolbar toolbar;
     List<HomeModelClass> homeModelClasses;
-
     RequestParams requestParams;
     HomeModelClass homeModelClass;
     ProgressDialog progressDialog;
@@ -86,6 +85,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                swipeRefreshLayout.setRefreshing(false);
                 if (GlobalClass.getInstance().isNetworkAvailable()) {
                     homeModelClasses.clear();
                     WebReq.post(Urls.home, requestParams, new HomeRestApi());

@@ -1,18 +1,27 @@
 package com.glowingsoft.Recomendados.Seller.ActivitiesSeller;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.constraint.solver.GoalRow;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -66,7 +75,6 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
     byte[] inputData = null;
     String tagId, materialId;
     String imagePath = null;
-    ImageView backIv;
     AutoCompleteTextView completionView;
     AutoCompleteTextView materialAtv;
     ArrayAdapter<String> materialAdapter;
@@ -75,6 +83,10 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
     TagView<TagsModel> tagsTv;
     TagView<TagsModel> maTagsTv;
     String[] tagsTitle, tagsId;
+    List<String> tagsIdforResult;
+    List<String> materialIdforResult;
+    int REQUEST_PERMISSION_CAMERA = 1;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,17 +97,16 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
 
 
     private void viewBinding() {
-
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         tagsTv = findViewById(R.id.tagsTv);
         maTagsTv = findViewById(R.id.materialsTv);
         materialAtv = findViewById(R.id.materialAtv);
-        backIv = findViewById(R.id.backIv);
-        backIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        tagsIdforResult = new ArrayList<>();
+        materialIdforResult = new ArrayList<>();
         tagsListModels = new ArrayList<>();
         completionView = findViewById(R.id.tagsAtv);
         materialAtv.addTextChangedListener(new TextWatcher() {
@@ -168,6 +179,7 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tagAddTv:
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
                 if (GlobalClass.getInstance().isNetworkAvailable()) {
                     RequestParams requestParams = new RequestParams();
                     requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
@@ -179,23 +191,32 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
                 }
                 break;
             case R.id.materialAddTv:
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
                 if (GlobalClass.getInstance().isNetworkAvailable()) {
                     RequestParams requestParams = new RequestParams();
                     requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
-                    requestParams.put("title", completionView.getText().toString());
-                    WebReq.post(Urls.addTags, requestParams, new AddTagRetagAddTvstApi());
+                    requestParams.put("title", materialAtv.getText().toString());
+                    WebReq.post(Urls.addTags, requestParams, new AddMaterialRestApi());
 
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
                 }
                 break;
             case R.id.saveAndcontinueTv:
-                List<TagsModel> tagsModels = (List<TagsModel>) tagsTv.getTag();
-//                tagId = tagsModels.get(0).getId() + ",";
-//                for (int i = 1; i < tagsModels.size(); i++) {
-//                    tagId = tagsId + tagsModels.get(i).getId();
-//                }
-                Log.d("response_tagId", tagId);
+                if (tagsIdforResult.size() > 0) {
+                    tagId = tagsIdforResult.get(0);
+                    for (int i = 1; i < tagsIdforResult.size(); i++) {
+                        tagId = tagId + "," + tagsIdforResult.get(i);
+                    }
+                }
+                if (materialIdforResult.size() > 0) {
+                    materialId = materialIdforResult.get(0);
+                    for (int i = 1; i < materialIdforResult.size(); i++) {
+                        materialId = materialId + "," + materialIdforResult.get(i);
+                    }
+                }
+                Log.d("tagId", tagId);
+                Log.d("materialId", materialId);
                 if (tagId != null && materialId != null && imagePath != null) {
                     if (GlobalClass.getInstance().isNetworkAvailable()) {
                         RequestParams requestParams = new RequestParams();
@@ -216,7 +237,7 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
                             e.printStackTrace();
                         }
                         requestParams.put("shop_type", GlobalClass.getInstance().returnShoptype());
-                        Log.d("param", requestParams.toString());
+                        Log.d("param_Section", requestParams.toString());
                         WebReq.post(Urls.addShop, requestParams, new AddShopRestApi());
                     } else {
                         GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
@@ -235,11 +256,27 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
 
                 break;
             case R.id.shopImage:
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,
-                        "Select Picture"), SELECT_PICTURE);
+                if (ContextCompat.checkSelfPermission(SectionActivity.this,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)
+                        != PackageManager.PERMISSION_GRANTED) {
+
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(SectionActivity.this,
+                            Manifest.permission.READ_EXTERNAL_STORAGE)) {
+
+                    } else {
+                        ActivityCompat.requestPermissions(SectionActivity.this,
+                                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                                REQUEST_PERMISSION_CAMERA);
+
+                    }
+                } else {
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent,
+                            "Select Picture"), SELECT_PICTURE);
+                }
+
                 break;
         }
     }
@@ -287,9 +324,11 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
                                 @NotNull
                                 @Override
                                 public String transfer(TagsModel tagsModel) {
+                                    materialIdforResult.add(tagsModel.getId());
                                     return tagsModel.getTitle();
                                 }
                             });
+                            materialAtv.setText("");
 
                         }
                     });
@@ -351,6 +390,7 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
                     completionView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                             List<TagsModel> tagsModels = new ArrayList<>();
                             TagsModel model = new TagsModel();
                             model.setTitle("" + tagsTitle[position]);
@@ -360,9 +400,11 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
                                 @NotNull
                                 @Override
                                 public String transfer(TagsModel tagsModel) {
+                                    tagsIdforResult.add(tagsModel.getId());
                                     return tagsModel.getTitle();
                                 }
                             });
+                            completionView.setText("");
 
                         }
                     });
@@ -481,9 +523,25 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
         @Override
         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
             super.onSuccess(statusCode, headers, response);
+            Log.d("response", response + "");
             try {
                 if (response.getInt("status") == 200) {
                     GlobalClass.getInstance().SnackBar(rootLayout, "" + response.getString("message"), -1, -1);
+                    JSONObject jsonObject = response.getJSONObject("tag");
+                    List<TagsModel> tagsModels = new ArrayList<>();
+                    TagsModel model = new TagsModel();
+                    model.setTitle("" + jsonObject.getString("title"));
+                    model.setId("" + jsonObject.getString("id"));
+                    tagsModels.add(model);
+                    tagsTv.setTags(tagsModels, new DataTransform<TagsModel>() {
+                        @NotNull
+                        @Override
+                        public String transfer(TagsModel tagsModel) {
+                            tagsIdforResult.add(tagsModel.getId());
+                            return tagsModel.getTitle();
+                        }
+                    });
+                    completionView.setText("");
 
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, "" + response.getString("message"), -1, -1);
@@ -504,4 +562,94 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
             super.onFinish();
         }
     }
+
+    public class AddMaterialRestApi extends JsonHttpResponseHandler {
+        @Override
+        public void onStart() {
+            super.onStart();
+        }
+
+        @Override
+        public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+            super.onSuccess(statusCode, headers, response);
+            Log.d("response", response + "");
+            try {
+                if (response.getInt("status") == 200) {
+                    GlobalClass.getInstance().SnackBar(rootLayout, "" + response.getString("message"), -1, -1);
+                    JSONObject jsonObject = response.getJSONObject("tag");
+                    List<TagsModel> tagsModels = new ArrayList<>();
+                    TagsModel model = new TagsModel();
+                    model.setTitle("" + jsonObject.getString("title"));
+                    model.setId("" + jsonObject.getString("id"));
+                    tagsModels.add(model);
+                    maTagsTv.setTags(tagsModels, new DataTransform<TagsModel>() {
+                        @NotNull
+                        @Override
+                        public String transfer(TagsModel tagsModel) {
+                            materialIdforResult.add(tagsModel.getId());
+                            return tagsModel.getTitle();
+                        }
+                    });
+                    materialAtv.setText("");
+
+                } else {
+                    GlobalClass.getInstance().SnackBar(rootLayout, "" + response.getString("message"), -1, -1);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+            super.onFailure(statusCode, headers, responseString, throwable);
+            GlobalClass.getInstance().SnackBar(rootLayout, responseString, -1, -1);
+        }
+
+        @Override
+        public void onFinish() {
+            super.onFinish();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case 1: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent,
+                            "Select Picture"), SELECT_PICTURE);
+
+                } else {
+
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    Uri uri = Uri.fromParts("package", SectionActivity.this.getPackageName(), null);
+                    intent.setData(uri);
+                    context.startActivity(intent);
+                }
+                return;
+            }
+
+        }
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
+

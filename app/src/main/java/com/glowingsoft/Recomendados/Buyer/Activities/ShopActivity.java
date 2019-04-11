@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.GridView;
@@ -45,7 +47,6 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
     GridView gridView;
     HomeFragmentAdapter adapter;
     List<HomeModelClass> modelClasses;
-    ImageView backIv;
     CircleImageView profileIv;
     TextView locationTv, shoptTitleTv;
     SwipeRefreshLayout swipeRefreshLayout;
@@ -56,6 +57,7 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
     ImageView chatIv;
     TagView<TagsModel> tagsView, materialTags;
     List<TagsModel> tagsviewModel, materialTagsModel;
+    Toolbar toolbar;
 
 
     @Override
@@ -68,7 +70,12 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
     private void viewBinding() {
         gridView = findViewById(R.id.gridView);
         modelClasses = new ArrayList<>();
-        backIv = findViewById(R.id.backIv);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         chatIv = findViewById(R.id.chatIv);
         tagsView = findViewById(R.id.tagView);
         materialTags = findViewById(R.id.materialsTag);
@@ -83,8 +90,28 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog.setMessage("Loading....");
         rootLayout = findViewById(R.id.rootLayout);
         swipeRefreshLayout = findViewById(R.id.refreshLayout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipeRefreshLayout.setRefreshing(false);
+
+                if (GlobalClass.getInstance().isNetworkAvailable()) {
+                    tagsviewModel.clear();
+                    materialTagsModel.clear();
+                    modelClasses.clear();
+                    requestParams = new RequestParams();
+                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
+                    requestParams.put("shop_id", getIntent().getExtras().getString("shop_id"));
+                    Log.d("userId", GlobalClass.getInstance().returnUserId());
+                    Log.d("shopId", getIntent().getExtras().getString("shop_id"));
+                    WebReq.post(Urls.viewShop, requestParams, new ViewShopRestApi());
+
+                } else {
+                    GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
+                }
+            }
+        });
         shoptTitleTv = findViewById(R.id.shoptTitleTv);
-        backIv.setOnClickListener(this);
         adapter = new HomeFragmentAdapter(this, modelClasses);
         gridView.setAdapter(adapter);
         if (GlobalClass.getInstance().isNetworkAvailable()) {
@@ -103,9 +130,7 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.backIv:
-                finish();
-                break;
+
             case R.id.chatIv:
                 Intent intent = new Intent(ShopActivity.this, BottomNavigationActivity.class);
                 intent.putExtra("type", 1);
@@ -134,13 +159,6 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
                             tagsModel.setTitle("" + tagArray.getJSONObject(i).getString("title"));
                             tagsviewModel.add(tagsModel);
                         }
-
-                        tagsView.setClickListener(new TagView.TagClickListener<TagsModel>() {
-                            @Override
-                            public void onTagClick(TagsModel tagsModel) {
-                                Toast.makeText(ShopActivity.this, "clicked", Toast.LENGTH_SHORT).show();
-                            }
-                        });
                         tagsView.setTags(tagsviewModel, new DataTransform<TagsModel>() {
                             @NotNull
                             @Override
@@ -217,5 +235,15 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
             progressDialog.dismiss();
             GlobalClass.getInstance().SnackBar(rootLayout, throwable.getMessage(), -1, -1);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

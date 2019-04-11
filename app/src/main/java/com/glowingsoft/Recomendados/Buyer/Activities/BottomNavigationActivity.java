@@ -31,14 +31,9 @@ public class BottomNavigationActivity extends ParentClass implements BottomNavig
     FrameLayout frameLayout;
     BottomNavigationView bottomNavigationView;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bottom_navigation);
-        frameLayout = findViewById(R.id.container);
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+    protected void onStart() {
+        super.onStart();
         try {
             if (getIntent().getExtras().getInt("type") == 2) {
                 Bundle bundle = new Bundle();
@@ -58,10 +53,18 @@ public class BottomNavigationActivity extends ParentClass implements BottomNavig
                 e.printStackTrace();
                 loadFragment(new HomeFragment(), R.id.container, "Home");
 
-//                loadFragment(new HomeFragment(), R.id.container);
-
             }
         }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_bottom_navigation);
+        frameLayout = findViewById(R.id.container);
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
 
     }
