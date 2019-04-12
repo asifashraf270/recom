@@ -52,6 +52,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
         viewBinding(view);
         return view;
     }
@@ -79,7 +80,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         gridView = view.findViewById(R.id.gridView);
         toolbar = view.findViewById(R.id.toolbar);
         rootLayout = getActivity().findViewById(R.id.rootLayout);
-
         swipeRefreshLayout = view.findViewById(R.id.refreshLayout);
         homeModelClasses = new ArrayList<HomeModelClass>();
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

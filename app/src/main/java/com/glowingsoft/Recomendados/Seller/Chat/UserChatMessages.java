@@ -286,7 +286,7 @@ public class UserChatMessages extends AppCompatActivity {
 
                         }
                         if (mReqType == 2) {
-                            playMsgSendSound();
+//                            playMsgSendSound();
                         }
 
                         if (mReqType == 3) {
@@ -329,7 +329,7 @@ public class UserChatMessages extends AppCompatActivity {
                                 if (userMessagesData.size() > previousLength) {
                                     //MediaPlayer.create(mContext,R.raw.message).start();
                                     messagesListView.setSelection(chatUsersMessagesAdapter.getCount() - 1);
-                                    playMsgSendSound();
+//                                    playMsgSendSound();
                                 }
                             }
                             previousLength = userMessagesData.size();

@@ -32,7 +32,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:paddingLeft="@dimen/textPadding"
-                android:text="$25.00"
                 android:textStyle="bold" />
 
             <TextView
@@ -46,14 +45,6 @@
                 android:textColor="@color/loginBg" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/descRl"
-            android:paddingLeft="@dimen/textPadding"
-            android:text="Stockhim Men Shoes"
-            android:textSize="@dimen/textSize" />
     </RelativeLayout>
 
     <LinearLayout
@@ -71,9 +62,10 @@
             android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/textPadding"
             android:background="@drawable/edit_button_view"
-            android:src="@drawable/update"
+            android:src="@drawable/editicon"
             android:text="EDIT"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/deleteBtn"

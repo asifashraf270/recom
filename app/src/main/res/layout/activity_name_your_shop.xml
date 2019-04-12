@@ -63,6 +63,7 @@
                     android:drawableLeft="@drawable/shop"
                     android:drawablePadding="@dimen/marginLinear"
                     android:hint="@string/shopName"
+                    android:inputType="text"
                     android:paddingLeft="@dimen/marginLinear" />
 
                 <TextView
@@ -94,7 +95,8 @@
                     android:background="@drawable/viewshop_view"
                     android:gravity="center"
                     android:text="@string/saveandcontinue"
-                    android:textColor="@color/colorWhite" />
+                    android:textColor="@color/colorWhite"
+                    android:visibility="invisible" />
 
             </LinearLayout>
         </RelativeLayout>

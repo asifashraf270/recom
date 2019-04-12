@@ -15,7 +15,9 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -70,6 +72,7 @@ public class AddProductActivity extends ParentClass implements View.OnClickListe
     String categoryId, title, price, description;
     String imagePath = null;
     int REQUEST_PERMISSION_CAMERA = 1;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +83,11 @@ public class AddProductActivity extends ParentClass implements View.OnClickListe
 
 
     private void viewBinding() {
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         progressDialog = new ProgressDialog(AddProductActivity.this);
         progressDialog.setMessage("Loading....");
         productIv = findViewById(R.id.imageview);
@@ -218,6 +226,7 @@ public class AddProductActivity extends ParentClass implements View.OnClickListe
                     GlobalClass.getInstance().SnackBar(rootLayout, "" + response.getString("message"), -1, -1);
                     Intent intent = new Intent(AddProductActivity.this, BottomNavigationSellerActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, "" + response.getString("message"), -1, -1);
                 }
@@ -340,5 +349,15 @@ public class AddProductActivity extends ParentClass implements View.OnClickListe
                 return;
             }
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

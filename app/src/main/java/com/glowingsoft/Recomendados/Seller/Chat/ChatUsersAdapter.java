@@ -2,6 +2,7 @@ package com.glowingsoft.Recomendados.Seller.Chat;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -140,6 +141,7 @@ public class ChatUsersAdapter extends BaseAdapter {
             String result = timeSince.getTimeAgo(timeInMilliSeconds, mContext);
             //  holder.date.setText("" + result);
             dateTv.setText(result);
+            Log.d("date", result);
 
         } catch (ParseException e) {
             e.printStackTrace();

@@ -123,7 +123,6 @@ public class FavouriteFragment extends Fragment {
                         homeModelClass.setOwner_image(jsonObject.getString("owner_image"));
                         homeModelClass.setIs_favorite("" + jsonObject.getString("is_favourite"));
                         homeModelClasses.add(homeModelClass);
-
                     }
                     if (homeModelClasses.size() == 0) {
                         noRecordTv.setVisibility(View.VISIBLE);

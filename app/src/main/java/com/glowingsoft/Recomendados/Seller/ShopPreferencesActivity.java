@@ -71,9 +71,8 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
     String country = null, city = null, address = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shop_preferences);
+    protected void onStart() {
+        super.onStart();
         if (GlobalClass.getInstance().returnShopId() != null) {
             Intent intent = new Intent(ShopPreferencesActivity.this, BottomNavigationSellerActivity.class);
             startActivity(intent);
@@ -81,16 +80,27 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
         } else {
             viewBinding();
         }
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_shop_preferences);
+
     }
 
     private void viewBinding() {
         country = null;
-        city = "Lahore";
-        address = "Muslim town Mor Kalma Chowk Lahore";
+        city = null;
+        address = null;
         latitude = "31.5412458";
         longitude = "74.3143284";
         radioGroup = findViewById(R.id.shoptype);
         countryTv = findViewById(R.id.countryTv);
+        if (GlobalClass.getInstance().returnCountryName() != null) {
+            countryTv.setText("" + GlobalClass.getInstance().returnCountryName());
+        }
         countryTv.setOnClickListener(this);
         searchTv = findViewById(R.id.searchTv);
         searchTv.setOnClickListener(this);
@@ -148,7 +158,10 @@ public class ShopPreferencesActivity extends AppCompatActivity implements View.O
                 RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
                 shopType = radioButton.getText().toString();
                 country = countryTv.getText().toString();
+
                 if (country != null) {
+                    city = country;
+                    address = country;
                     GlobalClass.getInstance().storePreferenceScreenData(latitude, longitude, currencyId, languageId, shopType, country, city, address);
                     Intent intent = new Intent(ShopPreferencesActivity.this, NameYourShopActivity.class);
                     startActivity(intent);

@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.AddProductActivity;
 import com.glowingsoft.Recomendados.Seller.Adapters.SellerHomePageAdapter;
 import com.glowingsoft.Recomendados.Seller.Models.HomeSellerModel;
 import com.glowingsoft.Recomendados.WebReq.Urls;
@@ -71,7 +72,8 @@ public class SellerHomePageFragment extends Fragment implements View.OnClickList
         addProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.container, new HomeSellerFragment()).addToBackStack(null).commit();
+                Intent intent = new Intent(getActivity(), AddProductActivity.class);
+                startActivity(intent);
             }
         });
         setHasOptionsMenu(true);

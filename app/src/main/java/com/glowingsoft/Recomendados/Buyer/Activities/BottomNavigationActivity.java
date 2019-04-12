@@ -35,25 +35,14 @@ public class BottomNavigationActivity extends ParentClass implements BottomNavig
     protected void onStart() {
         super.onStart();
         try {
-            if (getIntent().getExtras().getInt("type") == 2) {
-                Bundle bundle = new Bundle();
-                bundle.putInt("type", 2);
-                bundle.putString("conversation_id", getIntent().getExtras().getString("conversation_id"));
+            if (getIntent().getExtras().getString("check").equals("1")) {
+                Bundle bundle = getIntent().getExtras();
                 Fragment fragment = new ChatFragment();
                 fragment.setArguments(bundle);
                 loadFragment(fragment, R.id.container, null);
             }
-        } catch (Exception a) {
-            try {
-                if (getIntent().getExtras().getInt("type") == 1) {
-                    loadFragment(new ChatFragment(), R.id.container, null);
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-                loadFragment(new HomeFragment(), R.id.container, "Home");
-
-            }
+        } catch (Exception e) {
+            loadFragment(new HomeFragment(), R.id.container, "Home");
         }
     }
 

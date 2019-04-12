@@ -49,7 +49,6 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
     List<HomeModelClass> modelClasses;
     CircleImageView profileIv;
     TextView locationTv, shoptTitleTv;
-    SwipeRefreshLayout swipeRefreshLayout;
     ProgressDialog progressDialog;
     RequestParams requestParams;
     RelativeLayout rootLayout;
@@ -89,28 +88,7 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading....");
         rootLayout = findViewById(R.id.rootLayout);
-        swipeRefreshLayout = findViewById(R.id.refreshLayout);
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                swipeRefreshLayout.setRefreshing(false);
-
-                if (GlobalClass.getInstance().isNetworkAvailable()) {
-                    tagsviewModel.clear();
-                    materialTagsModel.clear();
-                    modelClasses.clear();
-                    requestParams = new RequestParams();
-                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
-                    requestParams.put("shop_id", getIntent().getExtras().getString("shop_id"));
-                    Log.d("userId", GlobalClass.getInstance().returnUserId());
-                    Log.d("shopId", getIntent().getExtras().getString("shop_id"));
-                    WebReq.post(Urls.viewShop, requestParams, new ViewShopRestApi());
-
-                } else {
-                    GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
-                }
-            }
-        });
+       
         shoptTitleTv = findViewById(R.id.shoptTitleTv);
         adapter = new HomeFragmentAdapter(this, modelClasses);
         gridView.setAdapter(adapter);

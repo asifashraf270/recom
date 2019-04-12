@@ -76,6 +76,7 @@
                         android:drawableLeft="@drawable/country"
                         android:drawablePadding="@dimen/marginLinear"
                         android:hint="@string/country"
+                        android:inputType="text"
                         android:paddingLeft="@dimen/marginLinear" />
                 </LinearLayout>
 

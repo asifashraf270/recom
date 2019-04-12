@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import com.glowingsoft.Recomendados.Buyer.Models.DetailsModelClass;
 import com.glowingsoft.Recomendados.Buyer.Models.HomeModelClass;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.Chat.UserChatMessages;
 import com.glowingsoft.Recomendados.WebReq.Urls;
 import com.glowingsoft.Recomendados.WebReq.WebReq;
 import com.gun0912.tedpermission.PermissionListener;
@@ -41,6 +43,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import cz.msebera.android.httpclient.Header;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -65,6 +69,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     ImageView chatIV, phoneIv;
     String productNamePrice = null, ownerPhoneNumber;
     PermissionListener permissionlistener;
+    String convId = null;
+    int currentPage = 0;
+    Handler handler;
+    Runnable Update;
 
 
     @Override
@@ -77,6 +85,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     private void viewBinding() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        handler = new Handler();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -102,7 +111,6 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         recyclerView.setHasFixedSize(true);
         detailsModelClasses = new ArrayList<>();
         adaper = new DetailPagerAdaper(this, detailsModelClasses);
-
         viewPager.setAdapter(adaper);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading....");
@@ -147,9 +155,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.chatIv:
-                Intent intent1 = new Intent(DetailActivity.this, BottomNavigationActivity.class);
-                intent1.putExtra("type", 1);
-                startActivity(intent1);
+                Intent chatIntent = new Intent(DetailActivity.this, UserChatMessages.class);
+                chatIntent.putExtra("conversation_id", convId);
+                chatIntent.putExtra("user_id", GlobalClass.getInstance().returnUserId());
+                startActivity(chatIntent);
                 break;
             case R.id.phoneIv:
                 TedPermission.with(this)
@@ -200,6 +209,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                     if (conversitional_id.equals("0")) {
                         chatIV.setVisibility(View.INVISIBLE);
                     }
+                    convId = conversitional_id;
                     locationTv.setText("" + jsonObjectShop.getJSONObject("location").getString("address"));
                     ownerPhoneNumber = jsonObjectShop.getJSONObject("owner").getString("phone");
                     nameTv.setText("" + jsonObjectShop.getString("name"));
@@ -224,6 +234,22 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                         detailsModelClasses.add(modelClass);
                     }
                     adaper.notifyDataSetChanged();
+                    Update = new Runnable() {
+                        public void run() {
+                            if (currentPage == detailsModelClasses.size()) {
+                                currentPage = 0;
+                            }
+                            viewPager.setCurrentItem(currentPage++, true);
+                        }
+                    };
+
+                    Timer timer = new Timer(); // This will create a new Thread
+                    timer.schedule(new TimerTask() { // task to be scheduled
+                        @Override
+                        public void run() {
+                            handler.post(Update);
+                        }
+                    }, 3000, 4000);
                     JSONArray jsonArrayProducts = response.getJSONObject("shop").getJSONArray("products");
                     Log.d("response", jsonArrayProducts.toString());
 

@@ -67,7 +67,7 @@
             <TextView
                 android:id="@+id/priceTv"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/textPadding"
                 android:paddingRight="@dimen/textPadding"
@@ -75,7 +75,7 @@
 
             <TextView
                 android:id="@+id/nameTv"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/textPadding"
                 android:paddingRight="@dimen/textPadding"
@@ -110,10 +110,10 @@
                 <TextView
                     android:id="@+id/locationTv"
                     style="@style/Base.TextAppearance.AppCompat.Medium"
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/phoneIv"
                     android:drawableLeft="@drawable/ic_location_on_black_18dp" />
             </RelativeLayout>
 

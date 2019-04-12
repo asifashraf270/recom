@@ -70,7 +70,7 @@
                         android:drawableLeft="@drawable/usernew"
                         android:drawablePadding="@dimen/drawablePadding"
                         android:hint="@string/user"
-                        android:inputType="textEmailAddress" />
+                        android:inputType="text" />
 
                     <EditText
                         android:id="@+id/emailEt"

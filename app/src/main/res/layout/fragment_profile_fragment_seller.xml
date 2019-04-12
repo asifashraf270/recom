@@ -78,7 +78,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="@dimen/marginLinear"
-        android:drawableLeft="@drawable/locationicon"
         android:drawablePadding="@dimen/marginLinear"
         android:visibility="invisible" />
 
@@ -90,7 +89,6 @@
         android:layout_below="@id/locationTv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/shopPrefMargin"
-        android:drawableLeft="@drawable/phoneicon"
         android:drawablePadding="@dimen/marginLinear" />
 
     <TextView
@@ -101,8 +99,8 @@
         android:layout_below="@id/phoneNoTv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/shopPrefMargin"
-        android:drawableLeft="@drawable/email"
         android:drawablePadding="@dimen/marginLinear" />
+
     <TextView
         android:id="@+id/logout"
         android:layout_width="@dimen/loginWith"

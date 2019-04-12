@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -109,6 +110,29 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
         materialIdforResult = new ArrayList<>();
         tagsListModels = new ArrayList<>();
         completionView = findViewById(R.id.tagsAtv);
+        completionView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_DEL) {
+                    if (completionView.getText().toString().length() == 0) {
+
+                        addTvTags.setVisibility(View.INVISIBLE);
+                    }
+                }
+                return false;
+            }
+        });
+        materialAtv.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_DEL) {
+                    if (materialAtv.getText().toString().length() == 0) {
+                        addTvMaterial.setVisibility(View.INVISIBLE);
+                    }
+                }
+                return false;
+            }
+        });
         materialAtv.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -122,13 +146,15 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (GlobalClass.getInstance().isNetworkAvailable()) {
-                    RequestParams requestParams = new RequestParams();
-                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
-                    requestParams.put("title", s.toString());
-                    WebReq.post(Urls.tagSearch, requestParams, new MaterialSearch());
-                } else {
-                    GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
+                if (s.length() > 0) {
+                    if (GlobalClass.getInstance().isNetworkAvailable()) {
+                        RequestParams requestParams = new RequestParams();
+                        requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
+                        requestParams.put("title", s.toString());
+                        WebReq.post(Urls.tagSearch, requestParams, new MaterialSearch());
+                    } else {
+                        GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
+                    }
                 }
 
             }
@@ -146,13 +172,15 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (GlobalClass.getInstance().isNetworkAvailable()) {
-                    RequestParams requestParams = new RequestParams();
-                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
-                    requestParams.put("title", s.toString());
-                    WebReq.post(Urls.tagSearch, requestParams, new TagSearch());
-                } else {
-                    GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
+                if (s.length() > 0) {
+                    if (GlobalClass.getInstance().isNetworkAvailable()) {
+                        RequestParams requestParams = new RequestParams();
+                        requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
+                        requestParams.put("title", s.toString());
+                        WebReq.post(Urls.tagSearch, requestParams, new TagSearch());
+                    } else {
+                        GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
+                    }
                 }
 
             }
@@ -170,7 +198,6 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
         shopImage.setOnClickListener(this);
         progressDialog = new ProgressDialog(SectionActivity.this);
         progressDialog.setMessage("Loading...");
-
 
     }
 

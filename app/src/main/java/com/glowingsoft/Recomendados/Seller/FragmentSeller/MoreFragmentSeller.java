@@ -37,7 +37,6 @@ public class MoreFragmentSeller extends Fragment implements View.OnClickListener
         myshopTv = view.findViewById(R.id.myshopTv);
         myshopTv.setOnClickListener(this);
         instaIv.setOnClickListener(this);
-        titleTv.setText("" + GlobalClass.getInstance().returntitle());
         titleTv.setOnClickListener(this);
         return view;
     }

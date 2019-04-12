@@ -42,8 +42,6 @@ public class ChatFragment extends Fragment {
     private UserChatModel userchatmodel;
     private Runnable runnableCode;
     private Handler handler = new Handler();
-
-
     String conversation_id, user_id, friend_id, user_name, friend_name, last_message, last_message_time, friend_photo, unread;
 
 
@@ -52,8 +50,26 @@ public class ChatFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
-        viewBinding(view);
+        try {
+            if (getArguments().getString("check").length() > 0) {
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Do something after 100ms
+                        Intent intent = new Intent(getActivity(), UserChatMessages.class);
+                        intent.putExtra("user_id", getArguments().getString("user_id"));
+                        intent.putExtra("conversation_id", getArguments().getString("conversation_id"));
+                        startActivity(intent);
+                    }
+                }, 3000);
 
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        viewBinding(view);
         return view;
     }
 
@@ -79,8 +95,6 @@ public class ChatFragment extends Fragment {
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, "" + getResources().getString(R.string.networkConnection), -1, -1);
                 }
-
-
                 handler.postDelayed(runnableCode, 5000);
             }
         };
@@ -119,13 +133,7 @@ public class ChatFragment extends Fragment {
             super.onSuccess(statusCode, headers, response);
             try {
                 if (response.getInt("status") == 200) {
-                    try {
-                        if (getArguments().getInt("type") == 2) {
-                            loadconversionafterwait();
-                        }
-                    } catch (Exception e) {
 
-                    }
                     JSONArray jsonArray = response.getJSONArray("conversations");
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject object = jsonArray.getJSONObject(i);
@@ -170,21 +178,6 @@ public class ChatFragment extends Fragment {
         public void onFinish() {
             super.onFinish();
         }
-    }
-
-    private void loadconversionafterwait() {
-
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //Do something after 100ms
-                Intent intent = new Intent(getActivity(), UserChatMessages.class);
-                intent.putExtra("user_id", GlobalClass.getInstance().returnUserId());
-                intent.putExtra("conversation_id", getArguments().getString("conversation_id"));
-                startActivity(intent);
-            }
-        }, 2000);
     }
 
 

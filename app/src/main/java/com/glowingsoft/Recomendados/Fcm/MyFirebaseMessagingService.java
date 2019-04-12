@@ -22,6 +22,7 @@ import com.glowingsoft.Recomendados.Buyer.Activities.BottomNavigationActivity;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.BottomNavigationSellerActivity;
+import com.glowingsoft.Recomendados.Seller.Chat.ChatUsersAdapter;
 import com.glowingsoft.Recomendados.Seller.Chat.UserChatMessages;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -50,7 +51,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             if (GlobalClass.getInstance().returnConvertionalId() == null) {
                 ShortcutBadger.applyCount(MyFirebaseMessagingService.this, GlobalClass.getInstance().returnCount());
                 intent = new Intent(this, BottomNavigationActivity.class);
-                intent.putExtra("type", 2);///2 for notification android
+                intent.putExtra("check", "1");
+                intent.putExtra("user_id", GlobalClass.getInstance().returnUserId());
                 intent.putExtra("conversation_id", remoteMessage.getData().get("conversation_id"));
                 CreateNOti(remoteMessage);
             } else {

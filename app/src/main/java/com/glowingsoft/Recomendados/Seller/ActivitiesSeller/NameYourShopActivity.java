@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -37,10 +40,15 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
     Toolbar toolbar;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        viewBinding();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_your_shop);
-        viewBinding();
     }
 
     private void viewBinding() {
@@ -50,6 +58,9 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         shopNameEt = findViewById(R.id.shopNameEt);
+        if (GlobalClass.getInstance().returnshopName() != null) {
+            shopNameEt.setText("" + GlobalClass.getInstance().returnshopName());
+        }
         checkavailabilyTv = findViewById(R.id.checkavailabilyTv);
         checkavailabilyTv.setOnClickListener(this);
         progressDialog = new ProgressDialog(this);
@@ -57,6 +68,18 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         rootLayout = findViewById(R.id.rootLayout);
         continueTv = findViewById(R.id.continueTv);
         continueTv.setOnClickListener(this);
+        shopNameEt.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_DEL) {
+                    if (shopNameEt.getText().toString().length() == 0) {
+                        continueTv.setVisibility(View.INVISIBLE);
+                    }
+
+                }
+                return false;
+            }
+        });
 
     }
 
@@ -74,9 +97,12 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
                     } else {
                         GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
                     }
+
                 } else {
-                    shopNameEt.setError("Shop Name is Compulsory");
+                    continueTv.setVisibility(View.INVISIBLE);
                 }
+
+
                 break;
             case R.id.continueTv:
                 if (GlobalClass.getInstance().returnshopName() != null) {
@@ -98,6 +124,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
             super.onSuccess(statusCode, headers, response);
             try {
                 if (response.getInt("status") == 200) {
+                    continueTv.setVisibility(View.VISIBLE);
                     GlobalClass.getInstance().storeShopName(shopName);
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
                 } else {
@@ -131,8 +158,7 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 break;

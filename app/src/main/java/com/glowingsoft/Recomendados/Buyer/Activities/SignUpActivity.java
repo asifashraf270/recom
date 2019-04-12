@@ -82,7 +82,7 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
         userEmail = getValueFromEdittext(emailEt);
         userName = getValueFromEdittext(userEt);
         userPassword = getValueFromEdittext(passwordEt);
-        if (userEmail.length() > 0 && userName.length() > 0 && userPassword.length() > 0 && isValidEmailId(userEmail)) {
+        if (userEmail.length() > 0 && userName.length() > 0 && userPassword.length() > 0 && isValidEmailId(userEmail) && userPassword.length() >= 6) {
             if (GlobalClass.getInstance().isNetworkAvailable()) {
                 requestParams = new RequestParams();
                 requestParams.put("name", userName);
@@ -101,21 +101,28 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                 if (userEmail.length() > 0) {
                     if (isValidEmailId(userEmail)) {
                         if (userPassword.length() > 0) {
-
                         } else {
-                            passwordEt.setError("Password is required");
+                            if (userPassword.length() < 6) {
+                                passwordEt.requestFocus();
+                                passwordEt.setError("Password must be atleast  6 digits");
+                            } else {
+                                passwordEt.requestFocus();
+                                passwordEt.setError("Password is Require");
+                            }
                         }
 
                     } else {
+                        emailEt.requestFocus();
                         emailEt.setError("Email is Invalid");
                     }
                 } else {
-                    emailEt.setError("Email is required");
+                    emailEt.requestFocus();
+                    emailEt.setError("Email is Require");
+
                 }
-
-
             } else {
-                userEt.setError("User Name is required");
+                userEt.requestFocus();
+                userEt.setError("Name is require");
             }
         }
     }
@@ -141,17 +148,11 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                     GlobalClass.getInstance().storeTitle(title);
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
                     GlobalClass.getInstance().storeTitle(title);
-                    if (title.equals("Become a SELLER")) {
-                        intent = new Intent(SignUpActivity.this, ShopPreferencesActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        GlobalClass.getInstance().storeUserType("1");
-                        startActivity(intent);
-                    } else {
-                        intent = new Intent(SignUpActivity.this, BottomNavigationActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        GlobalClass.getInstance().storeUserType("2");
-                        startActivity(intent);
-                    }
+                    intent = new Intent(SignUpActivity.this, BottomNavigationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    GlobalClass.getInstance().storeUserType("2");
+                    startActivity(intent);
+
                     finish();
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);

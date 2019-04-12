@@ -84,6 +84,7 @@
             android:background="@drawable/viewshop_view"
             android:gravity="center"
             android:padding="@dimen/marginLinear"
+            android:text="Switch to Buyer"
             android:textColor="@color/colorWhite" />
 
         <TextView

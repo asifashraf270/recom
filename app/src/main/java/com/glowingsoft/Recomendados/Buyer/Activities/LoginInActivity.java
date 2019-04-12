@@ -200,7 +200,7 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
     private void login(EditText emailEt, EditText passwordEt) {
         email = getValueFromEdittext(emailEt);
         password = getValueFromEdittext(passwordEt);
-        if (email.length() > 0 && passwordEt.length() > 0 && isValidEmailId(email)) {
+        if (email.length() > 0 && passwordEt.length() > 0 && isValidEmailId(email) && password.length() >= 6) {
             requestParams = new RequestParams();
             requestParams.put("email", email);
             requestParams.put("password", password);
@@ -214,11 +214,31 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
         } else {
             if (email.length() > 0) {
                 if (!isValidEmailId(email)) {
+                    emailEt.requestFocus();
                     emailEt.setError("email is Invalid");
+                } else {
+
+                    if (password.length() < 6) {
+                        passwordEt.requestFocus();
+                        passwordEt.setError("Password must be atleast  6 digits");
+                    } else {
+                        passwordEt.requestFocus();
+                        passwordEt.setError("Password  Required");
+                    }
                 }
-                passwordEt.setError("Password is Required");
             } else {
-                passwordEt.setError("Password is Required");
+                if (email.length() == 0) {
+                    emailEt.requestFocus();
+                    emailEt.setError("Email is Required");
+                }
+                if (password.length() < 6) {
+                    passwordEt.requestFocus();
+
+                    passwordEt.setError("Password must be atleast  6 digits");
+                } else {
+                    passwordEt.requestFocus();
+                    passwordEt.setError("Password  Required");
+                }
             }
         }
     }
@@ -243,17 +263,11 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
                     GlobalClass.getInstance().StoreUserId(jsonObject.getString("id"));
                     String title = response.getString("title");
                     GlobalClass.getInstance().storeTitle(title);
-                    if (title.equals("Become a SELLER")) {
-                        intent = new Intent(LoginInActivity.this, ShopPreferencesActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        GlobalClass.getInstance().storeUserType("1");
-                        startActivity(intent);
-                    } else {
-                        intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        GlobalClass.getInstance().storeUserType("2");
-                        startActivity(intent);
-                    }
+                    intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    GlobalClass.getInstance().storeUserType("2");
+                    startActivity(intent);
+
 
                 } else {
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);

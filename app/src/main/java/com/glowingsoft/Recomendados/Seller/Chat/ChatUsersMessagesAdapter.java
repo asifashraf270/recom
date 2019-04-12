@@ -3,6 +3,7 @@ package com.glowingsoft.Recomendados.Seller.Chat;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -93,7 +95,12 @@ public class ChatUsersMessagesAdapter extends BaseAdapter {
                 formattedDate = writeFormat.format(date);
             }
             Date startDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(formattedDate);
-            long timeInMilliSeconds = startDate.getTime();
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(startDate);
+            calendar.add(Calendar.HOUR, -6);
+            Log.d("data", startDate.getTime() + "");
+            Log.d("data1", calendar.getTime().getTime() + "");
+            long timeInMilliSeconds = calendar.getTime().getTime();
             timeInMilliSeconds = timeInMilliSeconds + (3600000 * 5);
             String result = timeSince.getTimeAgo(timeInMilliSeconds, mContext);
             dateView.setText(result);

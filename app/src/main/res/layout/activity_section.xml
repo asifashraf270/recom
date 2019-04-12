@@ -51,22 +51,21 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/shooperTv"
                 android:layout_margin="@dimen/shopPrefMargin"
-
                 android:orientation="vertical">
 
                 <com.github.tommykw.tagview.TagView
                     android:id="@+id/tagsTv"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:background_color="@color/white"
                     app:corner_radius="2dp"
-                    app:horizontal_spacing="4dp"
+                    app:horizontal_spacing="2dp"
                     app:sort_type="asc"
                     app:stroke_color="@color/gray"
                     app:stroke_width="1dp"
                     app:text_color="#000000"
                     app:text_font_size="6sp"
-                    app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+                    app:vertical_spacing="2dp"></com.github.tommykw.tagview.TagView>
 
 
                 <AutoCompleteTextView
@@ -74,7 +73,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/spinner_drawable"
-
                     android:hint="Enter Shop Tags" />
 
                 <TextView
@@ -92,27 +90,27 @@
 
                 <com.github.tommykw.tagview.TagView
                     android:id="@+id/materialsTv"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spinnerPadding"
                     app:background_color="@color/white"
-
                     app:corner_radius="2dp"
-                    app:horizontal_spacing="4dp"
+                    app:horizontal_spacing="2dp"
+
                     app:sort_type="asc"
                     app:stroke_color="@color/gray"
                     app:stroke_width="1dp"
                     app:text_color="#000000"
                     app:text_font_size="6sp"
-                    app:vertical_spacing="@dimen/spacing_small"></com.github.tommykw.tagview.TagView>
+                    app:vertical_spacing="2dp"></com.github.tommykw.tagview.TagView>
 
                 <AutoCompleteTextView
                     android:id="@+id/materialAtv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spinnerPadding"
-
                     android:background="@drawable/spinner_drawable"
-                    android:hint="Enter Shop Tags" />
+                    android:hint="Enter shop Materials" />
 
                 <TextView
                     android:id="@+id/materialAddTv"
@@ -128,16 +126,28 @@
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/shopPrefMargin"
+                android:gravity="center"
+                android:text="Shop Profile Image"
+                android:textColor="@color/colorBlack" />
+
             <ImageView
                 android:id="@+id/shopImage"
                 android:layout_width="@dimen/loginWith"
                 android:layout_height="@dimen/loginWith"
-                android:layout_below="@id/layout"
+                android:layout_below="@id/message"
                 android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="@dimen/spinnerPadding"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/placeholderviewplager" />
-
 
             <TextView
                 android:id="@+id/saveAndcontinueTv"

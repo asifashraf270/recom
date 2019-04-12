@@ -13,7 +13,7 @@
     <string name="viewShop">VIEW SHOP</string>
     <string name="alreadyAccount">Already have an account? <u>LOGIN</u></string>
     <string name="socialLogin">LOGIN WITH SOCIAL</string>
-    <string name="signUp">Don\'t have account? <u>SIGNUP</u></string>
+    <string name="signUp">Don\'t have an account? <u>SIGNUP</u></string>
     <string name="welcomeText">PLEASE CHOOSE YOUR PREFERRED\nACTION.WOULD YOU LIKE TO SELL\nYOUR GOODS OR BECOME A BUYER ?</string>
     <string name="type_message">Type your message</string>
 
@@ -33,7 +33,7 @@
     <string name="checkboxparttimePartial">I sell part-time but hope to sell full time</string>
     <string name="checkboxpartTime">I sell part-time and that how i like it.</string>
     <string name="checkboxOther">Other</string>
-    <string name="search">Search</string>
+    <string name="search">Next</string>
     <string name="nameyourshop">Name Your Shop</string>
     <string name="reflect">Choose a memorable name\nreflects your style</string>
     <string name="shopName">Shop Name</string>
