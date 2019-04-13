@@ -97,13 +97,14 @@ public class ChatUsersMessagesAdapter extends BaseAdapter {
             Date startDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(formattedDate);
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(startDate);
-            calendar.add(Calendar.HOUR, -6);
-            Log.d("data", startDate.getTime() + "");
-            Log.d("data1", calendar.getTime().getTime() + "");
-            long timeInMilliSeconds = calendar.getTime().getTime();
+            calendar.add(Calendar.HOUR, 6);
+            Date dateFinal = calendar.getTime();
+            Log.d("data1", dateFinal.getTime() + "");
+            long timeInMilliSeconds = dateFinal.getTime();
             timeInMilliSeconds = timeInMilliSeconds + (3600000 * 5);
             String result = timeSince.getTimeAgo(timeInMilliSeconds, mContext);
             dateView.setText(result);
+            Log.d("result", result);
 
         } catch (Exception e) {
 

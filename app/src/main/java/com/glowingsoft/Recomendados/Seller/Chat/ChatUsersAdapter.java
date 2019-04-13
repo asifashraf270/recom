@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.facebook.appevents.codeless.internal.Constants;
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
 import com.squareup.picasso.Picasso;
@@ -18,6 +19,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -136,7 +138,11 @@ public class ChatUsersAdapter extends BaseAdapter {
                 formattedDate = writeFormat.format(date);
             }
             Date startDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(formattedDate);
-            long timeInMilliSeconds = startDate.getTime();
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(startDate);
+            calendar.add(Calendar.HOUR, 6);
+            Date dateFinal = calendar.getTime();
+            long timeInMilliSeconds = dateFinal.getTime();
             timeInMilliSeconds = timeInMilliSeconds + (3600000 * 5);
             String result = timeSince.getTimeAgo(timeInMilliSeconds, mContext);
             //  holder.date.setText("" + result);

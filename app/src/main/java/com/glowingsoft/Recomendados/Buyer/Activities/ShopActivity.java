@@ -88,7 +88,7 @@ public class ShopActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading....");
         rootLayout = findViewById(R.id.rootLayout);
-       
+
         shoptTitleTv = findViewById(R.id.shoptTitleTv);
         adapter = new HomeFragmentAdapter(this, modelClasses);
         gridView.setAdapter(adapter);

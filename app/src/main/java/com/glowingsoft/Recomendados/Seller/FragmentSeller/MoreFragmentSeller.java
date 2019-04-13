@@ -55,6 +55,7 @@ public class MoreFragmentSeller extends Fragment implements View.OnClickListener
                 share("com.twitter.android");
                 break;
             case R.id.titleTv:
+                GlobalClass.getInstance().storeTitle("Become a Buyer");
                 Intent intent = new Intent(getActivity(), BottomNavigationActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 getActivity().startActivity(intent);

@@ -48,9 +48,9 @@ public class AutoCompleteTextAdapter extends ArrayAdapter<LanguageModel> {
         }
 //        LanguageModel people = modelList.get(position);
 //        if (people != null) {
-            TextView lblName = (TextView) view.findViewById(R.id.valueTv);
+        TextView lblName = (TextView) view.findViewById(R.id.valueTv);
 //            if (lblName != null)
-                lblName.setText("xyz");
+        lblName.setText("xyz");
 //        }
 
         return view;

@@ -2,6 +2,7 @@ package com.glowingsoft.Recomendados.Seller.Chat;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,7 +18,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.glowingsoft.Recomendados.Buyer.Activities.BottomNavigationActivity;
 import com.glowingsoft.Recomendados.GlobalClass;
+import com.glowingsoft.Recomendados.ParentClass;
 import com.glowingsoft.Recomendados.R;
 import com.glowingsoft.Recomendados.WebReq.Urls;
 import com.glowingsoft.Recomendados.WebReq.WebReq;
@@ -29,11 +32,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import cz.msebera.android.httpclient.Header;
 
 
-public class UserChatMessages extends AppCompatActivity {
+public class UserChatMessages extends ParentClass {
     ListView messagesListView;
     EditText chatText;
     ImageView sendMessageButton;
@@ -93,7 +97,6 @@ public class UserChatMessages extends AppCompatActivity {
         userMessagesData = new ArrayList<>();
         messagesBatch = (TextView) findViewById(R.id.messagesBatch);
         name_toolbar_title = findViewById(R.id.name_toolbar_title);
-
         user_id = getIntent().getExtras().getString("user_id");
         conversionalId = getIntent().getExtras().getString("conversation_id");
         rootlayout = findViewById(R.id.rootLayout);
@@ -141,7 +144,6 @@ public class UserChatMessages extends AppCompatActivity {
                 chatText.setText("");
                 sendMessages(2);
                 InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-
                 inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
             }
         });
@@ -149,11 +151,19 @@ public class UserChatMessages extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        if (getIntent().getExtras() != null) {
+            if (Objects.equals(getIntent().getExtras().getString("check"), "1")) {
+                startActivity(new Intent(UserChatMessages.this, BottomNavigationActivity.class));
 
-        super.onBackPressed();
+            } else {
+                finish();
+            }
 
-        finish();
+        } else {
+            finish();
+        }
     }
+
 
     private void updateNewMessagesBatch() {
         try {

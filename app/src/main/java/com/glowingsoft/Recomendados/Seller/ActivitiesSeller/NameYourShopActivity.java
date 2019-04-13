@@ -58,9 +58,6 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.backsecond);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         shopNameEt = findViewById(R.id.shopNameEt);
-        if (GlobalClass.getInstance().returnshopName() != null) {
-            shopNameEt.setText("" + GlobalClass.getInstance().returnshopName());
-        }
         checkavailabilyTv = findViewById(R.id.checkavailabilyTv);
         checkavailabilyTv.setOnClickListener(this);
         progressDialog = new ProgressDialog(this);
@@ -68,6 +65,10 @@ public class NameYourShopActivity extends ParentClass implements View.OnClickLis
         rootLayout = findViewById(R.id.rootLayout);
         continueTv = findViewById(R.id.continueTv);
         continueTv.setOnClickListener(this);
+        if (GlobalClass.getInstance().returnshopName() != null) {
+            shopNameEt.setText("" + GlobalClass.getInstance().returnshopName());
+            continueTv.setVisibility(View.VISIBLE);
+        }
         shopNameEt.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {

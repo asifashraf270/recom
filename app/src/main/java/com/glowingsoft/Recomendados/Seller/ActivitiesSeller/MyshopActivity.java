@@ -48,7 +48,6 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
     List<HomeModelClass> modelClasses;
     CircleImageView profileIv;
     TextView locationTv, shoptTitleTv;
-    SwipeRefreshLayout swipeRefreshLayout;
     ProgressDialog progressDialog;
     RequestParams requestParams;
     RelativeLayout rootLayout;
@@ -87,24 +86,7 @@ public class MyshopActivity extends AppCompatActivity implements View.OnClickLis
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading....");
         rootLayout = findViewById(R.id.rootLayout);
-        swipeRefreshLayout = findViewById(R.id.refreshLayout);
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                swipeRefreshLayout.setRefreshing(false);
-                tagsviewModel.clear();
-                materialTagsModel.clear();
-                modelClasses.clear();
-                if (GlobalClass.getInstance().isNetworkAvailable()) {
-                    requestParams = new RequestParams();
-                    requestParams.put("user_id", GlobalClass.getInstance().returnUserId());
-                    WebReq.post(Urls.myshop, requestParams, new ViewShopRestApi());
 
-                } else {
-                    GlobalClass.getInstance().SnackBar(rootLayout, getResources().getString(R.string.networkConnection), -1, -1);
-                }
-            }
-        });
         shoptTitleTv = findViewById(R.id.shoptTitleTv);
         adapter = new HomeFragmentAdapter(this, modelClasses);
         gridView.setAdapter(adapter);

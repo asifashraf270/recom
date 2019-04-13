@@ -52,7 +52,7 @@ public class ParentClass extends AppCompatActivity {
 
     protected void loadFragment(Fragment fragment, int container, String tag) {
         if (tag != null) {
-            getSupportFragmentManager().beginTransaction().replace(container, fragment, tag).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(container, fragment, tag).addToBackStack(tag).commit();
         } else {
             getSupportFragmentManager().beginTransaction().replace(container, fragment).addToBackStack(null).commit();
 

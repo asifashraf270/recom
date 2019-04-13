@@ -2,51 +2,53 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="pixel_xl" />
+      </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="data" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6512a786-b806-4213-92f3-d5b30162d0ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Models/TagsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Models/TagsModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ParentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ParentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/MyshopActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/MyshopActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/SellerHomePageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/SellerHomePageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/AutoCompleteTextAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/AutoCompleteTextAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersMessagesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersMessagesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/CircleTransform.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/CircleTransform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/TimeSince.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/TimeSince.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/MoreFragmentSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/MoreFragmentSeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/WebReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/WebReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/bubble_sms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/bubble_sms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/user.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_name_your_shop.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_name_your_shop.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_section.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_section.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_preferences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_preferences.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_product.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_chat_messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_chat_messages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/chat_users_messages_toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/chat_users_messages_toolbar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_seller.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_seller.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_more_fragment_seller.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_more_fragment_seller.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_fragment_seller.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_fragment_seller.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/sellerhomepage_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/sellerhomepage_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/add_product_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/add_product_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,16 +98,18 @@
     <session id="723675654">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.closed" value="28" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.20" value="2" />
-          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.25" value="2" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.40" value="2" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.6" value="1" />
@@ -114,45 +118,45 @@
           <entry key="project.open.time.80" value="1" />
           <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.90" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="3" />
-          <entry key="gradle" value="26" />
-          <entry key="java" value="375" />
+          <entry key="gradle" value="27" />
+          <entry key="java" value="417" />
           <entry key="json" value="2" />
           <entry key="mp3" value="2" />
-          <entry key="png" value="11" />
-          <entry key="xml" value="298" />
+          <entry key="png" value="18" />
+          <entry key="xml" value="334" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="Groovy" value="26" />
-          <entry key="Image" value="11" />
-          <entry key="JAVA" value="375" />
+          <entry key="Groovy" value="27" />
+          <entry key="Image" value="18" />
+          <entry key="JAVA" value="417" />
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="XML" value="298" />
+          <entry key="XML" value="334" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="14" />
-          <entry key="java" value="37086" />
+          <entry key="java" value="38194" />
           <entry key="txt" value="8" />
-          <entry key="xml" value="4509" />
+          <entry key="xml" value="4825" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="14" />
-          <entry key="JAVA" value="37086" />
+          <entry key="JAVA" value="38194" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="XML" value="4509" />
+          <entry key="XML" value="4825" />
         </counts>
       </usages-collector>
     </session>
@@ -160,73 +164,60 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4300">
-              <caret line="251" column="27" selection-start-line="251" selection-start-column="27" selection-end-line="251" selection-end-column="27" />
-              <folding>
-                <element signature="e#10413#10756#0" expanded="true" />
-                <element signature="e#10755#10756#0" expanded="true" />
-                <element signature="e#10840#11057#0" expanded="true" />
-                <element signature="e#11056#11057#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+            <state relative-caret-position="660">
+              <caret line="88" column="28" lean-forward="true" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
               <folding>
-                <element signature="e#3838#5190#0" expanded="true" />
-                <element signature="e#5189#5190#0" expanded="true" />
-                <element signature="e#13496#13696#0" expanded="true" />
-                <element signature="e#13695#13696#0" expanded="true" />
+                <element signature="e#3394#3544#0" expanded="true" />
+                <element signature="e#3543#3544#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersMessagesAdapter.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_chat_messages.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="101" column="62" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
+            <state relative-caret-position="179">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_users_messages_toolbar.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="374">
+              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="4444">
+              <caret line="251" column="33" selection-start-line="251" selection-start-column="33" selection-end-line="251" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#10890#11107#0" expanded="true" />
+                <element signature="e#11106#11107#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
+            <state relative-caret-position="412">
+              <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
               <folding>
-                <element signature="e#2082#2259#0" expanded="true" />
-                <element signature="e#2258#2259#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2475#3052#0" expanded="true" />
+                <element signature="e#3051#3052#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -235,46 +226,65 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="80" column="98" selection-start-line="80" selection-start-column="98" selection-end-line="80" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_chat_messages.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_out.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/SellerHomePageAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="199" column="37" selection-start-line="199" selection-start-column="37" selection-end-line="199" selection-end-column="37" />
+            <state relative-caret-position="250">
+              <caret line="81" column="67" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
               <folding>
-                <element signature="e#3490#4255#0" expanded="true" />
-                <element signature="e#4254#4255#0" expanded="true" />
-                <element signature="e#4295#6202#0" expanded="true" />
-                <element signature="e#5030#6095#0" expanded="true" />
-                <element signature="e#6094#6095#0" expanded="true" />
-                <element signature="e#6201#6202#0" expanded="true" />
-                <element signature="e#6994#6995#0" expanded="true" />
-                <element signature="e#7032#7033#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
+                <element signature="e#1399#1400#0" expanded="true" />
+                <element signature="e#1456#1457#0" expanded="true" />
+                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="e#1544#1545#0" expanded="true" />
+                <element signature="e#1575#1576#0" expanded="true" />
+                <element signature="e#2216#2750#0" expanded="true" />
+                <element signature="e#2749#2750#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/GlobalClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-990">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3387#3625#0" expanded="true" />
+                <element signature="e#3624#3625#0" expanded="true" />
+                <element signature="e#3655#3863#0" expanded="true" />
+                <element signature="e#3862#3863#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ParentClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -293,13 +303,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>materialSe</find>
-      <find>material</find>
-      <find>materialsea</find>
-      <find>saveAndcontinueTv</find>
-      <find>materialSear</find>
-      <find>materialAddTv</find>
-      <find>tagView</find>
       <find>storetok</find>
       <find>onac</find>
       <find>onclick</find>
@@ -323,6 +326,13 @@
       <find>addProductTv</find>
       <find>submitTv</find>
       <find>sendMessageBtn</find>
+      <find>title</find>
+      <find>splas</find>
+      <find>centerIn</find>
+      <find>onres</find>
+      <find>onbac</find>
+      <find>onBack</find>
+      <find>onBa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -347,20 +357,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Adapter/HomeFragmentAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ParentClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/BottomNavigationSellerActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ContactsCompletionView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/Urls.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/GlobalClass.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/delete_button_icon.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_seller_home_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_subscription.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SubscriptionFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/MyshopActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/ProfileFragmentSeller.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/HomeFragment.java" />
@@ -370,42 +372,49 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_seller.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_fragment_seller.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_more_fragment_seller.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/MoreFragmentSeller.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_shop.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_preferences.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_name_your_shop.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_section.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_update_product.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/sellerhomepage_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_user_chat_messages.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/chat_users_messages_toolbar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_out.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/SellerHomePageAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersMessagesAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/MoreFragmentSeller.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_section.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/MyshopActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_update_product.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/buyer_navigation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/chat_sender_et.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/WebReq.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ParentClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersMessagesAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="699" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -428,37 +437,13 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="recomendados" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="recomendados" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="recomendados" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="anim" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="ScreenshotViewer.SavePath" value="$PROJECT_DIR$/.." />
-    <property name="SearchEverywhereHistoryKey" value="Chat&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;chatFr&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;user&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java&#10;USer&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersAdapter.java&#10;Bot&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;My&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java&#10;check&#9;ACTION&#9;CheckinProject&#10;Detail&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java&#10;Seller&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/SellerHomePageAdapter.java&#10;Home&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/SellerHomePageAdapter.java&#10;color&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/values/colors.xml&#10;favo&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java&#10;Upda&#9;PSI&#9;JAVA://com.glowingsoft.Recomendados.Seller.ActivitiesSeller.UpdateProductActivity&#10;AddProd&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java&#10;home&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java&#10;upda&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_update_product.xml&#10;name&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_name_your_shop.xml&#10;add&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_add_product.xml&#10;Add&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java&#10;Section&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_section.xml&#10;bottom&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/BottomNavigationSellerActivity.java&#10;MoreFrag&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/MoreFragmentSeller.java&#10;Name&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java&#10;shop&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_shop_preferences.xml&#10;shopPr&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_shop_preferences.xml&#10;s&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_name_your_shop.xml&#10;login&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_login_in.xml&#10;shopPre&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java&#10;sh&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_shop.xml&#10;ShopPre&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java&#10;sign&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java&#10;my&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java&#10;Bottom&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;fire&#9;PSI&#9;JAVA://com.glowingsoft.Recomendados.Fcm.MyFirebaseMessagingService&#10;Deta&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java&#10;ChatFr&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;chat&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;Myshop&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/MyshopActivity.java&#10;upd&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_update_product.xml&#10;addpro&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java&#10;Fav&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java&#10;detail&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java&#10;Favo&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java&#10;favour&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java&#10;shopAc&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java&#10;Shopac&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java&#10;FA&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/FavouriteFragment.java&#10;build&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/build.gradle&#10;ShopAc&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java" />
+    <property name="SearchEverywhereHistoryKey" value="Bottom&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;bottom&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;chat&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java&#10;ChatFrag&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;USer&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java&#10;chatFr&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;my&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java&#10;Chat&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;My&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java&#10;DetailAc&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java&#10;ChatFr&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;User&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java&#10;cha&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;c&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;Myf&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java&#10;user&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java&#10;chatFra&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;bot&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;detailAc&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java&#10;ChatFra&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;Bott&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;Myfire&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java&#10;detail&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_detail.xml&#10;Detail&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java&#10;USerC&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java&#10;main&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_main.xml&#10;C&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java&#10;Ma&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/AndroidManifest.xml&#10;Manife&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/AndroidManifest.xml&#10;Android&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/AndroidManifest.xml&#10;build&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/build.gradle&#10;Manifes&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/AndroidManifest.xml&#10;Sell&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java&#10;WebRe&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/WebReq/WebReq.java&#10;Home&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java&#10;WebReq&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/WebReq/WebReq.java&#10;b&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;bott&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java&#10;chat_sen&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/drawable-mdpi/chat_sender_et.xml&#10;home&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/drawable/home.png&#10;add&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_add_product.xml&#10;update&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_update_product.xml&#10;section&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/res/layout/activity_section.xml&#10;Section&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java&#10;NameYourShopAc&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java&#10;SectionAc&#9;PSI&#9;JAVA://com.glowingsoft.Recomendados.Seller.ActivitiesSeller.SectionActivity&#10;Sec&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java&#10;myfire&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java&#10;login&#9;FILE&#9;file://C:/Users/Asif/Desktop/recomendados/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java" />
+    <property name="android.project.structure.last.selected" value="Project" />
+    <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="934dacbe" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -512,7 +497,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
+      <option name="MODE" value="do_nothing" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
@@ -551,12 +536,12 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_CLASS" value="com.glowingsoft.Recomendados.SplashActivity" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/Asif/Desktop/recomendados/app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="C:/Users/Asif/Desktop/recomendados/app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
@@ -578,11 +563,6 @@
       <item itemvalue="Android App.app" />
       <item itemvalue="Gradle.C:/Users/Asif/Desktop/recomendados/app [signingReport]" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.C:/Users/Asif/Desktop/recomendados/app [signingReport]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -610,11 +590,11 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.6213115" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4977307" weight="0.66885245" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4969743" weight="0.66885245" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50226927" side_tool="true" weight="0.47213113" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5030257" side_tool="true" weight="0.66885245" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32879046" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32786885" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
@@ -636,7 +616,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java</url>
-          <line>111</line>
+          <line>109</line>
           <properties class="com.glowingsoft.Recomendados.Fcm.MyFirebaseMessagingService">
             <option name="EMULATED" value="true" />
           </properties>
@@ -646,297 +626,24 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/ProfileFragmentSeller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_fragment_seller.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_more_fragment_seller.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/BaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding>
-            <element signature="e#1847#1848#0" expanded="true" />
-            <element signature="e#1897#1898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/MoreFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/GlobalClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="154" column="51" selection-start-line="154" selection-start-column="51" selection-end-line="154" selection-end-column="51" />
-          <folding>
-            <element signature="e#4883#4884#0" expanded="true" />
-            <element signature="e#4950#4951#0" expanded="true" />
-            <element signature="e#5092#5093#0" expanded="true" />
-            <element signature="e#5160#5161#0" expanded="true" />
-            <element signature="e#5761#5762#0" expanded="true" />
-            <element signature="e#5821#5822#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="41" column="25" selection-start-line="41" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/MyshopActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/ShopActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Fragments/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/Urls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_shop.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ShopPreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="216" column="43" selection-start-line="216" selection-start-column="43" selection-end-line="216" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="54" column="60" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_shop_preferences.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="75" column="63" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2529#2720#0" expanded="true" />
-            <element signature="e#2719#2720#0" expanded="true" />
-            <element signature="e#3189#3241#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
-          <folding>
-            <element signature="e#4170#4365#0" expanded="true" />
-            <element signature="e#4364#4365#0" expanded="true" />
-            <element signature="e#4621#5030#0" expanded="true" />
-            <element signature="e#5029#5030#0" expanded="true" />
-            <element signature="e#6038#6090#0" expanded="true" />
-            <element signature="class#AddTagRetagAddTvstApi#0;class#SectionActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/MoreFragmentSeller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/BottomNavigationSellerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="156" column="50" selection-start-line="156" selection-start-column="50" selection-end-line="156" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/HomeSellerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home_seller.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_section.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-          <folding>
-            <element signature="e#4199#4222#0" expanded="true" />
-            <element signature="e#4780#4803#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_name_your_shop.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/delete.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sellerhomepage_view.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_seller_home_page.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="e#2390#2563#0" expanded="true" />
-            <element signature="e#2562#2563#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="228" column="29" selection-start-line="228" selection-start-column="29" selection-end-line="228" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_update_product.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="124" column="45" selection-start-line="124" selection-start-column="45" selection-end-line="124" selection-end-column="45" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/UpdateProductActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -953,8 +660,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_favourite.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -963,13 +670,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_users_messages_toolbar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/msg_sound.mp3">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_out.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -978,99 +680,311 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4300">
-          <caret line="251" column="27" selection-start-line="251" selection-start-column="27" selection-end-line="251" selection-end-column="27" />
-          <folding>
-            <element signature="e#10413#10756#0" expanded="true" />
-            <element signature="e#10755#10756#0" expanded="true" />
-            <element signature="e#10840#11057#0" expanded="true" />
-            <element signature="e#11056#11057#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Adapters/SellerHomePageAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
+        <state relative-caret-position="3432">
           <caret line="199" column="37" selection-start-line="199" selection-start-column="37" selection-end-line="199" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersMessagesAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="106" column="36" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/MoreFragmentSeller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/SignUpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1021">
+          <caret line="129" column="49" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/LoginInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/NameYourShopActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/SectionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/AddProductActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="228" column="29" selection-start-line="228" selection-start-column="29" selection-end-line="228" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_section.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="137" column="56" selection-start-line="137" selection-start-column="56" selection-end-line="137" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/user.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/user.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/chat.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/ActivitiesSeller/MyshopActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1936">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_update_product.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/home.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/home_fragment_menu.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/buyer_navigation.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/chat_sender_et.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/WebReq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="e#3490#4255#0" expanded="true" />
-            <element signature="e#4254#4255#0" expanded="true" />
-            <element signature="e#4295#6202#0" expanded="true" />
-            <element signature="e#5030#6095#0" expanded="true" />
-            <element signature="e#6094#6095#0" expanded="true" />
-            <element signature="e#6201#6202#0" expanded="true" />
-            <element signature="e#6994#6995#0" expanded="true" />
-            <element signature="e#7032#7033#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_chat_messages.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+        <state relative-caret-position="1628">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/msg_sound.mp3">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="396">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/FragmentSeller/SellerHomePageFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/SplashActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="88">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/WebReq/Urls.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_shop.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="80" column="98" selection-start-line="80" selection-start-column="98" selection-end-line="80" selection-end-column="98" />
+        <state relative-caret-position="3058">
+          <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
           <folding>
-            <element signature="e#3838#5190#0" expanded="true" />
-            <element signature="e#5189#5190#0" expanded="true" />
-            <element signature="e#13496#13696#0" expanded="true" />
-            <element signature="e#13695#13696#0" expanded="true" />
+            <element signature="e#3222#3242#0" expanded="true" />
+            <element signature="e#5637#5657#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersMessagesAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/DetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="101" column="62" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
+        <state relative-caret-position="4444">
+          <caret line="251" column="33" selection-start-line="251" selection-start-column="33" selection-end-line="251" selection-end-column="33" />
+          <folding>
+            <element signature="e#10890#11107#0" expanded="true" />
+            <element signature="e#11106#11107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Fcm/MyFirebaseMessagingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_chat_messages.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_users_messages_toolbar.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/ParentClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/Activities/BottomNavigationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3387#3625#0" expanded="true" />
+            <element signature="e#3624#3625#0" expanded="true" />
+            <element signature="e#3655#3863#0" expanded="true" />
+            <element signature="e#3862#3863#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Buyer/ChatFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
+        <state relative-caret-position="412">
+          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
           <folding>
-            <element signature="e#2082#2259#0" expanded="true" />
-            <element signature="e#2258#2259#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2475#3052#0" expanded="true" />
+            <element signature="e#3051#3052#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/ChatUsersAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="81" column="67" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#2216#2750#0" expanded="true" />
+            <element signature="e#2749#2750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/Seller/Chat/UserChatMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="88" column="28" lean-forward="true" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding>
+            <element signature="e#3394#3544#0" expanded="true" />
+            <element signature="e#3543#3544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/glowingsoft/Recomendados/GlobalClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>

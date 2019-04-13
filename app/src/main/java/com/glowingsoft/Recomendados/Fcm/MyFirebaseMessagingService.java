@@ -50,10 +50,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             GlobalClass.getInstance().storeBadgeValue(badgeCount);
             if (GlobalClass.getInstance().returnConvertionalId() == null) {
                 ShortcutBadger.applyCount(MyFirebaseMessagingService.this, GlobalClass.getInstance().returnCount());
-                intent = new Intent(this, BottomNavigationActivity.class);
-                intent.putExtra("check", "1");
+                intent = new Intent(this, UserChatMessages.class);
                 intent.putExtra("user_id", GlobalClass.getInstance().returnUserId());
                 intent.putExtra("conversation_id", remoteMessage.getData().get("conversation_id"));
+                intent.putExtra("check", "1");
                 CreateNOti(remoteMessage);
             } else {
                 if (GlobalClass.getInstance().returnConvertionalId() != remoteMessage.getData().get("conversation_id")) {
@@ -83,9 +83,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         String message = remoteMessage.getData().get("title") + "\n" + remoteMessage.getData().get("message");
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
         int requestID = (int) System.currentTimeMillis();
-
         PendingIntent pendingIntent = PendingIntent.getActivity(this, requestID, intent, PendingIntent.FLAG_ONE_SHOT);
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
                 .setContentTitle(String.valueOf(getApplicationContext().getString(R.string.app_name)))

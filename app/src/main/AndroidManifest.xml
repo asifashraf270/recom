@@ -66,13 +66,13 @@
         <activity android:name=".Seller.ActivitiesSeller.SectionActivity" />
         <activity android:name=".Seller.ActivitiesSeller.NameYourShopActivity" />
         <activity android:name=".Seller.ShopPreferencesActivity" />
-        <activity android:name=".Seller.ActivitiesSeller.SellerSignUpActivity" />
+        <!--<activity android:name=".Seller.ActivitiesSeller.SellerSignUpActivity" />-->
         <activity android:name=".Buyer.Activities.ShopActivity" />
         <activity android:name=".Buyer.Activities.DetailActivity" />
         <activity android:name=".Buyer.Activities.BottomNavigationActivity" />
         <activity android:name=".Buyer.Activities.SignUpActivity" />
         <activity android:name=".Buyer.Activities.LoginInActivity" />
-        <activity android:name=".WelcomeActivity" />
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

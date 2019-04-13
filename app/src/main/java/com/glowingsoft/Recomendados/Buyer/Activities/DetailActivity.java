@@ -249,7 +249,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                         public void run() {
                             handler.post(Update);
                         }
-                    }, 3000, 4000);
+                    }, 3000, 3000);
                     JSONArray jsonArrayProducts = response.getJSONObject("shop").getJSONArray("products");
                     Log.d("response", jsonArrayProducts.toString());
 

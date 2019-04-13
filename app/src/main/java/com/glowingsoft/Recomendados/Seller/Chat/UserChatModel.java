@@ -5,7 +5,7 @@ package com.glowingsoft.Recomendados.Seller.Chat;
  */
 
 public class UserChatModel {
-    String conversation_id,user_id,friend_id,user_name,friend_name,last_message,last_message_time,friend_photo,unread;
+    String conversation_id, user_id, friend_id, user_name, friend_name, last_message, last_message_time, friend_photo, unread;
 
     public String getConversation_id() {
         return conversation_id;

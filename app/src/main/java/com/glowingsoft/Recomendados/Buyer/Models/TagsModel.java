@@ -1,7 +1,7 @@
 package com.glowingsoft.Recomendados.Buyer.Models;
 
 public class TagsModel {
-    String id,title;
+    String id, title;
 
     public String getId() {
         return id;

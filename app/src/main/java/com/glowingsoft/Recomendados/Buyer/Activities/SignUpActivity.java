@@ -101,13 +101,18 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                 if (userEmail.length() > 0) {
                     if (isValidEmailId(userEmail)) {
                         if (userPassword.length() > 0) {
+                            if (userPassword.length() < 6) {
+                                passwordEt.setError("Password must be atleast  6 digits");
+                            }
                         } else {
+                            if (userPassword.length() == 0) {
+                            }
                             if (userPassword.length() < 6) {
                                 passwordEt.requestFocus();
                                 passwordEt.setError("Password must be atleast  6 digits");
                             } else {
                                 passwordEt.requestFocus();
-                                passwordEt.setError("Password is Require");
+                                passwordEt.setError("Password is Required");
                             }
                         }
 
@@ -117,12 +122,12 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                     }
                 } else {
                     emailEt.requestFocus();
-                    emailEt.setError("Email is Require");
+                    emailEt.setError("Email is Required");
 
                 }
             } else {
                 userEt.requestFocus();
-                userEt.setError("Name is require");
+                userEt.setError("Name is required");
             }
         }
     }

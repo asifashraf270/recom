@@ -50,30 +50,11 @@ public class ChatFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
-        try {
-            if (getArguments().getString("check").length() > 0) {
-                final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        //Do something after 100ms
-                        Intent intent = new Intent(getActivity(), UserChatMessages.class);
-                        intent.putExtra("user_id", getArguments().getString("user_id"));
-                        intent.putExtra("conversation_id", getArguments().getString("conversation_id"));
-                        startActivity(intent);
-                    }
-                }, 3000);
 
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        viewBinding(view);
-        return view;
+        return viewBinding(view);
     }
 
-    private void viewBinding(View view) {
+    private View viewBinding(View view) {
         swipeRefreshLayout = view.findViewById(R.id.refresh);
         listView = view.findViewById(R.id.chatUsersList);
         rootLayout = view.findViewById(R.id.rootLayout);
@@ -81,6 +62,7 @@ public class ChatFragment extends Fragment {
         chatUsersAdapter = new ChatUsersAdapter(getActivity(), mUsersData);
         listView.setAdapter(chatUsersAdapter);
         runConversationTHread();
+        return view;
     }
 
     private void runConversationTHread() {

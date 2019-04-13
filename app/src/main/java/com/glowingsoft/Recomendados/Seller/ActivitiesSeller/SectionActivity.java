@@ -115,8 +115,9 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (keyCode == KeyEvent.KEYCODE_DEL) {
                     if (completionView.getText().toString().length() == 0) {
-
                         addTvTags.setVisibility(View.INVISIBLE);
+                    } else {
+                        addTvTags.setVisibility(View.VISIBLE);
                     }
                 }
                 return false;
@@ -128,6 +129,8 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
                 if (keyCode == KeyEvent.KEYCODE_DEL) {
                     if (materialAtv.getText().toString().length() == 0) {
                         addTvMaterial.setVisibility(View.INVISIBLE);
+                    } else {
+                        addTvMaterial.setVisibility(View.VISIBLE);
                     }
                 }
                 return false;
@@ -530,7 +533,7 @@ public class SectionActivity extends ParentClass implements View.OnClickListener
         @Override
         public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
             super.onFailure(statusCode, headers, throwable, errorResponse);
-            Log.d("response", errorResponse.toString());
+            GlobalClass.getInstance().SnackBar(rootLayout, throwable.getMessage(), -1, -1);
 
         }
 

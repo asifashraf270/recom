@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -34,17 +35,11 @@ public class BottomNavigationActivity extends ParentClass implements BottomNavig
     @Override
     protected void onStart() {
         super.onStart();
-        try {
-            if (getIntent().getExtras().getString("check").equals("1")) {
-                Bundle bundle = getIntent().getExtras();
-                Fragment fragment = new ChatFragment();
-                fragment.setArguments(bundle);
-                loadFragment(fragment, R.id.container, null);
-            }
-        } catch (Exception e) {
-            loadFragment(new HomeFragment(), R.id.container, "Home");
-        }
+        loadFragment(new HomeFragment(), R.id.container, "Home");
+
+
     }
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -80,6 +75,7 @@ public class BottomNavigationActivity extends ParentClass implements BottomNavig
         }
         return false;
     }
+
 
     @Override
     public void onBackPressed() {

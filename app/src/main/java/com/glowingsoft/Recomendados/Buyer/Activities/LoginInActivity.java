@@ -219,10 +219,8 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
                 } else {
 
                     if (password.length() < 6) {
-                        passwordEt.requestFocus();
                         passwordEt.setError("Password must be atleast  6 digits");
                     } else {
-                        passwordEt.requestFocus();
                         passwordEt.setError("Password  Required");
                     }
                 }
@@ -232,11 +230,9 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
                     emailEt.setError("Email is Required");
                 }
                 if (password.length() < 6) {
-                    passwordEt.requestFocus();
 
                     passwordEt.setError("Password must be atleast  6 digits");
                 } else {
-                    passwordEt.requestFocus();
                     passwordEt.setError("Password  Required");
                 }
             }
