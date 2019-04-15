@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.glowingsoft.Recomendados.GlobalClass;
 import com.glowingsoft.Recomendados.R;
+import com.glowingsoft.Recomendados.Seller.ActivitiesSeller.BottomNavigationSellerActivity;
 import com.glowingsoft.Recomendados.Seller.ShopPreferencesActivity;
 
 /**
@@ -52,9 +53,16 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
                 share();
                 break;
             case R.id.titleTv:
-                Intent intent = new Intent(getActivity(), ShopPreferencesActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                getActivity().startActivity(intent);
+                if (GlobalClass.getInstance().returnSellerStatus()) {
+                    Intent intent = new Intent(getActivity(), BottomNavigationSellerActivity.class);
+                    intent.putExtra("is_seller", true);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getActivity().startActivity(intent);
+                } else {
+                    Intent intent = new Intent(getActivity(), ShopPreferencesActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getActivity().startActivity(intent);
+                }
         }
     }
 

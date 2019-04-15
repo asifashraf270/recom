@@ -43,8 +43,8 @@ public class GlobalClass extends Application {
             view.setBackgroundColor(bgColor);
         }
         if (textColor != -1) {
-            TextView textView = view.findViewById(android.support.design.R.id.snackbar_text);
-            textView.setTextColor(textColor);
+            //            TextView textView = view.findViewById(android.support.design.R.id.snackbar_text);
+            //            textView.setTextColor(textColor);
         }
         snackbar.show();
     }
@@ -203,6 +203,15 @@ public class GlobalClass extends Application {
         editor.remove("conversition_id");
         editor.commit();
         editor.apply();
+    }
+
+    public void is_Seller(Boolean value) {
+        editor.putBoolean("is_seller", value);
+        editor.commit();
+    }
+
+    public Boolean returnSellerStatus() {
+        return sharedPreferences.getBoolean("is_seller", false);
     }
 
 }

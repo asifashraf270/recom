@@ -259,6 +259,10 @@ public class LoginInActivity extends ParentClass implements View.OnClickListener
                     GlobalClass.getInstance().StoreUserId(jsonObject.getString("id"));
                     String title = response.getString("title");
                     GlobalClass.getInstance().storeTitle(title);
+                    if (response.getBoolean("is_seller")) {
+                        GlobalClass.getInstance().is_Seller(response.getBoolean("is_seller"));
+                        GlobalClass.getInstance().storeShopId("" + response.getJSONObject("shop").getString("id"));
+                    }
                     intent = new Intent(LoginInActivity.this, BottomNavigationActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     GlobalClass.getInstance().storeUserType("2");

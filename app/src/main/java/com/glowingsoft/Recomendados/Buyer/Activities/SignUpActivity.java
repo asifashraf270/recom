@@ -153,6 +153,8 @@ public class SignUpActivity extends ParentClass implements View.OnClickListener 
                     GlobalClass.getInstance().storeTitle(title);
                     GlobalClass.getInstance().SnackBar(rootLayout, response.getString("message"), -1, -1);
                     GlobalClass.getInstance().storeTitle(title);
+                    GlobalClass.getInstance().is_Seller(response.getBoolean("is_seller"));
+
                     intent = new Intent(SignUpActivity.this, BottomNavigationActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     GlobalClass.getInstance().storeUserType("2");
